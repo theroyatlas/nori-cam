@@ -88,9 +88,11 @@ After changing `site/observatory/observatory.js`, run `npm run build:observatory
 ## AI tools used in development
 
 All development agents worked under the author's direction. Every change was reviewed and tested before merging.
-- **Claude Code with Claude Opus 5.5:** project management, the R40 Blender build script and renderer, and the Remotion demo video.
+- **Claude Code with Claude Opus 5.5:** project management, the R40 Blender build script and renderer, Nori's movement and animation, and the Remotion demo video.
+- **Claude Fable 5.1, Sonnet 5.5 and Haiku 5.5:** early memory experiments, some reviews and small fixes.
 - **OpenAI Codex with GPT-6.1 (Sol, Terra):** engineering and review.
-- **Meta Muse Code with Muse Spark 1.3:** implementation tasks, run in an isolated runner.
+- **Meta Muse Code with Muse Spark 1.3 and Muse Wonder 1.0:** implementation tasks, run in an isolated runner.
+- **Google Antigravity with Gemini 3.8 Flash and Gemini 4 Argon:** spikes and tools, such as the weather layer, the character rig prototype and the blind object test.
 - **Cursor Composer 2.5:** early drafts.
 - **ChatGPT image generation:** the author's Nori design sheets.
 
