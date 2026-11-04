@@ -3,7 +3,7 @@
 A small, quiet window into another world. Nori, a fictional short-legged AI cat, lives in a miniature room on her own clock. You don't control her. You watch, and sometimes you send her a gift.
 
 - **Public site:** https://nori-aipet.theroyatlas.workers.dev/. It shows the R40 room with Nori's real server timeline. Catalog gifts are free and fall from the sky into the room.
-- **Demo video (under 3 minutes):** <VIDEO_URL>
+- **Demo video (under 3 minutes):** https://youtu.be/Fl8p8HdzPC0
 
 ## What happens when you send a gift
 
