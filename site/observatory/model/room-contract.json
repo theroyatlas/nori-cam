@@ -1,0 +1,831 @@
+{
+ "schema": "nori-r40-observatory-room-contract/1",
+ "status": "candidate layout - not the Live world, physics not verified in Three.js",
+ "units": "metres",
+ "up_axis": {
+  "blender": "Z-up (x right-along-window-wall, y along desk wall, z up)",
+  "gltf": "Y-up; gltf = (x_b, z_b, -y_b); exporter export_yup=True"
+ },
+ "floor": {
+  "rect_xy_blender": [
+   0,
+   0,
+   4.800000000000001,
+   4.0
+  ],
+  "z": 0.0,
+  "grid": {
+   "cell_m": 0.4,
+   "nx": 12,
+   "ny": 10,
+   "origin": "back corner (0,0) where walls meet"
+  },
+  "walls": {
+   "left_window_wall": "plane y=0 (thickness to y=-0.2)",
+   "right_desk_wall": "plane x=0 (thickness to x=-0.2)",
+   "height": 2.7
+  },
+  "open_edges": "x=4.8 (front-left) and y=4.0 (front-right) are open, plinth lip to +0.12"
+ },
+ "cameras": {
+  "front": {
+   "position_blender": [
+    13.119,
+    15.784,
+    10.616
+   ],
+   "target_blender": [
+    2.35,
+    2.0,
+    0.92
+   ],
+   "position_gltf": [
+    13.119,
+    10.616,
+    -15.784
+   ],
+   "target_gltf": [
+    2.35,
+    0.92,
+    -2.0
+   ],
+   "type": "orthographic",
+   "orthographic_scale": 8.600000381469727,
+   "ortho_scale_meaning": "Blender: full width of view in metres (16:9 -> height = scale*9/16)",
+   "azimuth_deg": 52,
+   "elevation_deg": 29,
+   "aspect": 1.7777777777777777
+  },
+  "close": {
+   "position_blender": [
+    12.319,
+    14.834,
+    10.646
+   ],
+   "target_blender": [
+    1.55,
+    1.05,
+    0.95
+   ],
+   "position_gltf": [
+    12.319,
+    10.646,
+    -14.834
+   ],
+   "target_gltf": [
+    1.55,
+    0.95,
+    -1.05
+   ],
+   "type": "orthographic",
+   "orthographic_scale": 3.5999999046325684,
+   "ortho_scale_meaning": "Blender: full width of view in metres (16:9 -> height = scale*9/16)",
+   "azimuth_deg": 52,
+   "elevation_deg": 29,
+   "aspect": 1.7777777777777777
+  }
+ },
+ "lights": [
+  {
+   "name": "Lantern light",
+   "type": "POINT",
+   "position_blender": [
+    4.18,
+    0.22,
+    1.55
+   ],
+   "target_blender": null,
+   "color_linear": [
+    1.0,
+    0.5,
+    0.18
+   ],
+   "blender_watts": 320,
+   "size": 0.08,
+   "spot_angle_deg": null,
+   "note": "warm key, left wall"
+  },
+  {
+   "name": "Desk lamp light",
+   "type": "SPOT",
+   "position_blender": [
+    0.48,
+    0.82,
+    1.18
+   ],
+   "target_blender": [
+    0.6,
+    1.35,
+    0.74
+   ],
+   "color_linear": [
+    1.0,
+    0.55,
+    0.24
+   ],
+   "blender_watts": 480,
+   "size": 0.05,
+   "spot_angle_deg": 110,
+   "note": "warm pool on desk + perch"
+  },
+  {
+   "name": "Room warm fill",
+   "type": "AREA",
+   "position_blender": [
+    3.0,
+    2.6,
+    3.4
+   ],
+   "target_blender": [
+    2.4,
+    2.0,
+    0
+   ],
+   "color_linear": [
+    1.0,
+    0.6,
+    0.38
+   ],
+   "blender_watts": 70,
+   "size": [
+    3.0,
+    2.6
+   ],
+   "spot_angle_deg": null,
+   "note": "broad warm ceiling wash"
+  },
+  {
+   "name": "Moon window light",
+   "type": "AREA",
+   "position_blender": [
+    2.725,
+    -0.9,
+    2.2
+   ],
+   "target_blender": [
+    2.725,
+    1.6,
+    0.3
+   ],
+   "color_linear": [
+    0.55,
+    0.48,
+    1.0
+   ],
+   "blender_watts": 220,
+   "size": [
+    1.8,
+    1.0
+   ],
+   "spot_angle_deg": null,
+   "note": "cool violet through window"
+  },
+  {
+   "name": "Monitor glow",
+   "type": "AREA",
+   "position_blender": [
+    0.32,
+    2.05,
+    1.28
+   ],
+   "target_blender": [
+    1.2,
+    2.05,
+    1.1
+   ],
+   "color_linear": [
+    0.55,
+    0.45,
+    1.0
+   ],
+   "blender_watts": 6,
+   "size": [
+    0.9,
+    0.5
+   ],
+   "spot_angle_deg": null,
+   "note": "screen spill"
+  },
+  {
+   "name": "Candle light",
+   "type": "POINT",
+   "position_blender": [
+    0.6,
+    2.95,
+    0.86
+   ],
+   "target_blender": null,
+   "color_linear": [
+    1.0,
+    0.55,
+    0.25
+   ],
+   "blender_watts": 3,
+   "size": 0.02,
+   "spot_angle_deg": null,
+   "note": "tiny warm accent"
+  },
+  {
+   "name": "Terrarium crystal light",
+   "type": "POINT",
+   "position_blender": [
+    1.25,
+    0.25,
+    0.91
+   ],
+   "target_blender": null,
+   "color_linear": [
+    0.6,
+    0.35,
+    1.0
+   ],
+   "blender_watts": 4,
+   "size": 0.05,
+   "spot_angle_deg": null,
+   "note": "violet accent"
+  },
+  {
+   "name": "Crystal ball light",
+   "type": "POINT",
+   "position_blender": [
+    3.98,
+    0.32,
+    0.82
+   ],
+   "target_blender": null,
+   "color_linear": [
+    1.0,
+    0.6,
+    0.3
+   ],
+   "blender_watts": 6,
+   "size": 0.04,
+   "spot_angle_deg": null,
+   "note": "warm accent"
+  },
+  {
+   "name": "Window seat warm spill",
+   "type": "POINT",
+   "position_blender": [
+    3.3,
+    0.7,
+    1.05
+   ],
+   "target_blender": null,
+   "color_linear": [
+    1.0,
+    0.55,
+    0.28
+   ],
+   "blender_watts": 70,
+   "size": 0.3,
+   "spot_angle_deg": null,
+   "note": "fake lantern bounce on seat/steps"
+  },
+  {
+   "name": "Desk warm spill",
+   "type": "POINT",
+   "position_blender": [
+    1.1,
+    1.6,
+    1.4
+   ],
+   "target_blender": null,
+   "color_linear": [
+    1.0,
+    0.58,
+    0.3
+   ],
+   "blender_watts": 45,
+   "size": 0.3,
+   "spot_angle_deg": null,
+   "note": "fake lamp bounce on desk wall"
+  },
+  {
+   "name": "Front cool rim",
+   "type": "AREA",
+   "position_blender": [
+    6.5,
+    6.0,
+    4.0
+   ],
+   "target_blender": [
+    1.5,
+    1.2,
+    0.8
+   ],
+   "color_linear": [
+    0.58,
+    0.48,
+    1.0
+   ],
+   "blender_watts": 340,
+   "size": 3.0,
+   "spot_angle_deg": null,
+   "note": "violet night fill from camera side"
+  }
+ ],
+ "world": {
+  "color_linear": [
+   0.05,
+   0.028,
+   0.11
+  ],
+  "strength": 1.0,
+  "note": "background + ambient; use as clear colour + low hemisphere ambient"
+ },
+ "lights_note": "AREA lights are not exported by glTF (KHR_lights_punctual has point/spot/directional only); rebuild them in Three.js (RectAreaLight) from this list. Blender watts are not Three.js candela - calibrate visually.",
+ "support_surfaces": [
+  {
+   "name": "window_bench",
+   "rect_xy": [
+    1.56,
+    0,
+    4.62,
+    0.56
+   ],
+   "z": 0.55,
+   "climbable": true,
+   "note": "long window seat; landing between x2.3-2.9"
+  },
+  {
+   "name": "corner_cubby",
+   "rect_xy": [
+    0.78,
+    0,
+    1.56,
+    0.5
+   ],
+   "z": 0.76,
+   "climbable": true,
+   "note": "reachable from window bench (+0.21)"
+  },
+  {
+   "name": "step_low",
+   "rect_xy": [
+    2.32,
+    0.98,
+    2.86,
+    1.36
+   ],
+   "z": 0.2,
+   "climbable": true,
+   "note": "floor->0.20"
+  },
+  {
+   "name": "step_high",
+   "rect_xy": [
+    2.32,
+    0.58,
+    2.86,
+    0.98
+   ],
+   "z": 0.38,
+   "climbable": true,
+   "note": "0.20->0.38->bench 0.55"
+  },
+  {
+   "name": "desk_top",
+   "rect_xy": [
+    0,
+    0.02,
+    0.76,
+    3.3
+   ],
+   "z": 0.74,
+   "climbable": true,
+   "note": "reached from bookcase (0.56) or cubby; front edge x=0.76"
+  },
+  {
+   "name": "front_bookcase",
+   "rect_xy": [
+    0,
+    3.36,
+    0.48,
+    3.98
+   ],
+   "z": 0.56,
+   "climbable": true,
+   "note": "floor->0.56 is a jump; L return of desk (0.74)"
+  },
+  {
+   "name": "wall_shelf_decor",
+   "rect_xy": [
+    0,
+    0.08,
+    0.3,
+    3.05
+   ],
+   "z": 1.78,
+   "climbable": false,
+   "note": "decor only - not a platform"
+  },
+  {
+   "name": "coffee_table",
+   "rect_xy": [
+    2.22,
+    1.89,
+    3.34,
+    3.01
+   ],
+   "z": 0.4,
+   "climbable": true,
+   "note": "round r=0.56"
+  },
+  {
+   "name": "cat_bed",
+   "rect_xy": [
+    3.65,
+    0.72,
+    4.31,
+    1.38
+   ],
+   "z": 0.12,
+   "climbable": true,
+   "note": "soft sleep spot"
+  }
+ ],
+ "colliders": [
+  {
+   "name": "Cardboard box (group)",
+   "kind": "box_group",
+   "blocks_floor": true,
+   "climbable": false,
+   "support_z": 0.3,
+   "aabb_min_blender": [
+    4.03,
+    1.7,
+    0.0
+   ],
+   "aabb_max_blender": [
+    4.528,
+    2.14,
+    0.375
+   ]
+  },
+  {
+   "name": "Cat bed ring",
+   "kind": "cylinder",
+   "blocks_floor": true,
+   "climbable": true,
+   "support_z": 0.12,
+   "aabb_min_blender": [
+    3.51,
+    0.58,
+    0.004
+   ],
+   "aabb_max_blender": [
+    4.45,
+    1.52,
+    0.236
+   ]
+  },
+  {
+   "name": "Coffee table top",
+   "kind": "cylinder",
+   "blocks_floor": true,
+   "climbable": true,
+   "support_z": 0.4,
+   "aabb_min_blender": [
+    2.22,
+    1.89,
+    0.345
+   ],
+   "aabb_max_blender": [
+    3.34,
+    3.01,
+    0.4
+   ]
+  },
+  {
+   "name": "Corner cubby top",
+   "kind": "solid",
+   "blocks_floor": true,
+   "climbable": true,
+   "support_z": 0.76,
+   "aabb_min_blender": [
+    0.78,
+    0.0,
+    0.71
+   ],
+   "aabb_max_blender": [
+    1.56,
+    0.5,
+    0.76
+   ]
+  },
+  {
+   "name": "Desk top",
+   "kind": "solid",
+   "blocks_floor": true,
+   "climbable": true,
+   "support_z": 0.74,
+   "aabb_min_blender": [
+    0.0,
+    0.02,
+    0.69
+   ],
+   "aabb_max_blender": [
+    0.76,
+    3.3,
+    0.74
+   ]
+  },
+  {
+   "name": "Front bookcase top",
+   "kind": "solid",
+   "blocks_floor": true,
+   "climbable": true,
+   "support_z": 0.56,
+   "aabb_min_blender": [
+    0.0,
+    3.36,
+    0.52
+   ],
+   "aabb_max_blender": [
+    0.48,
+    3.98,
+    0.56
+   ]
+  },
+  {
+   "name": "Step high",
+   "kind": "solid",
+   "blocks_floor": true,
+   "climbable": true,
+   "support_z": 0.38,
+   "aabb_min_blender": [
+    2.32,
+    0.58,
+    0.0
+   ],
+   "aabb_max_blender": [
+    2.86,
+    0.98,
+    0.38
+   ]
+  },
+  {
+   "name": "Step low",
+   "kind": "solid",
+   "blocks_floor": true,
+   "climbable": true,
+   "support_z": 0.2,
+   "aabb_min_blender": [
+    2.32,
+    0.98,
+    0.0
+   ],
+   "aabb_max_blender": [
+    2.86,
+    1.36,
+    0.2
+   ]
+  },
+  {
+   "name": "Window bench top",
+   "kind": "solid",
+   "blocks_floor": true,
+   "climbable": true,
+   "support_z": 0.55,
+   "aabb_min_blender": [
+    1.56,
+    0.0,
+    0.49
+   ],
+   "aabb_max_blender": [
+    4.62,
+    0.56,
+    0.55
+   ]
+  },
+  {
+   "name": "Woven tunnel",
+   "kind": "tunnel_walkthrough",
+   "blocks_floor": false,
+   "climbable": false,
+   "support_z": 0.32,
+   "aabb_min_blender": [
+    0.97,
+    3.22,
+    -0.005
+   ],
+   "aabb_max_blender": [
+    1.59,
+    3.82,
+    0.3
+   ]
+  }
+ ],
+ "anchors": {
+  "ANCHOR_nori_spawn": {
+   "position_blender": [
+    3.5,
+    3.3,
+    0.0
+   ],
+   "role": "nori_spawn",
+   "facing_deg": 225.0
+  },
+  "ANCHOR_gift_zone": {
+   "position_blender": [
+    4.27,
+    3.32,
+    0.0
+   ],
+   "role": "gift_zone",
+   "rect_xy": [
+    3.92,
+    2.78,
+    4.62,
+    3.86
+   ]
+  },
+  "ANCHOR_nori_desk_perch": {
+   "position_blender": [
+    0.51,
+    1.18,
+    0.81
+   ],
+   "role": "perch",
+   "surface": "desk_top"
+  },
+  "ANCHOR_nori_bench_perch": {
+   "position_blender": [
+    2.6,
+    0.3,
+    0.55
+   ],
+   "role": "perch",
+   "surface": "window_bench"
+  },
+  "ANCHOR_nori_bed": {
+   "position_blender": [
+    3.98,
+    1.05,
+    0.12
+   ],
+   "role": "sleep",
+   "surface": "cat_bed"
+  },
+  "ANCHOR_step_low": {
+   "position_blender": [
+    2.59,
+    1.17,
+    0.2
+   ],
+   "role": "climb_step",
+   "surface": "step_low"
+  },
+  "ANCHOR_step_high": {
+   "position_blender": [
+    2.59,
+    0.78,
+    0.38
+   ],
+   "role": "climb_step",
+   "surface": "step_high"
+  },
+  "ANCHOR_tunnel_mouth": {
+   "position_blender": [
+    1.7,
+    3.52,
+    0
+   ],
+   "role": "hide_entry",
+   "surface": "floor"
+  },
+  "ANCHOR_telescope_look": {
+   "position_blender": [
+    2.05,
+    0.28,
+    1.01
+   ],
+   "role": "focus_prop"
+  },
+  "ANCHOR_monitor": {
+   "position_blender": [
+    0.18,
+    2.05,
+    1.3
+   ],
+   "role": "focus_prop"
+  }
+ },
+ "nori_spawn": {
+  "position_blender": [
+   3.5,
+   3.3,
+   0.0
+  ],
+  "role": "nori_spawn",
+  "facing_deg": 225.0
+ },
+ "gift_zone": {
+  "rect_xy_blender": [
+   3.92,
+   2.78,
+   4.62,
+   3.86
+  ],
+  "z": 0.0,
+  "cells": [
+   [
+    10,
+    7
+   ],
+   [
+    11,
+    7
+   ],
+   [
+    10,
+    8
+   ],
+   [
+    11,
+    8
+   ],
+   [
+    10,
+    9
+   ],
+   [
+    11,
+    9
+   ]
+  ],
+  "clear": true
+ },
+ "walk_grid": {
+  "legend": "row j=0 is y 0-0.4 (back, window wall side); col i=0 is x 0-0.4 (desk wall side). '.' free, '#' blocked footprint, 'G' gift zone free, 'X' gift zone blocked",
+  "rows": [
+   "############",
+   "##..#######.",
+   "##....#..##.",
+   "##....#..##.",
+   "##........#.",
+   "##...####.#.",
+   "##...####...",
+   "##....##..GG",
+   "#.........GG",
+   "#.........GG"
+  ],
+  "free_cells": 67,
+  "reachable_from_spawn": 67,
+  "all_free_reachable": true,
+  "gift_reachable": true,
+  "climb_entries_reachable": {
+   "Cat bed ring": true,
+   "Coffee table top": true,
+   "Corner cubby top": true,
+   "Desk top": true,
+   "Front bookcase top": true,
+   "Step high": true,
+   "Step low": true,
+   "Window bench top": true
+  }
+ },
+ "climb_graph": [
+  [
+   "floor",
+   "step_low"
+  ],
+  [
+   "step_low",
+   "step_high"
+  ],
+  [
+   "step_high",
+   "window_bench"
+  ],
+  [
+   "window_bench",
+   "corner_cubby"
+  ],
+  [
+   "floor",
+   "front_bookcase"
+  ],
+  [
+   "front_bookcase",
+   "desk_top"
+  ],
+  [
+   "floor",
+   "cat_bed"
+  ],
+  [
+   "floor",
+   "coffee_table"
+  ]
+ ],
+ "not_climbable": [
+  "wall_shelf_decor",
+  "window sill/frame",
+  "monitor",
+  "terrarium",
+  "scratch post top (decor)"
+ ],
+ "nori_note": "No cat in this asset; parent attaches the existing canonical Nori at anchors. Suggested Nori shoulder ~0.25 m."
+}

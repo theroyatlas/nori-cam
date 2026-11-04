@@ -1,0 +1,81 @@
+{
+ "posts": [
+  {
+   "post_id": "P-sample-2",
+   "ts": "2026-10-30T09:09:00+00:00",
+   "mode": "draft",
+   "status": "composed",
+   "text": "FAKE SAMPLE POST TWO. A crab in a tide pool, a lighthouse above it. Small things near big lights.",
+   "language": "en",
+   "is_draft": false,
+   "image": null,
+   "events": [
+    {
+     "id": "X2",
+     "title": "Sample tide pool picture",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/sample-tide-pool.jpg",
+     "license": "CC BY 4.0",
+     "license_url": null,
+     "attribution": "FAKE SAMPLE",
+     "excerpt": "FAKE SAMPLE image page.",
+     "retrieved_at": "2026-10-30T09:03:00+00:00",
+     "feeling": {
+      "valence": "neutral",
+      "intensity": 0,
+      "reason": "FAKE SAMPLE: nice, but no strong feeling.",
+      "label": "model-generated",
+      "model": "fake"
+     }
+    },
+    {
+     "id": "X1",
+     "title": "Sample Lighthouse",
+     "url": "https://en.wikipedia.org/wiki/Lighthouse",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "attribution": "FAKE SAMPLE, Wikipedia contributors",
+     "excerpt": "FAKE SAMPLE. A lighthouse is a tower that shows ships where the coast is.",
+     "retrieved_at": "2026-10-30T09:01:00+00:00",
+     "feeling": {
+      "valence": "positive",
+      "intensity": 2,
+      "reason": "FAKE SAMPLE: a steady light for strangers feels kind.",
+      "label": "model-generated",
+      "model": "fake"
+     }
+    }
+   ],
+   "project": null
+  },
+  {
+   "post_id": "P-sample-1",
+   "ts": "2026-10-30T09:08:00+00:00",
+   "mode": "draft",
+   "status": "published",
+   "text": "FAKE SAMPLE POST. Dragged this home today: Lighthouse. A tower that tells ships where the coast is. I like it because it is a kind of promise. #sample",
+   "language": "en",
+   "is_draft": true,
+   "image": "/media/P-sample-1.png",
+   "events": [
+    {
+     "id": "X1",
+     "title": "Sample Lighthouse",
+     "url": "https://en.wikipedia.org/wiki/Lighthouse",
+     "license": "CC BY-SA 4.0",
+     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "attribution": "FAKE SAMPLE, Wikipedia contributors",
+     "excerpt": "FAKE SAMPLE. A lighthouse is a tower that shows ships where the coast is.",
+     "retrieved_at": "2026-10-30T09:01:00+00:00",
+     "feeling": {
+      "valence": "positive",
+      "intensity": 2,
+      "reason": "FAKE SAMPLE: a steady light for strangers feels kind.",
+      "label": "model-generated",
+      "model": "fake"
+     }
+    }
+   ],
+   "project": null
+  }
+ ]
+}

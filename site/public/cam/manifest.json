@@ -1,0 +1,152 @@
+{
+ "alert_loaf": {
+  "body_h": 24,
+  "eyes": [
+   [
+    11,
+    15,
+    3,
+    4
+   ],
+   [
+    19,
+    15,
+    3,
+    4
+   ]
+  ],
+  "fallback": "sit",
+  "file": "sprites/alert_loaf.png",
+  "foot": [
+   16.5,
+   23
+  ],
+  "generic": true,
+  "h": 24,
+  "native_facing": 1,
+  "w": 34
+ },
+ "jump": {
+  "body_h": 43,
+  "eyes": [],
+  "fallback": "sit",
+  "file": "sprites/jump.png",
+  "foot": [
+   21.0,
+   42
+  ],
+  "generic": true,
+  "h": 56,
+  "native_facing": 1,
+  "w": 43
+ },
+ "look_up": {
+  "body_h": 42,
+  "eyes": [
+   [
+    22,
+    10,
+    3,
+    3
+   ],
+   [
+    30,
+    9,
+    3,
+    3
+   ]
+  ],
+  "fallback": "sit",
+  "file": "sprites/look_up.png",
+  "foot": [
+   18.5,
+   41
+  ],
+  "generic": true,
+  "h": 42,
+  "native_facing": 1,
+  "w": 38
+ },
+ "sit": {
+  "body_h": 40,
+  "eyes": [
+   [
+    9,
+    11,
+    3,
+    4
+   ],
+   [
+    18,
+    11,
+    3,
+    4
+   ]
+  ],
+  "fallback": "sit",
+  "file": "sprites/sit.png",
+  "foot": [
+   18.0,
+   39
+  ],
+  "generic": true,
+  "h": 40,
+  "native_facing": 1,
+  "w": 37
+ },
+ "sleepy": {
+  "body_h": 28,
+  "eyes": [],
+  "fallback": "sit",
+  "file": "sprites/sleepy.png",
+  "foot": [
+   18.0,
+   27
+  ],
+  "generic": true,
+  "h": 28,
+  "native_facing": 1,
+  "w": 37
+ },
+ "stretch": {
+  "body_h": 46,
+  "eyes": [],
+  "fallback": "sit",
+  "file": "sprites/stretch.png",
+  "foot": [
+   22.0,
+   45
+  ],
+  "generic": true,
+  "h": 46,
+  "native_facing": -1,
+  "w": 45
+ },
+ "walk": {
+  "body_h": 35,
+  "eyes": [
+   [
+    4,
+    9,
+    3,
+    4
+   ],
+   [
+    11,
+    11,
+    3,
+    3
+   ]
+  ],
+  "fallback": "sit",
+  "file": "sprites/walk.png",
+  "foot": [
+   20.0,
+   34
+  ],
+  "generic": true,
+  "h": 35,
+  "native_facing": -1,
+  "w": 41
+ }
+}

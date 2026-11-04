@@ -1,0 +1,108 @@
+{
+  "move_to": {
+    "poses": [
+      "walk",
+      "sneak",
+      "dash"
+    ],
+    "min_ms": 0,
+    "max_ms": 120000,
+    "speeds": {
+      "walk": 1.5,
+      "sneak": 1,
+      "dash": 3
+    }
+  },
+  "face": {
+    "poses": [],
+    "min_ms": 0,
+    "max_ms": 0
+  },
+  "touch": {
+    "poses": [
+      "wave"
+    ],
+    "min_ms": 500,
+    "max_ms": 3000
+  },
+  "push": {
+    "poses": [
+      "dash"
+    ],
+    "min_ms": 800,
+    "max_ms": 2000
+  },
+  "carry": {
+    "poses": [
+      "walk"
+    ],
+    "min_ms": 0,
+    "max_ms": 120000
+  },
+  "drop": {
+    "poses": [
+      "sit"
+    ],
+    "min_ms": 500,
+    "max_ms": 500
+  },
+  "climb": {
+    "poses": [
+      "jump"
+    ],
+    "min_ms": 600,
+    "max_ms": 600
+  },
+  "hold_pose": {
+    "poses": [
+      "walk",
+      "sneak",
+      "dash",
+      "sit",
+      "alert-loaf",
+      "sleepy",
+      "belly-up",
+      "stretch",
+      "look-up",
+      "back",
+      "peek",
+      "wave",
+      "jump",
+      "startled",
+      "surprised",
+      "starstruck",
+      "love",
+      "question",
+      "unimpressed",
+      "grumpy",
+      "giggle",
+      "meh",
+      "ponder",
+      "neutral",
+      "oops"
+    ],
+    "min_ms": 1000,
+    "max_ms": 1800000
+  },
+  "wait": {
+    "poses": [
+      "sit",
+      "alert-loaf"
+    ],
+    "min_ms": 500,
+    "max_ms": 60000
+  },
+  "set_object_state": {
+    "poses": [],
+    "min_ms": 0,
+    "max_ms": 0
+  },
+  "sleep": {
+    "poses": [
+      "sleepy",
+      "belly-up"
+    ],
+    "min_ms": 1200000,
+    "max_ms": 5400000
+  }
+}

@@ -1,0 +1,55 @@
+name = "nori-aipet"
+main = "src/worker/index.ts"
+compatibility_date = "2026-10-01"
+
+# Static site. Only /api/*, /media/* and /posts/* run the Worker first (/posts/<id> is one static page with the id in the address).
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/api/*", "/media/*", "/data/live/*", "/posts/*"]
+
+# Local-only D1: `wrangler dev --local` and `wrangler d1 migrations apply DB --local` need no Cloudflare account.
+# database_id is a placeholder; the manager replaces it after `wrangler d1 create nori-aipet` (see DEPLOY.md).
+[[d1_databases]]
+binding = "DB"
+database_name = "nori-aipet"
+database_id = "00000000-0000-0000-0000-000000000001"
+migrations_dir = "migrations"
+
+# Pictures (avatar, generated memes) live in KV and are served at /media/<name>. The id is a placeholder too.
+[[kv_namespaces]]
+binding = "MEDIA"
+id = "00000000000000000000000000000001"
+
+# Every 5 minutes the Worker reads Nori's next_wake_at from the data branch and, when it has passed, asks GitHub to run
+# nori-wake.yml (src/worker/wake.ts). GitHub's own schedule drops most runs.
+[triggers]
+crons = ["*/5 * * * *"]
+
+[vars]
+# Whole-site spend cap per UTC day in USD (counted from the real usage of each model reply at the official prices).
+DEMO_DAILY_USD = "1.00"
+# Model calls per hashed IP per 10 minutes (compare = 2 calls). Cached answers do not count.
+RATE_LIMIT_PER_10MIN = "20"
+# Chat-completions base. `wrangler dev` may override it with a fake upstream (see DEPLOY.md); production keeps this value.
+MODEL_API_BASE = "https://api.meta.ai/v1"
+
+# Secret (name only; the value is set with `wrangler secret put MODEL_API_KEY`, never in this file):
+#   MODEL_API_KEY
+#   MEDIA_UPLOAD_TOKEN (the runner uploads Nori's drawings to /media)
+#   GH_DISPATCH_TOKEN (fine-grained PAT for this repo only: Actions read and write, Contents read)
+#
+# Preview deploy checklist — keep every CAM_* feature switch at "0" until browse/reflect fixes ship:
+# CAM_SPARK_ENABLED = "0"       # Spark reactions/plans via chat-completions (est + daily cap)
+# CAM_BROWSE_ENABLED = "0"     # GitHub wake for computer segments (browse est + daily cap)
+# CAM_REFLECT_ENABLED = "0"    # Daily wonder reflection segment (wonder est + daily cap)
+# CAM_BROWSE_EST_USD = "0.30"  # per-segment browse reservation estimate (not a switch)
+# CAM_WONDER_MAX_USD = "0.50"  # max accepted wonder_result cost_usd from runner
+# CAM_BROWSE_MAX_USD = "1.00"  # max accepted browse_result cost_usd from runner
+# CAM_PHOTO_EST_USD = "0.08"   # photo gift pipeline reservation estimate
+# CAM_OWNER_PHOTO_CAP = "10"   # owner photo gifts per London day
+# CAM_JUDGE_PHOTO_CAP = "10"   # judge photo gifts per London day
+# CAM_VISITOR_GIFTS_DAILY = "40" # catalog gifts per London day (all visitors)
+# CAM_SPARK_EST_USD = "0.01"   # per Spark call reservation estimate
+# CAM_SPARK_DAILY_USD = "0.50" # Spark purposes shared daily cap
+# CAM_INSPECT_RATE_10MIN = "60"  # per-visitor-hash cap on /api/record, /api/replay and /api/interaction/*

@@ -1,0 +1,5 @@
+{
+  "_comment": "304 case: no body. The mock server returns this status when If-None-Match matches the current ETag; X-Server-Now carries the server time. Kept as a fixture so tests can assert the contract shape.",
+  "_status": 304,
+  "headers": {"Cache-Control": "no-store", "ETag": "W/\"2-1793530860000\"", "X-Server-Now": "1793527260000"}
+}

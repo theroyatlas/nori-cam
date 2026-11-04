@@ -1,0 +1,116 @@
+{
+  "name": "cardboard box",
+  "category": "furniture",
+  "contract_version": "cam-d1fix-2",
+  "content_safety": {
+    "ok": true,
+    "reason": "ok"
+  },
+  "identifiable_person_present": false,
+  "initial_state": "default",
+  "size": "M",
+  "object_card": {
+    "name": "cardboard box",
+    "category": "furniture",
+    "size": "M",
+    "height": "low",
+    "tags": [
+      "enclosed",
+      "pushable"
+    ],
+    "sensations": {
+      "shelter": 0.8,
+      "motion": 0.2
+    },
+    "parts": [
+      {
+        "kind": "front",
+        "label": "front wall",
+        "side": "front",
+        "height": "low"
+      },
+      {
+        "kind": "inside",
+        "label": "box interior",
+        "side": "front",
+        "height": "low"
+      }
+    ],
+    "states": [
+      "default"
+    ],
+    "hazards": [],
+    "space": {
+      "cm": {
+        "w": 40,
+        "d": 40,
+        "h": 20
+      },
+      "blocks": true,
+      "placement": "floor",
+      "movable": {
+        "push": true,
+        "rotate": false,
+        "stack": false
+      },
+      "state_cm": {}
+    },
+    "affordances": [
+      {
+        "verb": "push cardboard box",
+        "effect_text": "slides across the floor when nudged",
+        "sensations": [
+          "shelter",
+          "motion"
+        ]
+      }
+    ],
+    "beyond_executor": [
+      "hop inside unknown box sprite with layered occlusion"
+    ],
+    "summary": "Corrugated cardboard box sitting on the floor."
+  },
+  "interactions": [
+    {
+      "verb": "push_box",
+      "sensations": {
+        "shelter": 0.8,
+        "motion": 0.2
+      },
+      "steps": [
+        {
+          "p": "move_to",
+          "part": "front",
+          "gait": "walk"
+        },
+        {
+          "p": "face",
+          "part": "front"
+        },
+        {
+          "p": "push",
+          "part": "front",
+          "dir": [
+            0,
+            -1
+          ],
+          "ms": 1000,
+          "effects": [
+            {
+              "e": "move_object",
+              "dx": 0,
+              "dy": -1
+            }
+          ]
+        },
+        {
+          "p": "wait",
+          "pose": "sit",
+          "ms": 1000
+        }
+      ],
+      "end_state": null,
+      "cooldown_min": 15
+    }
+  ]
+}

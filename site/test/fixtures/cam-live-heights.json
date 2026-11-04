@@ -1,0 +1,1074 @@
+{
+  "server_now": 1793577600000,
+  "engine_version": "cam-a2c",
+  "world_version": 2,
+  "timeline_until": 1793578215604,
+  "room": {
+    "grid": {
+      "w": 10,
+      "h": 8
+    },
+    "window": "london"
+  },
+  "objects": [
+    {
+      "id": "o_cardboard_box",
+      "kind": "cardboard_box",
+      "x": 6,
+      "y": 4,
+      "z": 0,
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ],
+      "rotation": 0,
+      "blocks": true,
+      "placement": "floor",
+      "status": "placed",
+      "state": "default",
+      "size": "M",
+      "tags": [
+        "enclosed"
+      ],
+      "sprite": "procedural:cardboard_box",
+      "levels": [],
+      "parts": [
+        {
+          "kind": "inside",
+          "label": "inside",
+          "side": "front",
+          "height": "low"
+        }
+      ],
+      "card": {
+        "name": "cardboard box",
+        "summary": "Prefab cardboard_box"
+      }
+    },
+    {
+      "id": "o_slipper",
+      "kind": "slipper",
+      "x": 3,
+      "y": 2,
+      "z": 0,
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ],
+      "rotation": 0,
+      "blocks": true,
+      "placement": "floor",
+      "status": "placed",
+      "state": "default",
+      "size": "S",
+      "tags": [
+        "portable",
+        "pushable"
+      ],
+      "sprite": "procedural:slipper",
+      "levels": [],
+      "parts": [
+        {
+          "kind": "front",
+          "label": "front",
+          "side": "front",
+          "height": "low"
+        }
+      ],
+      "card": {
+        "name": "slipper",
+        "summary": "Prefab slipper"
+      }
+    },
+    {
+      "id": "o_bed",
+      "kind": "bed",
+      "x": 8,
+      "y": 6,
+      "z": 0,
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ],
+      "rotation": 0,
+      "blocks": false,
+      "placement": "floor",
+      "status": "placed",
+      "state": "default",
+      "size": "M",
+      "tags": [
+        "soft"
+      ],
+      "sprite": "procedural:bed",
+      "levels": [],
+      "parts": [
+        {
+          "kind": "top",
+          "label": "top",
+          "side": "top",
+          "height": "low"
+        }
+      ],
+      "card": {
+        "name": "bed",
+        "summary": "Prefab bed"
+      }
+    },
+    {
+      "id": "o_computer_desk",
+      "kind": "computer_desk",
+      "x": 8,
+      "y": 1,
+      "z": 0,
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ],
+      "rotation": 0,
+      "blocks": true,
+      "placement": "floor",
+      "status": "placed",
+      "state": "default",
+      "size": "M",
+      "tags": [
+        "computer",
+        "high_place"
+      ],
+      "sprite": "procedural:computer_desk",
+      "levels": [
+        {
+          "id": "top",
+          "z": 1.5,
+          "part": "top"
+        }
+      ],
+      "parts": [
+        {
+          "kind": "top",
+          "label": "top",
+          "side": "top",
+          "height": "low"
+        }
+      ],
+      "card": {
+        "name": "computer desk",
+        "summary": "Prefab computer_desk"
+      }
+    },
+    {
+      "id": "o_drawing_wall",
+      "kind": "drawing_wall",
+      "x": 0,
+      "y": 2,
+      "z": 0,
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ],
+      "rotation": 0,
+      "blocks": false,
+      "placement": "wall",
+      "status": "placed",
+      "state": "default",
+      "size": "M",
+      "tags": [],
+      "sprite": "procedural:drawing_wall",
+      "levels": [],
+      "parts": [
+        {
+          "kind": "front",
+          "label": "front",
+          "side": "front",
+          "height": "low"
+        }
+      ],
+      "card": {
+        "name": "drawing wall",
+        "summary": "Prefab drawing_wall"
+      }
+    },
+    {
+      "id": "o_water_bowl",
+      "kind": "water_bowl",
+      "x": 1,
+      "y": 5,
+      "z": 0,
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ],
+      "rotation": 0,
+      "blocks": true,
+      "placement": "floor",
+      "status": "placed",
+      "state": "default",
+      "size": "S",
+      "tags": [
+        "water"
+      ],
+      "sprite": "procedural:water_bowl",
+      "levels": [],
+      "parts": [
+        {
+          "kind": "front",
+          "label": "front",
+          "side": "front",
+          "height": "low"
+        }
+      ],
+      "card": {
+        "name": "water bowl",
+        "summary": "Prefab water_bowl"
+      }
+    },
+    {
+      "id": "o_food_bowl",
+      "kind": "food_bowl",
+      "x": 2,
+      "y": 5,
+      "z": 0,
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ],
+      "rotation": 0,
+      "blocks": true,
+      "placement": "floor",
+      "status": "placed",
+      "state": "default",
+      "size": "S",
+      "tags": [],
+      "sprite": "procedural:food_bowl",
+      "levels": [],
+      "parts": [
+        {
+          "kind": "front",
+          "label": "front",
+          "side": "front",
+          "height": "low"
+        }
+      ],
+      "card": {
+        "name": "food bowl",
+        "summary": "Prefab food_bowl"
+      }
+    },
+    {
+      "id": "env:sun",
+      "kind": "env:sun",
+      "x": 5,
+      "y": 3,
+      "z": 0,
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ],
+      "rotation": 0,
+      "blocks": false,
+      "placement": "floor",
+      "status": "placed",
+      "state": "default",
+      "size": "M",
+      "tags": [
+        "soft"
+      ],
+      "sprite": "procedural:env:sun",
+      "levels": [],
+      "parts": [
+        {
+          "kind": "top",
+          "label": "top",
+          "side": "top",
+          "height": "floor"
+        }
+      ],
+      "card": {
+        "name": "env:sun",
+        "summary": "Prefab env:sun"
+      }
+    },
+    {
+      "id": "o_cat_tree",
+      "kind": "cat_tree",
+      "x": 5,
+      "y": 0,
+      "z": 0,
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ],
+      "rotation": 0,
+      "blocks": true,
+      "placement": "floor",
+      "status": "placed",
+      "state": "default",
+      "size": "M",
+      "tags": [
+        "high_place",
+        "soft",
+        "viewpoint"
+      ],
+      "sprite": "procedural:cat_tree",
+      "levels": [
+        {
+          "id": "mid",
+          "z": 1,
+          "part": "front"
+        },
+        {
+          "id": "top",
+          "z": 2.5,
+          "part": "top"
+        }
+      ],
+      "parts": [
+        {
+          "kind": "front",
+          "label": "mid platform",
+          "side": "front",
+          "height": "low"
+        },
+        {
+          "kind": "top",
+          "label": "top platform",
+          "side": "top",
+          "height": "mid"
+        }
+      ],
+      "card": {
+        "name": "cat tree",
+        "summary": "Prefab cat_tree"
+      }
+    },
+    {
+      "id": "o_wall_shelf",
+      "kind": "wall_shelf",
+      "x": 5,
+      "y": 0,
+      "z": 3,
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ],
+      "rotation": 0,
+      "blocks": false,
+      "placement": "wall",
+      "status": "placed",
+      "state": "default",
+      "size": "M",
+      "tags": [
+        "high_place",
+        "soft",
+        "viewpoint"
+      ],
+      "sprite": "procedural:wall_shelf",
+      "levels": [
+        {
+          "id": "top",
+          "z": 3,
+          "part": "top",
+          "requires": {
+            "kind": "cat_tree",
+            "level": "top"
+          }
+        }
+      ],
+      "wall_side": "window",
+      "parts": [
+        {
+          "kind": "front",
+          "label": "mid platform",
+          "side": "front",
+          "height": "low"
+        },
+        {
+          "kind": "top",
+          "label": "top platform",
+          "side": "top",
+          "height": "mid"
+        }
+      ],
+      "card": {
+        "name": "wall shelf",
+        "summary": "Prefab wall_shelf"
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": 1000000000,
+      "start_at": 1793577600000,
+      "end_at": 1793577600667,
+      "action": "walk",
+      "primitive": "move_to",
+      "pose": "walk",
+      "facing": 1,
+      "path": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "z": 0,
+      "target": "o_wall_shelf",
+      "part": "top",
+      "carrying": null,
+      "interaction": "ix_wall_shelf_look_out",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 1000000001,
+      "start_at": 1793577600667,
+      "end_at": 1793577601334,
+      "action": "walk",
+      "primitive": "move_to",
+      "pose": "walk",
+      "facing": 1,
+      "path": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "z": 0,
+      "target": "o_wall_shelf",
+      "part": "top",
+      "carrying": null,
+      "interaction": "ix_wall_shelf_look_out",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 1000000002,
+      "start_at": 1793577601334,
+      "end_at": 1793577602001,
+      "action": "walk",
+      "primitive": "move_to",
+      "pose": "walk",
+      "facing": 1,
+      "path": [
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "z": 0,
+      "target": "o_wall_shelf",
+      "part": "top",
+      "carrying": null,
+      "interaction": "ix_wall_shelf_look_out",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 1000000003,
+      "start_at": 1793577602001,
+      "end_at": 1793577602668,
+      "action": "walk",
+      "primitive": "move_to",
+      "pose": "walk",
+      "facing": 1,
+      "path": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "z": 0,
+      "target": "o_wall_shelf",
+      "part": "top",
+      "carrying": null,
+      "interaction": "ix_wall_shelf_look_out",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 1000000004,
+      "start_at": 1793577602668,
+      "end_at": 1793577603335,
+      "action": "walk",
+      "primitive": "move_to",
+      "pose": "walk",
+      "facing": 1,
+      "path": [
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "z": 0,
+      "target": "o_wall_shelf",
+      "part": "top",
+      "carrying": null,
+      "interaction": "ix_wall_shelf_look_out",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 1000000005,
+      "start_at": 1793577603335,
+      "end_at": 1793577604002,
+      "action": "walk",
+      "primitive": "move_to",
+      "pose": "walk",
+      "facing": 1,
+      "path": [
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "z": 0,
+      "target": "o_wall_shelf",
+      "part": "top",
+      "carrying": null,
+      "interaction": "ix_wall_shelf_look_out",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 1000000006,
+      "start_at": 1793577604002,
+      "end_at": 1793577604669,
+      "action": "walk",
+      "primitive": "move_to",
+      "pose": "walk",
+      "facing": 1,
+      "path": [
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "z": 0,
+      "target": "o_wall_shelf",
+      "part": "top",
+      "carrying": null,
+      "interaction": "ix_wall_shelf_look_out",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 1000000007,
+      "start_at": 1793577604669,
+      "end_at": 1793577605336,
+      "action": "walk",
+      "primitive": "move_to",
+      "pose": "walk",
+      "facing": 1,
+      "path": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "z": 0,
+      "target": "o_wall_shelf",
+      "part": "top",
+      "carrying": null,
+      "interaction": "ix_wall_shelf_look_out",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 1000000008,
+      "start_at": 1793577605336,
+      "end_at": 1793577605936,
+      "action": "sit_on",
+      "primitive": "climb",
+      "pose": "jump",
+      "facing": 1,
+      "path": [
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "z": 1,
+      "target": "o_cat_tree",
+      "part": "front",
+      "carrying": null,
+      "interaction": "ix_wall_shelf_look_out",
+      "effects": [
+        {
+          "e": "height",
+          "z_from": 0,
+          "z_to": 1
+        }
+      ],
+      "cut_at": null,
+      "z_from": 0,
+      "z_to": 1
+    },
+    {
+      "id": 1000000009,
+      "start_at": 1793577605936,
+      "end_at": 1793577606536,
+      "action": "sit_on",
+      "primitive": "climb",
+      "pose": "jump",
+      "facing": 1,
+      "path": [
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "z": 2.5,
+      "target": "o_cat_tree",
+      "part": "top",
+      "carrying": null,
+      "interaction": "ix_wall_shelf_look_out",
+      "effects": [
+        {
+          "e": "height",
+          "z_from": 1,
+          "z_to": 2.5
+        }
+      ],
+      "cut_at": null,
+      "z_from": 1,
+      "z_to": 2.5
+    },
+    {
+      "id": 1000000010,
+      "start_at": 1793577606536,
+      "end_at": 1793577607136,
+      "action": "sit_on",
+      "primitive": "climb",
+      "pose": "jump",
+      "facing": 1,
+      "path": [
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "z": 3,
+      "target": "o_wall_shelf",
+      "part": "top",
+      "carrying": null,
+      "interaction": "ix_wall_shelf_look_out",
+      "effects": [
+        {
+          "e": "height",
+          "z_from": 2.5,
+          "z_to": 3
+        }
+      ],
+      "cut_at": null,
+      "z_from": 2.5,
+      "z_to": 3
+    },
+    {
+      "id": 1000000011,
+      "start_at": 1793577607136,
+      "end_at": 1793578207136,
+      "action": "look_out",
+      "primitive": "hold_pose",
+      "pose": "look_up",
+      "facing": 1,
+      "path": [
+        [
+          5,
+          0
+        ]
+      ],
+      "z": 3,
+      "target": "o_wall_shelf",
+      "part": null,
+      "carrying": null,
+      "interaction": "ix_wall_shelf_look_out",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 1000000999,
+      "start_at": 1793578207136,
+      "end_at": 1793578208636,
+      "action": "react",
+      "primitive": "hold_pose",
+      "pose": "look_up",
+      "facing": 1,
+      "path": [
+        [
+          5,
+          0
+        ]
+      ],
+      "z": 3,
+      "target": "o_wall_shelf",
+      "part": null,
+      "carrying": null,
+      "interaction": "ix_wall_shelf_look_out",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 2000000000,
+      "start_at": 1793578208636,
+      "end_at": 1793578209236,
+      "action": "sit_on",
+      "primitive": "climb",
+      "pose": "jump",
+      "facing": 1,
+      "path": [
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "z": 2.5,
+      "target": "o_cat_tree",
+      "part": "top",
+      "carrying": null,
+      "interaction": "ix_eeb76c98",
+      "effects": [
+        {
+          "e": "height",
+          "z_from": 3,
+          "z_to": 2.5
+        }
+      ],
+      "cut_at": null,
+      "z_from": 3,
+      "z_to": 2.5
+    },
+    {
+      "id": 2000000001,
+      "start_at": 1793578209236,
+      "end_at": 1793578209836,
+      "action": "sit_on",
+      "primitive": "climb",
+      "pose": "jump",
+      "facing": 1,
+      "path": [
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "z": 1,
+      "target": "o_cat_tree",
+      "part": "front",
+      "carrying": null,
+      "interaction": "ix_eeb76c98",
+      "effects": [
+        {
+          "e": "height",
+          "z_from": 2.5,
+          "z_to": 1
+        }
+      ],
+      "cut_at": null,
+      "z_from": 2.5,
+      "z_to": 1
+    },
+    {
+      "id": 2000000002,
+      "start_at": 1793578209836,
+      "end_at": 1793578210436,
+      "action": "sit_on",
+      "primitive": "climb",
+      "pose": "jump",
+      "facing": -1,
+      "path": [
+        [
+          5,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "z": 0,
+      "target": "o_cat_tree",
+      "part": "floor",
+      "carrying": null,
+      "interaction": "ix_eeb76c98",
+      "effects": [
+        {
+          "e": "height",
+          "z_from": 1,
+          "z_to": 0
+        }
+      ],
+      "cut_at": null,
+      "z_from": 1,
+      "z_to": 0
+    },
+    {
+      "id": 2000000003,
+      "start_at": 1793578210436,
+      "end_at": 1793578211103,
+      "action": "walk",
+      "primitive": "move_to",
+      "pose": "walk",
+      "facing": -1,
+      "path": [
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "z": 0,
+      "target": "o_slipper",
+      "part": "front",
+      "carrying": null,
+      "interaction": "ix_eeb76c98",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 2000000004,
+      "start_at": 1793578211103,
+      "end_at": 1793578211770,
+      "action": "walk",
+      "primitive": "move_to",
+      "pose": "walk",
+      "facing": -1,
+      "path": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "z": 0,
+      "target": "o_slipper",
+      "part": "front",
+      "carrying": null,
+      "interaction": "ix_eeb76c98",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 2000000005,
+      "start_at": 1793578211770,
+      "end_at": 1793578212437,
+      "action": "walk",
+      "primitive": "move_to",
+      "pose": "walk",
+      "facing": -1,
+      "path": [
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "z": 0,
+      "target": "o_slipper",
+      "part": "front",
+      "carrying": null,
+      "interaction": "ix_eeb76c98",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 2000000006,
+      "start_at": 1793578212437,
+      "end_at": 1793578213104,
+      "action": "walk",
+      "primitive": "move_to",
+      "pose": "walk",
+      "facing": -1,
+      "path": [
+        [
+          4,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "z": 0,
+      "target": "o_slipper",
+      "part": "front",
+      "carrying": null,
+      "interaction": "ix_eeb76c98",
+      "effects": [],
+      "cut_at": null
+    },
+    {
+      "id": 2000000007,
+      "start_at": 1793578213104,
+      "end_at": 1793578214104,
+      "action": "play",
+      "primitive": "touch",
+      "pose": "sit",
+      "facing": -1,
+      "path": [
+        [
+          3,
+          3
+        ]
+      ],
+      "z": 0,
+      "target": "o_slipper",
+      "part": "front",
+      "carrying": null,
+      "interaction": "ix_eeb76c98",
+      "effects": [
+        {
+          "e": "move_object",
+          "object_id": "o_slipper",
+          "dx": 1,
+          "dy": 0,
+          "at_ms": 1793578213337,
+          "keyframes": [
+            {
+              "at_ms": 1793578213104,
+              "x": 3,
+              "y": 2,
+              "z": 0
+            },
+            {
+              "at_ms": 1793578213154,
+              "x": 3.375,
+              "y": 2,
+              "z": 0
+            },
+            {
+              "at_ms": 1793578213204,
+              "x": 3.6875,
+              "y": 2,
+              "z": 0
+            },
+            {
+              "at_ms": 1793578213254,
+              "x": 3.9375,
+              "y": 2,
+              "z": 0
+            },
+            {
+              "at_ms": 1793578213287,
+              "x": 4,
+              "y": 2,
+              "z": 0
+            },
+            {
+              "at_ms": 1793578213337,
+              "x": 4,
+              "y": 2,
+              "z": 0
+            }
+          ]
+        }
+      ],
+      "cut_at": null
+    },
+    {
+      "id": 2000000999,
+      "start_at": 1793578214104,
+      "end_at": 1793578215604,
+      "action": "react",
+      "primitive": "hold_pose",
+      "pose": "look_up",
+      "facing": -1,
+      "path": [
+        [
+          3,
+          3
+        ]
+      ],
+      "z": 0,
+      "target": "o_slipper",
+      "part": null,
+      "carrying": null,
+      "interaction": "ix_eeb76c98",
+      "effects": [],
+      "cut_at": null
+    }
+  ],
+  "weather": {
+    "condition": "clear",
+    "cloud_pct": 0,
+    "precip_mm": 0
+  }
+}

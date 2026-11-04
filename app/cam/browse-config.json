@@ -1,0 +1,30 @@
+{
+  "user_agent": "NoriCam/0.1",
+  "explore": {
+    "min_domain_interval_seconds": 5,
+    "interval_overrides": {
+      "hacker-news.firebaseio.com": 1,
+      "api.gdeltproject.org": 6,
+      "rss.marketingtools.apple.com": 6,
+      "mastodon.social": 6,
+      "public.api.bsky.app": 6,
+      "trends.google.com": 10
+    },
+    "max_page_bytes": 2000000,
+    "max_redirects": 3,
+    "timeout_seconds": 20
+  },
+  "browser": {
+    "blocked_domains": [
+      "pornhub.com",
+      "xvideos.com",
+      "xhamster.com",
+      "bet365.com",
+      "draftkings.com",
+      "stake.com",
+      "1337x.to",
+      "thepiratebay.org",
+      "rarbg.to"
+    ]
+  }
+}

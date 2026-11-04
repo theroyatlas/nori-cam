@@ -1,0 +1,26 @@
+{
+  "name": "nori-aipet-site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build:miniature": "node scripts/build-miniature.mjs",
+    "build:observatory": "node scripts/build-observatory.mjs",
+    "test": "vitest run",
+    "bench:cam": "vitest run test/cam-bench.test.ts --no-file-parallelism",
+    "typecheck": "tsc --noEmit",
+    "fixtures": "python ../app/scripts/make_site_fixtures.py",
+    "seed:sample": "node scripts/seed-sample.mjs",
+    "db:local": "wrangler d1 migrations apply DB --local",
+    "dev": "wrangler dev --local --port 8788",
+    "deploy:dry": "wrangler deploy --dry-run --outdir .wrangler/dry-run"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261026.1",
+    "@types/node": "^26.6.5",
+    "three": "0.187.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5",
+    "wrangler": "^4.152.0"
+  }
+}

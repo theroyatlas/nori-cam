@@ -1,0 +1,1744 @@
+# Nori Cam public export report
+
+Status: **PASS**
+Source commit: `c018bb4c1486e35b64ed07e63dd70afc02fa09d5`
+Payload: 391 files, 23320978 bytes (excluding reports/.git).
+
+## Blocking issues
+
+None.
+
+## Safety and scope
+
+Committed Git objects only. Forbidden filenames excluded without opening. Output confined to approved temp directory; links/junctions and unmanaged replacement refused. No network, provider call or remote. Scan values are fully masked. Audit reports contain excluded filename inventory, not executable posting/chat content; generated reports are separately checked for secrets and local path leaks. All payloads including binary ASCII strings are scanned.
+
+## Scan hits
+
+| Path:line | Pattern | Length | Mask | Resolution |
+|---|---|---:|---|---|
+| site/observatory/model/render-front.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-0.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-1.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-10.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-11.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-12.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-13.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-14.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-15.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-16.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-17.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-18.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-19.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-2.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-20.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-3.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-4.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-5.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-6.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-7.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-8.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| site/public/observatory/tex/room-9.png:0 | image_exif_gps | 2 | **** | stripped EXIF |
+| app/tests/test_cam_p1h.py:74 | path_leak | 34 | **** | path leak, accept: exact reviewed synthetic offline test path |
+| app/tests/test_cam_p1h.py:75 | path_leak | 20 | **** | path leak, accept: exact reviewed synthetic offline test path |
+| app/tests/test_cam_p1h.py:84 | path_leak | 34 | **** | path leak, accept: exact reviewed synthetic offline test path |
+| app/tests/test_cam_p1h.py:85 | path_leak | 20 | **** | path leak, accept: exact reviewed synthetic offline test path |
+| app/tests/test_cam_r30_acceptance.py:96 | path_leak | 23 | **** | path leak, accept: exact reviewed synthetic offline test path |
+| app/tests/test_cam_r30_acceptance.py:97 | path_leak | 17 | **** | path leak, accept: exact reviewed synthetic offline test path |
+| app/tests/test_cam_r30_acceptance.py:103 | path_leak | 23 | **** | path leak, accept: exact reviewed synthetic offline test path |
+| app/tests/test_cam_r30_acceptance.py:104 | path_leak | 17 | **** | path leak, accept: exact reviewed synthetic offline test path |
+| app/tests/test_owner_live.py:76 | path_leak | 18 | **** | path leak, accept: exact reviewed synthetic offline test path |
+| site/observatory/model/room.glb:83789 | social_posting_chat_content | 3 | **** | accepted: compressed binary noise, absent from parsed GLB/image metadata |
+| site/observatory/model/room.glb:97211 | social_posting_chat_content | 3 | **** | accepted: compressed binary noise, absent from parsed GLB/image metadata |
+| site/public/observatory/tex/room-16.png:2233 | email_address | 9 | **** | accepted: compressed binary noise, absent from parsed GLB/image metadata |
+| site/public/observatory/tex/room-16.png:26208 | social_posting_chat_content | 3 | **** | accepted: compressed binary noise, absent from parsed GLB/image metadata |
+| site/public/room/desktop.jpg:609 | social_posting_chat_content | 3 | **** | accepted: compressed binary noise, absent from parsed GLB/image metadata |
+| site/public/room/sprites/nori-peek-browser.png:144 | email_address | 8 | **** | accepted: compressed binary noise, absent from parsed GLB/image metadata |
+| site/scripts/blind-test.ts:508 | bearer_20 | 20 | **** | accepted: exact reviewed offline test constant |
+| site/test/helpers.ts:6 | sk_key | 35 | **** | accepted: exact reviewed offline test constant |
+| site/test/helpers.ts:6 | named_secret_base64 | 35 | **** | accepted: exact reviewed offline test constant |
+
+## EXIF / GPS
+
+Pillow inspected 93 images; any EXIF was stripped and rechecked. No real-photo fixture was approved.
+
+## Files over 5 MiB
+
+- site/observatory/model/room.glb: 7248424 bytes; expected=True
+
+## Source maps
+
+[]
+
+## Third-party notices / fonts
+
+- site/public/cam/miniature/THREE-LICENSE.txt
+- site/public/cam-miniature.js.LEGAL.txt
+Font binaries: 0.
+
+## Transformations
+
+- app/cam/web/browser.py: committed generic read-only helper relocated; no posting implementation
+- app/cam/web/explore_net.py: committed generic read-only helper relocated; no posting implementation
+- app/cam/web/net.py: committed generic read-only helper relocated; no posting implementation
+- app/cam/wake.py: relocate imports/config outside excluded package
+- app/cam/browse-config.json: only read-only limits/domain policy extracted
+- app/cam/owner_live.py: portable shared external ledger; same accounting cap
+- site/observatory/model/build.py: Blender output relative to committed build script
+- site/wrangler.toml: local placeholders replace deployment binding IDs
+- site/test/api.test.ts: remove only excluded OAuth callback test and its disclosure-list item
+- app/tests/test_cam_wake.py: remove private workflow/history tests; preserve Python reflection/browse unit tests
+- app/tests/test_cam_gift.py: remove only tests of excluded private workflows/frozen research fixtures
+- app/tests/test_cam_r31_ui.py: remove only tests of excluded private workflows/frozen research fixtures
+- app/tests/test_cam_r33.py: remove only tests of excluded private workflows/frozen research fixtures
+- site/sample/data/demo-events.json: committed synthetic product sample
+- site/sample/data/experiences.json: committed synthetic product sample
+- site/sample/data/journal.json: committed synthetic product sample
+- site/sample/data/media-manifest.json: committed synthetic product sample
+- site/sample/data/posts.json: committed synthetic product sample
+- site/sample/data/room.json: committed synthetic product sample
+- site/sample/data/x-reading-list.json: committed synthetic product sample
+- README.md: public README with explicit manager TODOs
+- .gitignore: public runtime/dependency exclusions
+- site/observatory/model/render-front.png: EXIF stripped from export only
+- site/public/observatory/tex/room-0.png: EXIF stripped from export only
+- site/public/observatory/tex/room-1.png: EXIF stripped from export only
+- site/public/observatory/tex/room-10.png: EXIF stripped from export only
+- site/public/observatory/tex/room-11.png: EXIF stripped from export only
+- site/public/observatory/tex/room-12.png: EXIF stripped from export only
+- site/public/observatory/tex/room-13.png: EXIF stripped from export only
+- site/public/observatory/tex/room-14.png: EXIF stripped from export only
+- site/public/observatory/tex/room-15.png: EXIF stripped from export only
+- site/public/observatory/tex/room-16.png: EXIF stripped from export only
+- site/public/observatory/tex/room-17.png: EXIF stripped from export only
+- site/public/observatory/tex/room-18.png: EXIF stripped from export only
+- site/public/observatory/tex/room-19.png: EXIF stripped from export only
+- site/public/observatory/tex/room-2.png: EXIF stripped from export only
+- site/public/observatory/tex/room-20.png: EXIF stripped from export only
+- site/public/observatory/tex/room-3.png: EXIF stripped from export only
+- site/public/observatory/tex/room-4.png: EXIF stripped from export only
+- site/public/observatory/tex/room-5.png: EXIF stripped from export only
+- site/public/observatory/tex/room-6.png: EXIF stripped from export only
+- site/public/observatory/tex/room-7.png: EXIF stripped from export only
+- site/public/observatory/tex/room-8.png: EXIF stripped from export only
+- site/public/observatory/tex/room-9.png: EXIF stripped from export only
+- THIRD_PARTY_NOTICES.md: collect full bundled library notices
+
+## Excluded private-only test cases
+
+- site/test/api.test.ts: legacy OAuth callback static-page test; callback-only disclosure list item
+- app/tests/test_cam_wake.py: WorkflowTests class requires excluded private automation and master history
+- app/tests/test_cam_gift.py: test_workflow_privacy (excluded workflow/research fixture)
+- app/tests/test_cam_r31_ui.py: test_control_uses_current_object_and_interaction_schemas (excluded workflow/research fixture)
+- app/tests/test_cam_r31_ui.py: test_repaired_control_keeps_card_sensations_and_registration (excluded workflow/research fixture)
+- app/tests/test_cam_r31_ui.py: test_semantic_fixture_tampering_is_rejected (excluded workflow/research fixture)
+- app/tests/test_cam_r31_ui.py: test_windows_checkout_newlines_do_not_change_frozen_content (excluded workflow/research fixture)
+- app/tests/test_cam_r31_ui.py: test_original_failed_control_remains_frozen (excluded workflow/research fixture)
+- app/tests/test_cam_r33.py: test_card_and_sensations_unchanged_from_r31 (excluded workflow/research fixture)
+- app/tests/test_cam_r33.py: test_one_frozen_control_for_all_trials (excluded workflow/research fixture)
+
+## Excluded but possibly needed
+
+- app/cam/README.md: outside product whitelist; original docs replaced by public README
+- app/social/assets/README.md: social implementation or unused original character reference
+- app/social/assets/nori-ref-actions.png: social implementation or unused original character reference
+- app/social/assets/nori-ref-actions2.png: social implementation or unused original character reference
+- app/social/assets/nori-ref-expressions.png: social implementation or unused original character reference
+- app/tests/test_cam_r35.py: test requires excluded private research evidence
+- app/tests/test_cam_r37_evidence.py: test requires excluded private research evidence
+- site/DEPLOY.md: outside product whitelist; original docs replaced by public README
+- site/test/cam-experience-causal-v2.test.ts: test requires excluded private research evidence
+- site/test/cam-owner-live.test.ts: test requires excluded private research evidence
+- site/test/cam-r35-evidence.test.ts: test requires excluded private research evidence
+- site/test/cam-r37-batch.test.ts: test requires excluded private research evidence
+- site/test/cam-r37-ui-evidence.test.ts: test requires excluded private research evidence
+
+## Photo and R30 media exclusions
+
+- docs/research/spikes/r30-art-atlas/assets/A01-1.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A01-2.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A02-2.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A03-2.png: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A03-3.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A04-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A05-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A05-room.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A06-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A06-2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A07-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A07-2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A08-1.png: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A08-2.png: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A08-3.png: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A09-1.png: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A10-1.png: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A10-2.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A11-2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A12-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A12-2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/A04-walk-frame3.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/A11-frame1.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/A11-motion-inspection.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/gallery-desktop-top.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/gallery-desktop.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/gallery-hybrid-detail.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/gallery-mobile-top.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/gallery-mobile.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/gallery-source-detail.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/inspect-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/inspect-2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/inspect-3.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/inspect-motion2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/last-inspect.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-390.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-728.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-A04-timing.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-motion-A04-a.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-motion-A04-b.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-motion-A11-a.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-motion-A11-b.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/stills-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/stills-2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/stills-3.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A01-1.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A01-2.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A02-2.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A03-2.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A03-3.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A04-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A04-walk.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A05-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A05-room.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A06-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A06-2.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A07-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A07-2.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A08-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A08-2.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A08-3.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A09-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A10-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A10-2.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A11-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A11-2.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A12-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A12-2.webp: denylisted path
+- docs/research/spikes/r30-engineering/evidence/mixed2-local-room.png: denylisted path
+- docs/research/spikes/r30-engineering/evidence/mixed2-photo-panel.png: denylisted path
+- docs/research/spikes/r30-engineering/evidence/run6-local-room.png: denylisted path
+- docs/research/spikes/r30-engineering/evidence/run6-photo-panel.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/reference-consecutive.jpg: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/evidence/sam3d-official-frames.jpg: denylisted path
+- docs/research/spikes/r36-room-character/evidence/close-consecutive.jpg: denylisted path
+- docs/research/spikes/r36-room-character/evidence/close-sequence.jpg: denylisted path
+- docs/research/spikes/r36-room-character/evidence/live-playback-sequence.jpg: denylisted path
+- docs/research/spikes/r36-room-character/evidence/room-consecutive.jpg: denylisted path
+- docs/research/spikes/r36-room-character/evidence/room-sequence.jpg: denylisted path
+- docs/research/spikes/r39-demo-room/out/walk-sequence.jpg: denylisted path
+
+## All exclusions (names only)
+
+- .github/workflows/nori-gift.yml: outside product whitelist; original docs replaced by public README
+- .github/workflows/nori-wake.yml: outside product whitelist; original docs replaced by public README
+- .gitignore: outside product whitelist; original docs replaced by public README
+- README.md: outside product whitelist; original docs replaced by public README
+- app/cam/README.md: outside product whitelist; original docs replaced by public README
+- app/cam/wonder_sim_bridge.ts: offline simulation harness with developer-local output paths
+- app/cam/wonder_sim_guard.mjs: offline simulation harness with developer-local output paths
+- app/data/events.jsonl: denylisted path
+- app/data/feelings.json: denylisted path
+- app/nori/__init__.py: outside product whitelist; original docs replaced by public README
+- app/nori/decide.py: outside product whitelist; original docs replaced by public README
+- app/nori/memory.py: outside product whitelist; original docs replaced by public README
+- app/nori/store.py: outside product whitelist; original docs replaced by public README
+- app/public/app.js: outside product whitelist; original docs replaced by public README
+- app/public/index.html: outside product whitelist; original docs replaced by public README
+- app/public/journal.html: outside product whitelist; original docs replaced by public README
+- app/public/journal.js: outside product whitelist; original docs replaced by public README
+- app/public/social.html: outside product whitelist; original docs replaced by public README
+- app/public/social.js: outside product whitelist; original docs replaced by public README
+- app/public/style.css: outside product whitelist; original docs replaced by public README
+- app/scripts/import_events.py: outside product whitelist; original docs replaced by public README
+- app/scripts/make_site_fixtures.py: outside product whitelist; original docs replaced by public README
+- app/scripts/make_site_sample.py: outside product whitelist; original docs replaced by public README
+- app/server.py: outside product whitelist; original docs replaced by public README
+- app/social/AGENT.md: social implementation or unused original character reference
+- app/social/EXPLORE.md: social implementation or unused original character reference
+- app/social/PERSONA.md: social implementation or unused original character reference
+- app/social/__init__.py: social implementation or unused original character reference
+- app/social/actionlog.py: social implementation or unused original character reference
+- app/social/agent.py: social implementation or unused original character reference
+- app/social/agent_fake.py: social implementation or unused original character reference
+- app/social/agent_tools.py: social implementation or unused original character reference
+- app/social/approvals.py: social implementation or unused original character reference
+- app/social/approve.py: social implementation or unused original character reference
+- app/social/assets/README.md: social implementation or unused original character reference
+- app/social/assets/nori-ref-actions.png: social implementation or unused original character reference
+- app/social/assets/nori-ref-actions2.png: social implementation or unused original character reference
+- app/social/assets/nori-ref-expressions.png: social implementation or unused original character reference
+- app/social/browser.py: social implementation or unused original character reference
+- app/social/claim_check.py: social implementation or unused original character reference
+- app/social/cli.py: social implementation or unused original character reference
+- app/social/config.cloud.json: social implementation or unused original character reference
+- app/social/config.json: social implementation or unused original character reference
+- app/social/config.py: social implementation or unused original character reference
+- app/social/explore.py: social implementation or unused original character reference
+- app/social/explore_demo.py: social implementation or unused original character reference
+- app/social/explore_fake.py: social implementation or unused original character reference
+- app/social/explore_net.py: social implementation or unused original character reference
+- app/social/explore_tools.py: social implementation or unused original character reference
+- app/social/export_site.py: social implementation or unused original character reference
+- app/social/guard.py: social implementation or unused original character reference
+- app/social/journal.py: social implementation or unused original character reference
+- app/social/llm.py: social implementation or unused original character reference
+- app/social/longrun.py: social implementation or unused original character reference
+- app/social/media.py: social implementation or unused original character reference
+- app/social/memory_report.py: social implementation or unused original character reference
+- app/social/memory_view.py: social implementation or unused original character reference
+- app/social/net.py: social implementation or unused original character reference
+- app/social/owner_channel.py: social implementation or unused original character reference
+- app/social/owner_inbox.py: social implementation or unused original character reference
+- app/social/paths.py: social implementation or unused original character reference
+- app/social/pending.py: social implementation or unused original character reference
+- app/social/post_style.py: social implementation or unused original character reference
+- app/social/projects.py: social implementation or unused original character reference
+- app/social/publish_flow.py: social implementation or unused original character reference
+- app/social/publisher.py: social implementation or unused original character reference
+- app/social/quote_check.py: social implementation or unused original character reference
+- app/social/reader.py: social implementation or unused original character reference
+- app/social/site_sync.py: social implementation or unused original character reference
+- app/social/sources.py: social implementation or unused original character reference
+- app/social/tick.py: social implementation or unused original character reference
+- app/social/topic_gate.py: social implementation or unused original character reference
+- app/social/topics.py: social implementation or unused original character reference
+- app/social/view.py: social implementation or unused original character reference
+- app/social/vision.py: social implementation or unused original character reference
+- app/social/voice.py: social implementation or unused original character reference
+- app/social/wake_gate.py: social implementation or unused original character reference
+- app/social/watchlist.py: social implementation or unused original character reference
+- app/social/x_oauth1.py: social implementation or unused original character reference
+- app/social/x_query.py: social implementation or unused original character reference
+- app/social/x_read_caps.py: social implementation or unused original character reference
+- app/social/x_reader.py: social implementation or unused original character reference
+- app/social/x_reading_list.py: social implementation or unused original character reference
+- app/social/x_text.py: social implementation or unused original character reference
+- app/tests/test_actionlog_names.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_cam_r35.py: test requires excluded private research evidence
+- app/tests/test_cam_r37_evidence.py: test requires excluded private research evidence
+- app/tests/test_longrun.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_nori.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r12_cloud_wake.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r14a_wake_kinds.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r14b_plan_post.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r14c_trending.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r14d_x_reading.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r15a_draw.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r15a_review.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r16a_memory_edits_receipts.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r16a_review.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r16b_review.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r17_post_style.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r18_post_frequency.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r19_quote_line.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r20a_projects.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_r20c_project_span.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_s1_publish_off.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_site_export.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_site_export_r16b.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_social.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_social_agent.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_social_browser.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_social_explore.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_social_multimodal.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_social_owner.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_social_r10.py: outside product whitelist; original docs replaced by public README
+- app/tests/test_social_r7b.py: outside product whitelist; original docs replaced by public README
+- docs/DELIVERY.md: outside product whitelist; original docs replaced by public README
+- docs/LEARNINGS.md: outside product whitelist; original docs replaced by public README
+- docs/ROADMAP.md: outside product whitelist; original docs replaced by public README
+- docs/art/ART-DIRECTION.md: outside product whitelist; original docs replaced by public README
+- docs/art/targets/observatory-room-20261105.png: outside product whitelist; original docs replaced by public README
+- docs/competition-notes-20261104.md: outside product whitelist; original docs replaced by public README
+- docs/research/backups/r3/decisions.before.md: denylisted path
+- docs/research/backups/r3/notes.before.md: denylisted path
+- docs/research/compass.md: denylisted path
+- docs/research/decisions.md: denylisted path
+- docs/research/notes.md: denylisted path
+- docs/research/spikes/a2a/a2a-report.md: denylisted path
+- docs/research/spikes/a2a/a2a-sha256.json: denylisted path
+- docs/research/spikes/a2a/a2a-typecheck.txt: denylisted path
+- docs/research/spikes/a2a/a2a-verification.json: denylisted path
+- docs/research/spikes/a2a/a2a-vitest.txt: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-baseline.txt: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-green.txt: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-mutation-insertEvent.unsettled.txt: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-mutation-insertEvent.writer.txt: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-mutation-insertExperience.unsettled.txt: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-mutation-insertExperience.writer.txt: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-mutation-markSettled.unsettled.txt: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-mutation-markSettled.writer.txt: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-mutation-persistObject.unsettled.txt: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-mutation-persistObject.writer.txt: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-mutations.json: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-red.txt: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-report.md: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-simulation.json: denylisted path
+- docs/research/spikes/a2a/cam-a1b-r2-simulation.txt: denylisted path
+- docs/research/spikes/a2a/mutation-budget-expiry.json: denylisted path
+- docs/research/spikes/a2a/mutation-budget-release.json: denylisted path
+- docs/research/spikes/a2a/mutation-budget-settle.json: denylisted path
+- docs/research/spikes/a2a/mutation-code-lockout.json: denylisted path
+- docs/research/spikes/a2a/mutation-content-length.json: denylisted path
+- docs/research/spikes/a2a/mutation-cost-validation.json: denylisted path
+- docs/research/spikes/a2a/mutation-failed-step.json: denylisted path
+- docs/research/spikes/a2a/mutation-ingest-bearer.json: denylisted path
+- docs/research/spikes/a2a/mutation-jpeg-magic.json: denylisted path
+- docs/research/spikes/a2a/mutation-judge-owner.json: denylisted path
+- docs/research/spikes/a2a/mutation-sprite-path.json: denylisted path
+- docs/research/spikes/a2a/mutation-stream-size.json: denylisted path
+- docs/research/spikes/a2a/r2-baseline-red.txt: denylisted path
+- docs/research/spikes/a2a/r2-baseline.py: denylisted path
+- docs/research/spikes/a2a/r2-boundary-green.txt: denylisted path
+- docs/research/spikes/a2a/r2-contract-red.txt: denylisted path
+- docs/research/spikes/a2a/r2-green-attempt.txt: denylisted path
+- docs/research/spikes/a2a/r2-mutation-summary.json: denylisted path
+- docs/research/spikes/a2a/r2-mutations.py: denylisted path
+- docs/research/spikes/a2a/r2-original-vitest.txt: denylisted path
+- docs/research/spikes/a2a/r2-red.txt: denylisted path
+- docs/research/spikes/a2a/r2-report.md: denylisted path
+- docs/research/spikes/a2a/r2-sha256.json: denylisted path
+- docs/research/spikes/a2a/r2-typecheck.txt: denylisted path
+- docs/research/spikes/a2a/r2-vitest.txt: denylisted path
+- docs/research/spikes/a2b/REPORT.md: denylisted path
+- docs/research/spikes/a2b/verification.json: denylisted path
+- docs/research/spikes/a2b2/REPORT.md: denylisted path
+- docs/research/spikes/a2b2/verification.json: denylisted path
+- docs/research/spikes/a2c/.gitignore: denylisted path
+- docs/research/spikes/a2c/CONTRACT.md: denylisted path
+- docs/research/spikes/a2c/REPORT.md: denylisted path
+- docs/research/spikes/a2c/end-time.txt: denylisted path
+- docs/research/spikes/a2c/simulate.ts: denylisted path
+- docs/research/spikes/a2c/simulation.json: denylisted path
+- docs/research/spikes/a2c/tsc-final.txt: denylisted path
+- docs/research/spikes/a2c/vitest-final.txt: denylisted path
+- docs/research/spikes/blind/PREREG-M2.md: denylisted path
+- docs/research/spikes/blind/REPORT.md: denylisted path
+- docs/research/spikes/live-end-state-fix-20261105/NOTES.md: denylisted path
+- docs/research/spikes/live-end-state-fix-20261105/check_hud.py: denylisted path
+- docs/research/spikes/live-end-state-fix-20261105/evidence/failed-MOCK-component.png: denylisted path
+- docs/research/spikes/live-end-state-fix-20261105/evidence/hud-check.json: denylisted path
+- docs/research/spikes/live-end-state-fix-20261105/evidence/manifest.json: denylisted path
+- docs/research/spikes/live-end-state-fix-20261105/evidence/parent-reported-live-failure.json: denylisted path
+- docs/research/spikes/live-end-state-fix-20261105/evidence/planned-MOCK-component.png: denylisted path
+- docs/research/spikes/live-end-state-fix-20261105/evidence/python-tests.log: denylisted path
+- docs/research/spikes/live-end-state-fix-20261105/evidence/settled-MOCK-component.png: denylisted path
+- docs/research/spikes/live-end-state-fix-20261105/manager-review.json: denylisted path
+- docs/research/spikes/r21-pose-state/README.md: denylisted path
+- docs/research/spikes/r21-pose-state/compare-hue.png: denylisted path
+- docs/research/spikes/r21-pose-state/idem_guard.py: denylisted path
+- docs/research/spikes/r21-pose-state/log.json: denylisted path
+- docs/research/spikes/r21-pose-state/pose_state_spike.py: denylisted path
+- docs/research/spikes/r22-rig/capture.md: denylisted path
+- docs/research/spikes/r22-rig/make_overlays.py: denylisted path
+- docs/research/spikes/r22-rig/overlays/alert_loaf.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/back.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/belly_up.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/dash.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/giggle.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/grumpy.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/jump.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/look_up.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/love.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/meh.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/neutral.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/oops.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/peek.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/ponder.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/question.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/sit.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/sleepy.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/sneak.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/starstruck.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/startled.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/stretch.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/surprised.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/unimpressed.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/walk.png: denylisted path
+- docs/research/spikes/r22-rig/overlays/wave.png: denylisted path
+- docs/research/spikes/r22-rig/rig-proto.html: denylisted path
+- docs/research/spikes/r22-rig/rig-proto.js: denylisted path
+- docs/research/spikes/r22-rig/shots/sit_0.png: denylisted path
+- docs/research/spikes/r22-rig/shots/sit_1200.png: denylisted path
+- docs/research/spikes/r22-rig/shots/sit_1800.png: denylisted path
+- docs/research/spikes/r22-rig/shots/sit_600.png: denylisted path
+- docs/research/spikes/r22-rig/shots/sleepy_0.png: denylisted path
+- docs/research/spikes/r22-rig/shots/sleepy_1200.png: denylisted path
+- docs/research/spikes/r22-rig/shots/sleepy_1800.png: denylisted path
+- docs/research/spikes/r22-rig/shots/sleepy_600.png: denylisted path
+- docs/research/spikes/r24-entry/.gitattributes: denylisted path
+- docs/research/spikes/r24-entry/after-desktop.png: denylisted path
+- docs/research/spikes/r24-entry/after-mobile.png: denylisted path
+- docs/research/spikes/r24-entry/before-desktop.png: denylisted path
+- docs/research/spikes/r24-entry/before-mobile.png: denylisted path
+- docs/research/spikes/r24-entry/experience.json: denylisted path
+- docs/research/spikes/r24-entry/experience.mjs: denylisted path
+- docs/research/spikes/r24-entry/gift-mobile.png: denylisted path
+- docs/research/spikes/r24-entry/layout.json: denylisted path
+- docs/research/spikes/r24-entry/layout.mjs: denylisted path
+- docs/research/spikes/r24-entry/local-config.json: denylisted path
+- docs/research/spikes/r24-entry/local-room-10s.mp4: denylisted path
+- docs/research/spikes/r24-entry/manifest.json: denylisted path
+- docs/research/spikes/r24-entry/python.log: denylisted path
+- docs/research/spikes/r24-entry/vitest.log: denylisted path
+- docs/research/spikes/r25-pixel-corner/.gitattributes: denylisted path
+- docs/research/spikes/r25-pixel-corner/.gitignore: denylisted path
+- docs/research/spikes/r25-pixel-corner/NOTES.md: denylisted path
+- docs/research/spikes/r25-pixel-corner/baseline/day-display.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/baseline/day.mp4: denylisted path
+- docs/research/spikes/r25-pixel-corner/baseline/night-display.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/baseline/night.mp4: denylisted path
+- docs/research/spikes/r25-pixel-corner/browser-check.json: denylisted path
+- docs/research/spikes/r25-pixel-corner/build.py: denylisted path
+- docs/research/spikes/r25-pixel-corner/contract.json: denylisted path
+- docs/research/spikes/r25-pixel-corner/cutout.py: denylisted path
+- docs/research/spikes/r25-pixel-corner/gait.mjs: denylisted path
+- docs/research/spikes/r25-pixel-corner/index.html: denylisted path
+- docs/research/spikes/r25-pixel-corner/inspect_scene.py: denylisted path
+- docs/research/spikes/r25-pixel-corner/manifest.json: denylisted path
+- docs/research/spikes/r25-pixel-corner/motion.json: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/day-display.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/day-night.mp4: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/day-occlusion.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/day.mp4: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/day.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/desktop-day.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/desktop-night.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/mobile-day.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/mobile-night.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/night-display.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/night-occlusion.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/night.mp4: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/night.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/room-day.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/room-night.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/out/video-info.json: denylisted path
+- docs/research/spikes/r25-pixel-corner/outline.py: denylisted path
+- docs/research/spikes/r25-pixel-corner/prepare.mjs: denylisted path
+- docs/research/spikes/r25-pixel-corner/rebuild.ps1: denylisted path
+- docs/research/spikes/r25-pixel-corner/scene-check.json: denylisted path
+- docs/research/spikes/r25-pixel-corner/scene.blend: denylisted path
+- docs/research/spikes/r25-pixel-corner/settings.js: denylisted path
+- docs/research/spikes/r25-pixel-corner/sources/manifest.json: denylisted path
+- docs/research/spikes/r25-pixel-corner/sources/rig.json: denylisted path
+- docs/research/spikes/r25-pixel-corner/sources/sprites/look_up.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/sources/sprites/sit.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/sources/sprites/sleepy.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/sources/sprites/walk.png: denylisted path
+- docs/research/spikes/r25-pixel-corner/verify.mjs: denylisted path
+- docs/research/spikes/r25-pixel-corner/walk-rig.json: denylisted path
+- docs/research/spikes/r27-live-corner/.gitattributes: denylisted path
+- docs/research/spikes/r27-live-corner/.gitignore: denylisted path
+- docs/research/spikes/r27-live-corner/NOTES.md: denylisted path
+- docs/research/spikes/r27-live-corner/THREE-LICENSE.txt: denylisted path
+- docs/research/spikes/r27-live-corner/browser-check.json: denylisted path
+- docs/research/spikes/r27-live-corner/build.mjs: denylisted path
+- docs/research/spikes/r27-live-corner/export_scene.py: denylisted path
+- docs/research/spikes/r27-live-corner/index.html: denylisted path
+- docs/research/spikes/r27-live-corner/manifest.json: denylisted path
+- docs/research/spikes/r27-live-corner/out/day-canvas.png: denylisted path
+- docs/research/spikes/r27-live-corner/out/day-runtime-2x.mp4: denylisted path
+- docs/research/spikes/r27-live-corner/out/day-runtime.mp4: denylisted path
+- docs/research/spikes/r27-live-corner/out/desktop-day.png: denylisted path
+- docs/research/spikes/r27-live-corner/out/desktop-night.png: denylisted path
+- docs/research/spikes/r27-live-corner/out/mobile-day.png: denylisted path
+- docs/research/spikes/r27-live-corner/out/mobile-night.png: denylisted path
+- docs/research/spikes/r27-live-corner/out/night-canvas.png: denylisted path
+- docs/research/spikes/r27-live-corner/out/night-doze.png: denylisted path
+- docs/research/spikes/r27-live-corner/out/night-runtime.mp4: denylisted path
+- docs/research/spikes/r27-live-corner/out/runtime-paired.mp4: denylisted path
+- docs/research/spikes/r27-live-corner/out/unrecorded-behind-table.png: denylisted path
+- docs/research/spikes/r27-live-corner/out/unrecorded-near-lamp.png: denylisted path
+- docs/research/spikes/r27-live-corner/out/video-info.json: denylisted path
+- docs/research/spikes/r27-live-corner/package-lock.json: denylisted path
+- docs/research/spikes/r27-live-corner/package.json: denylisted path
+- docs/research/spikes/r27-live-corner/rebuild.ps1: denylisted path
+- docs/research/spikes/r27-live-corner/scene-data.js: denylisted path
+- docs/research/spikes/r27-live-corner/scene-meta.json: denylisted path
+- docs/research/spikes/r27-live-corner/scene.glb: denylisted path
+- docs/research/spikes/r27-live-corner/verify.mjs: denylisted path
+- docs/research/spikes/r27-live-corner/viewer.bundle.js: denylisted path
+- docs/research/spikes/r27-live-corner/viewer.bundle.js.LEGAL.txt: denylisted path
+- docs/research/spikes/r27-live-corner/viewer.js: denylisted path
+- docs/research/spikes/r28-room-refine/.gitattributes: denylisted path
+- docs/research/spikes/r28-room-refine/.gitignore: denylisted path
+- docs/research/spikes/r28-room-refine/NOTES.md: denylisted path
+- docs/research/spikes/r28-room-refine/THREE-LICENSE.txt: denylisted path
+- docs/research/spikes/r28-room-refine/baseline/r27-frame-0021.png: denylisted path
+- docs/research/spikes/r28-room-refine/baseline/r27-frame-0022.png: denylisted path
+- docs/research/spikes/r28-room-refine/baseline/r27-frame-0023.png: denylisted path
+- docs/research/spikes/r28-room-refine/browser-check.json: denylisted path
+- docs/research/spikes/r28-room-refine/build.mjs: denylisted path
+- docs/research/spikes/r28-room-refine/evidence-check.json: denylisted path
+- docs/research/spikes/r28-room-refine/export_scene.py: denylisted path
+- docs/research/spikes/r28-room-refine/geometry-check.json: denylisted path
+- docs/research/spikes/r28-room-refine/index.html: denylisted path
+- docs/research/spikes/r28-room-refine/manifest.json: denylisted path
+- docs/research/spikes/r28-room-refine/motion.json: denylisted path
+- docs/research/spikes/r28-room-refine/out/contact-off.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/contact-on.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/day-canvas.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/day-motion-lossless.webp: denylisted path
+- docs/research/spikes/r28-room-refine/out/day-runtime.mp4: denylisted path
+- docs/research/spikes/r28-room-refine/out/desktop-day.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/desktop-night.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/face-after-4x.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/face-before-4x.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/mobile-360-day.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/mobile-360-night.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/mobile-390-day.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/mobile-390-night.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/motion-detail.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/night-canvas.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/night-doze.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/night-motion-lossless.webp: denylisted path
+- docs/research/spikes/r28-room-refine/out/night-runtime.mp4: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-164-anchor.json: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-164.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-21-anchor.json: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-21.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-210-anchor.json: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-210.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-22-anchor.json: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-22.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-23-anchor.json: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-23.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-24-anchor.json: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-24.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-25-anchor.json: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-25.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-26-anchor.json: denylisted path
+- docs/research/spikes/r28-room-refine/out/pose-26.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/unrecorded-behind-table.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/unrecorded-near-lamp.png: denylisted path
+- docs/research/spikes/r28-room-refine/out/video-info.json: denylisted path
+- docs/research/spikes/r28-room-refine/pack_evidence.py: denylisted path
+- docs/research/spikes/r28-room-refine/package-lock.json: denylisted path
+- docs/research/spikes/r28-room-refine/package.json: denylisted path
+- docs/research/spikes/r28-room-refine/rebuild.ps1: denylisted path
+- docs/research/spikes/r28-room-refine/refine_scene.py: denylisted path
+- docs/research/spikes/r28-room-refine/scene-data.js: denylisted path
+- docs/research/spikes/r28-room-refine/scene-meta.json: denylisted path
+- docs/research/spikes/r28-room-refine/scene.blend: denylisted path
+- docs/research/spikes/r28-room-refine/scene.glb: denylisted path
+- docs/research/spikes/r28-room-refine/verify.mjs: denylisted path
+- docs/research/spikes/r28-room-refine/viewer.bundle.js: denylisted path
+- docs/research/spikes/r28-room-refine/viewer.bundle.js.LEGAL.txt: denylisted path
+- docs/research/spikes/r28-room-refine/viewer.js: denylisted path
+- docs/research/spikes/r29-world-bridge/.gitattributes: denylisted path
+- docs/research/spikes/r29-world-bridge/.gitignore: denylisted path
+- docs/research/spikes/r29-world-bridge/NOTES.md: denylisted path
+- docs/research/spikes/r29-world-bridge/browser-check.json: denylisted path
+- docs/research/spikes/r29-world-bridge/browser.mjs: denylisted path
+- docs/research/spikes/r29-world-bridge/confirm.mjs: denylisted path
+- docs/research/spikes/r29-world-bridge/confirmation.json: denylisted path
+- docs/research/spikes/r29-world-bridge/default-check.json: denylisted path
+- docs/research/spikes/r29-world-bridge/default-check.mjs: denylisted path
+- docs/research/spikes/r29-world-bridge/diagnostics/first-desktop.png: denylisted path
+- docs/research/spikes/r29-world-bridge/diagnostics/first-mobile.png: denylisted path
+- docs/research/spikes/r29-world-bridge/diagnostics/initial-probe.json: denylisted path
+- docs/research/spikes/r29-world-bridge/local-replay.json: denylisted path
+- docs/research/spikes/r29-world-bridge/local.mjs: denylisted path
+- docs/research/spikes/r29-world-bridge/manifest.json: denylisted path
+- docs/research/spikes/r29-world-bridge/out/final-fixture-shelf.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/final-fixture-walk.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/final-replay-390.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/final-replay-768.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/final-replay-after.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/final-replay-before.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/fixture-climb.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/fixture-night.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/fixture-shelf.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/fixture-walk.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/gift-after-detail.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/gift-before-detail.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/gift-placed.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/live-desktop.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/live-mobile.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/local-d1-replay-10s.webp: denylisted path
+- docs/research/spikes/r29-world-bridge/out/replay-after.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/replay-before.png: denylisted path
+- docs/research/spikes/r29-world-bridge/out/replay-cover.png: denylisted path
+- docs/research/spikes/r29-world-bridge/pack.py: denylisted path
+- docs/research/spikes/r29-world-bridge/probe.mjs: denylisted path
+- docs/research/spikes/r29-world-bridge/record.mjs: denylisted path
+- docs/research/spikes/r29-world-bridge/recording.json: denylisted path
+- docs/research/spikes/r29-world-bridge/typecheck.log: denylisted path
+- docs/research/spikes/r29-world-bridge/verify.mjs: denylisted path
+- docs/research/spikes/r29-world-bridge/video-check.json: denylisted path
+- docs/research/spikes/r29-world-bridge/vitest.log: denylisted path
+- docs/research/spikes/r3-product-mvp/mock-1280.png: denylisted path
+- docs/research/spikes/r3-product-mvp/mock-390.png: denylisted path
+- docs/research/spikes/r30-art-atlas/NOTES.md: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A01-1.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A01-2.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A02-2.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A03-2.png: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A03-3.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A04-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A04-walk.mp4: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A05-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A05-room.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A06-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A06-2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A07-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A07-2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A08-1.png: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A08-2.png: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A08-3.png: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A09-1.png: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A10-1.png: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A10-2.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A11-1.mp4: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A11-2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A12-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/assets/A12-2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/build_atlas.py: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/A04-walk-frame3.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/A11-frame1.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/A11-motion-inspection.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/gallery-desktop-top.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/gallery-desktop.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/gallery-hybrid-detail.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/gallery-mobile-top.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/gallery-mobile.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/gallery-source-detail.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/inspect-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/inspect-2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/inspect-3.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/inspect-motion2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/last-inspect.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/quote-checks.json: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-390.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-728.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-A04-timing.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-motion-A04-a.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-motion-A04-b.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-motion-A11-a.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-motion-A11-b.png: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/reader-verification.json: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/stills-1.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/stills-2.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/stills-3.jpg: denylisted path
+- docs/research/spikes/r30-art-atlas/evidence/verification.json: denylisted path
+- docs/research/spikes/r30-art-atlas/index.html: denylisted path
+- docs/research/spikes/r30-art-atlas/prepare_reader.py: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A01-1.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A01-2.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A02-2.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A03-2.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A03-3.gif: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A04-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A04-walk.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A05-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A05-room.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A06-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A06-2.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A07-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A07-2.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A08-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A08-2.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A08-3.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A09-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A10-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A10-2.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A11-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A11-2.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A12-1.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/A12-2.webp: denylisted path
+- docs/research/spikes/r30-art-atlas/reader-assets/manifest.json: denylisted path
+- docs/research/spikes/r30-art-atlas/reader.html: denylisted path
+- docs/research/spikes/r30-art-atlas/sources.json: denylisted path
+- docs/research/spikes/r30-art-atlas/verify_reader.py: denylisted path
+- docs/research/spikes/r30-engineering/LIVE-CANDIDATE.md: denylisted path
+- docs/research/spikes/r30-engineering/NOTES.md: denylisted path
+- docs/research/spikes/r30-engineering/evidence/baseline.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/dry-run.log: denylisted path
+- docs/research/spikes/r30-engineering/evidence/focused.log: denylisted path
+- docs/research/spikes/r30-engineering/evidence/live-plan.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/manager-integration-proof.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/manager-integration-summary.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/manifest.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/mixed2-local-room.png: denylisted path
+- docs/research/spikes/r30-engineering/evidence/mixed2-m2.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/mixed2-photo-panel.png: denylisted path
+- docs/research/spikes/r30-engineering/evidence/mixed2-summary.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/mixed2-trail.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/python-final.log: denylisted path
+- docs/research/spikes/r30-engineering/evidence/run2-summary.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/run3-summary.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/run4-summary.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/run5-summary.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/run6-local-room.png: denylisted path
+- docs/research/spikes/r30-engineering/evidence/run6-photo-panel.png: denylisted path
+- docs/research/spikes/r30-engineering/evidence/run6-summary.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/run6-trail.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/run7-summary.json: denylisted path
+- docs/research/spikes/r30-engineering/evidence/scene-recheck.log: denylisted path
+- docs/research/spikes/r30-engineering/evidence/typecheck-final.log: denylisted path
+- docs/research/spikes/r30-engineering/evidence/vitest-final.log: denylisted path
+- docs/research/spikes/r30-engineering/verify.py: denylisted path
+- docs/research/spikes/r31-engineering/NOTES.md: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt1/durable-evidence.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt1/m2.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt1/muse-image-raw.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt1/registration.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt1/spark-raw.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt1/summary.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt1/synthetic-photo.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt1/trail.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt1/wonder-raw.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt1/worker.log: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/01-selected.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/02-processing.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/03-terminal.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/04-before-effect.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/05-after-effect.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/carry-replay.mp4: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/durable-evidence.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/000.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/001.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/002.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/003.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/004.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/005.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/006.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/007.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/008.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/009.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/010.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/011.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/012.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/013.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/014.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/015.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/016.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/frames/017.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/m2.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/muse-image-raw.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/registration.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/spark-raw.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/summary.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/synthetic-photo.png: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/trail.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/wonder-raw.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/attempt2/worker.log: denylisted path
+- docs/research/spikes/r31-engineering/evidence/cup-negative-control.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/index.html: denylisted path
+- docs/research/spikes/r31-engineering/evidence/live-plan.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/manager-carry-replay.webp: denylisted path
+- docs/research/spikes/r31-engineering/evidence/manager-review.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/manager-view.html: denylisted path
+- docs/research/spikes/r31-engineering/evidence/manifest.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/preflight-v2.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/python-focused.log: denylisted path
+- docs/research/spikes/r31-engineering/evidence/typecheck.log: denylisted path
+- docs/research/spikes/r31-engineering/evidence/video-check.json: denylisted path
+- docs/research/spikes/r31-engineering/evidence/vitest-focused.log: denylisted path
+- docs/research/spikes/r31-engineering/freeze-v2.json: denylisted path
+- docs/research/spikes/r31-engineering/freeze.json: denylisted path
+- docs/research/spikes/r31-engineering/positive-control-v2.json: denylisted path
+- docs/research/spikes/r31-engineering/positive-control.json: denylisted path
+- docs/research/spikes/r31-engineering/preflight.ts: denylisted path
+- docs/research/spikes/r32-art-probes/.gitignore: denylisted path
+- docs/research/spikes/r32-art-probes/NOTES.md: denylisted path
+- docs/research/spikes/r32-art-probes/THREE-LICENSE.txt: denylisted path
+- docs/research/spikes/r32-art-probes/build.mjs: denylisted path
+- docs/research/spikes/r32-art-probes/capture.py: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/checks.json: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/compare-desktop-day-top.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/compare-desktop-day.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/compare-desktop-night.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/compare-mobile-day-top.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/compare-mobile-day.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/compare-mobile-night.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/cutout-continuous-frames.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/cutout-sequence.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/delivery-check.json: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/manager-review.json: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/manager-view.html: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/motion-cutout-390.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/motion-proxy-390.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/p1-1280.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/p1-390.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/p1-sequence.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/p2-1280.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/p2-390.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/p2-sequence.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/proxy-continuous-frames.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/proxy-sequence.png: denylisted path
+- docs/research/spikes/r32-art-probes/evidence/reference-consecutive.jpg: denylisted path
+- docs/research/spikes/r32-art-probes/index.html: denylisted path
+- docs/research/spikes/r32-art-probes/manifest.json: denylisted path
+- docs/research/spikes/r32-art-probes/manifest.py: denylisted path
+- docs/research/spikes/r32-art-probes/motion-study.js: denylisted path
+- docs/research/spikes/r32-art-probes/motion.bundle.js: denylisted path
+- docs/research/spikes/r32-art-probes/motion.bundle.js.LEGAL.txt: denylisted path
+- docs/research/spikes/r32-art-probes/motion.html: denylisted path
+- docs/research/spikes/r32-art-probes/motion.json: denylisted path
+- docs/research/spikes/r32-art-probes/out/cutout-motion.mp4: denylisted path
+- docs/research/spikes/r32-art-probes/out/cutout-motion.webp: denylisted path
+- docs/research/spikes/r32-art-probes/out/motion-synchronized.webp: denylisted path
+- docs/research/spikes/r32-art-probes/out/p1-day.png: denylisted path
+- docs/research/spikes/r32-art-probes/out/p1-motion.mp4: denylisted path
+- docs/research/spikes/r32-art-probes/out/p1-motion.webp: denylisted path
+- docs/research/spikes/r32-art-probes/out/p1-night.png: denylisted path
+- docs/research/spikes/r32-art-probes/out/p1-occlusion-off.png: denylisted path
+- docs/research/spikes/r32-art-probes/out/p1-occlusion-on.png: denylisted path
+- docs/research/spikes/r32-art-probes/out/p2-day.png: denylisted path
+- docs/research/spikes/r32-art-probes/out/p2-motion.mp4: denylisted path
+- docs/research/spikes/r32-art-probes/out/p2-motion.webp: denylisted path
+- docs/research/spikes/r32-art-probes/out/p2-night.png: denylisted path
+- docs/research/spikes/r32-art-probes/out/p2-occlusion-off.png: denylisted path
+- docs/research/spikes/r32-art-probes/out/p2-occlusion-on.png: denylisted path
+- docs/research/spikes/r32-art-probes/out/proxy-motion.mp4: denylisted path
+- docs/research/spikes/r32-art-probes/out/proxy-motion.webp: denylisted path
+- docs/research/spikes/r32-art-probes/out/r28-before-day.png: denylisted path
+- docs/research/spikes/r32-art-probes/out/room-comparison.png: denylisted path
+- docs/research/spikes/r32-art-probes/out/rooms-synchronized.webp: denylisted path
+- docs/research/spikes/r32-art-probes/pack.py: denylisted path
+- docs/research/spikes/r32-art-probes/rebuild.ps1: denylisted path
+- docs/research/spikes/r32-art-probes/room-variants.js: denylisted path
+- docs/research/spikes/r32-art-probes/room-viewer.js: denylisted path
+- docs/research/spikes/r32-art-probes/room.bundle.js: denylisted path
+- docs/research/spikes/r32-art-probes/room.bundle.js.LEGAL.txt: denylisted path
+- docs/research/spikes/r32-art-probes/room.html: denylisted path
+- docs/research/spikes/r32-art-probes/scene-data.js: denylisted path
+- docs/research/spikes/r32-art-probes/scene-meta.json: denylisted path
+- docs/research/spikes/r32-art-probes/scene.glb: denylisted path
+- docs/research/spikes/r32-art-probes/sources/look_up.png: denylisted path
+- docs/research/spikes/r32-art-probes/sources/sit.png: denylisted path
+- docs/research/spikes/r32-art-probes/sources/sleepy.png: denylisted path
+- docs/research/spikes/r32-art-probes/sources/walk.png: denylisted path
+- docs/research/spikes/r32-art-probes/sprite-data.js: denylisted path
+- docs/research/spikes/r33-engineering/NOTES.md: denylisted path
+- docs/research/spikes/r33-engineering/analyze_run.ts: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt1/analysis.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt1/durable-evidence.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt1/m2.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt1/muse-image-raw.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt1/registration.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt1/spark-raw.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt1/summary.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt1/synthetic-photo.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt1/trail.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt1/wonder-raw.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt1/worker.log: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/01-selected.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/02-processing.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/03-terminal.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/04-before-effect.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/05-after-effect.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/analysis.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/durable-evidence.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/000.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/001.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/002.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/003.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/004.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/005.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/006.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/007.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/008.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/009.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/010.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/011.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/012.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/013.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/014.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/015.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/016.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/frames/017.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/live-carry.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/m2.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/muse-image-raw.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/registration.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/spark-raw.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/summary.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/synthetic-photo.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/trail.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/wonder-raw.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/attempt2/worker.log: denylisted path
+- docs/research/spikes/r33-engineering/evidence/carry-ab.mp4: denylisted path
+- docs/research/spikes/r33-engineering/evidence/index.html: denylisted path
+- docs/research/spikes/r33-engineering/evidence/live-plan.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/manager-review.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/manifest.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/pixel-check.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/preflight.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/python.log: denylisted path
+- docs/research/spikes/r33-engineering/evidence/r31-negative-control.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer-initial-check.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer-result.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer-source.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/after_replan.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/at_cut.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/before_cut.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/000.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/001.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/002.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/003.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/004.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/005.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/006.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/007.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/008.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/009.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/010.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/011.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/012.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/013.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/014.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/015.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/016.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/baseline/frames/017.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/after_replan.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/at_cut.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/before_cut.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/000.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/001.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/002.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/003.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/004.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/005.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/006.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/007.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/008.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/009.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/010.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/011.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/012.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/013.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/014.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/015.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/016.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/renderer/fixed/frames/017.png: denylisted path
+- docs/research/spikes/r33-engineering/evidence/typecheck.log: denylisted path
+- docs/research/spikes/r33-engineering/evidence/video-check.json: denylisted path
+- docs/research/spikes/r33-engineering/evidence/vitest.log: denylisted path
+- docs/research/spikes/r33-engineering/freeze.json: denylisted path
+- docs/research/spikes/r33-engineering/positive-control.json: denylisted path
+- docs/research/spikes/r33-engineering/preflight.ts: denylisted path
+- docs/research/spikes/r33-engineering/render_verify.py: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/REVIEW.md: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/evidence/official-media-inspection.json: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/evidence/reader-390.png: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/evidence/reader-728.png: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/evidence/reader-checks.json: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/evidence/sam3d-official-frames.jpg: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/evidence/source-audit.json: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/evidence/sources.json: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/evidence/t3-preview.json: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/evidence/upstream-revision.json: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/experiment.json: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/index.html: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/manifest.json: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/reference-manifest.json: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/references/README.md: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/references/SAM-LICENSE.txt: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/references/demo_single_object.ipynb: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/references/inference.py.txt: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/references/sam3d-intro.png: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/references/sam3d-kidsroom.gif: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/references/setup.md: denylisted path
+- docs/research/spikes/r34-gift-pipeline-review/verify_reader.py: denylisted path
+- docs/research/spikes/r35-engineering/LOCK.json: denylisted path
+- docs/research/spikes/r35-engineering/NOTES.md: denylisted path
+- docs/research/spikes/r35-engineering/PROTOCOL.archived.md: denylisted path
+- docs/research/spikes/r35-engineering/PROTOCOL.md: denylisted path
+- docs/research/spikes/r35-engineering/collect_evidence.py: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/01-selected.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/02-processing.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/03-terminal.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/04-before-effect.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/05-after-effect.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/causal-sample.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/causal-v2.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/config.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/failure-diagnostic.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/000.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/001.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/002.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/003.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/004.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/005.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/006.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/007.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/008.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/009.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/010.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/011.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/012.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/013.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/014.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/015.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/016.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/frames/017.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/legacy-gate.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/live-carry.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/muse-image-raw.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/owned-process.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/registration.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/spark-raw.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/summary.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/synthetic-photo.png: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/trail.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/attempt1/worker.log: denylisted path
+- docs/research/spikes/r35-engineering/evidence/blocked-plan.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/carry.mp4: denylisted path
+- docs/research/spikes/r35-engineering/evidence/handoff.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/manager-review.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/manifest.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/preflight.json: denylisted path
+- docs/research/spikes/r35-engineering/evidence/python-tests.log: denylisted path
+- docs/research/spikes/r35-engineering/evidence/typecheck.log: denylisted path
+- docs/research/spikes/r35-engineering/evidence/vitest.log: denylisted path
+- docs/research/spikes/r35-engineering/finalize_evidence.py: denylisted path
+- docs/research/spikes/r35-engineering/protocol-hash.json: denylisted path
+- docs/research/spikes/r36-room-character/.gitignore: denylisted path
+- docs/research/spikes/r36-room-character/NOTES.md: denylisted path
+- docs/research/spikes/r36-room-character/THREE-LICENSE.txt: denylisted path
+- docs/research/spikes/r36-room-character/build.mjs: denylisted path
+- docs/research/spikes/r36-room-character/capture.py: denylisted path
+- docs/research/spikes/r36-room-character/cat.js: denylisted path
+- docs/research/spikes/r36-room-character/evidence/checks.json: denylisted path
+- docs/research/spikes/r36-room-character/evidence/close-390.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/close-consecutive.jpg: denylisted path
+- docs/research/spikes/r36-room-character/evidence/close-sequence.jpg: denylisted path
+- docs/research/spikes/r36-room-character/evidence/delivery-checks.json: denylisted path
+- docs/research/spikes/r36-room-character/evidence/first-back.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/first-close.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/first-front.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/first-motion-samples.json: denylisted path
+- docs/research/spikes/r36-room-character/evidence/first-room.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/first-side.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/index-1280.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/index-390.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/live-1.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/live-2.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/live-3.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/live-4.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/live-5.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/live-6.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/live-playback-sequence.jpg: denylisted path
+- docs/research/spikes/r36-room-character/evidence/manager-reader-390.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/manager-reader-728.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/manager-reader-checks.json: denylisted path
+- docs/research/spikes/r36-room-character/evidence/manager-review.json: denylisted path
+- docs/research/spikes/r36-room-character/evidence/manager-view.html: denylisted path
+- docs/research/spikes/r36-room-character/evidence/pass1-room.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/room-390.png: denylisted path
+- docs/research/spikes/r36-room-character/evidence/room-consecutive.jpg: denylisted path
+- docs/research/spikes/r36-room-character/evidence/room-sequence.jpg: denylisted path
+- docs/research/spikes/r36-room-character/index.html: denylisted path
+- docs/research/spikes/r36-room-character/manifest.json: denylisted path
+- docs/research/spikes/r36-room-character/manifest.py: denylisted path
+- docs/research/spikes/r36-room-character/out/cat-back.png: denylisted path
+- docs/research/spikes/r36-room-character/out/cat-front.png: denylisted path
+- docs/research/spikes/r36-room-character/out/cat-side.png: denylisted path
+- docs/research/spikes/r36-room-character/out/character-equal-scale.png: denylisted path
+- docs/research/spikes/r36-room-character/out/character-rig.glb: denylisted path
+- docs/research/spikes/r36-room-character/out/close-motion.mp4: denylisted path
+- docs/research/spikes/r36-room-character/out/close-motion.webp: denylisted path
+- docs/research/spikes/r36-room-character/out/redesign-comparison.png: denylisted path
+- docs/research/spikes/r36-room-character/out/room-day.png: denylisted path
+- docs/research/spikes/r36-room-character/out/room-motion.mp4: denylisted path
+- docs/research/spikes/r36-room-character/out/room-motion.webp: denylisted path
+- docs/research/spikes/r36-room-character/out/room-night.png: denylisted path
+- docs/research/spikes/r36-room-character/out/window-inspection.png: denylisted path
+- docs/research/spikes/r36-room-character/pack.py: denylisted path
+- docs/research/spikes/r36-room-character/rebuild.ps1: denylisted path
+- docs/research/spikes/r36-room-character/room.js: denylisted path
+- docs/research/spikes/r36-room-character/sources/nori-ref-actions.png: denylisted path
+- docs/research/spikes/r36-room-character/sources/nori-ref-actions2.png: denylisted path
+- docs/research/spikes/r36-room-character/sources/nori-ref-expressions.png: denylisted path
+- docs/research/spikes/r36-room-character/verify.py: denylisted path
+- docs/research/spikes/r36-room-character/viewer.bundle.js: denylisted path
+- docs/research/spikes/r36-room-character/viewer.bundle.js.LEGAL.txt: denylisted path
+- docs/research/spikes/r36-room-character/viewer.html: denylisted path
+- docs/research/spikes/r36-room-character/viewer.js: denylisted path
+- docs/research/spikes/r37-engineering/LIVE-BLOCKED.md: denylisted path
+- docs/research/spikes/r37-engineering/LOCK.json: denylisted path
+- docs/research/spikes/r37-engineering/NOTES.md: denylisted path
+- docs/research/spikes/r37-engineering/PROTOCOL.archived.md: denylisted path
+- docs/research/spikes/r37-engineering/PROTOCOL.md: denylisted path
+- docs/research/spikes/r37-engineering/archive_run.py: denylisted path
+- docs/research/spikes/r37-engineering/build_entry.py: denylisted path
+- docs/research/spikes/r37-engineering/check_method.ts: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/01-selected.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/02-processing.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/03-terminal.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/04-before-effect.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/05-after-effect.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/causal-batch.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/causal-sample.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/config.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/000.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/001.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/002.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/003.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/004.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/005.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/006.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/007.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/008.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/009.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/010.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/011.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/012.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/013.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/014.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/015.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/016.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/frames/017.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/live-carry.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/m2.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/muse-image-raw.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/observer.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/owned-process.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/read-only-audit.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/reflection-clock.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/registration.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/spark-raw.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/summary.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/synthetic-photo.png: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/trail.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/wonder-raw.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/attempt1/worker.log: denylisted path
+- docs/research/spikes/r37-engineering/evidence/blocked-plan.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/carry.mp4: denylisted path
+- docs/research/spikes/r37-engineering/evidence/handoff.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/manager-review.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/manifest.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/negative-controls.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/python-tests.log: denylisted path
+- docs/research/spikes/r37-engineering/evidence/retrospective-batch.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/retrospective-causal.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/retrospective-source.json: denylisted path
+- docs/research/spikes/r37-engineering/evidence/typecheck.log: denylisted path
+- docs/research/spikes/r37-engineering/evidence/vitest.log: denylisted path
+- docs/research/spikes/r37-engineering/finalize_evidence.py: denylisted path
+- docs/research/spikes/r37-engineering/phase1-development.json: denylisted path
+- docs/research/spikes/r37-engineering/save_negatives.py: denylisted path
+- docs/research/spikes/r38-engineering/P0-HANDOFF.md: denylisted path
+- docs/research/spikes/r38-engineering/PROTOCOL.archived.md: denylisted path
+- docs/research/spikes/r38-engineering/PROTOCOL.md: denylisted path
+- docs/research/spikes/r38-engineering/archive_p0.py: denylisted path
+- docs/research/spikes/r38-engineering/build_source.py: denylisted path
+- docs/research/spikes/r38-engineering/evidence/attempts.json: denylisted path
+- docs/research/spikes/r38-engineering/evidence/final/01-selected-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/final/02-processing-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/final/03-terminal-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/final/04-world-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/final/05-future-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/final/result.json: denylisted path
+- docs/research/spikes/r38-engineering/evidence/manifest.json: denylisted path
+- docs/research/spikes/r38-engineering/evidence/python-tests.log: denylisted path
+- docs/research/spikes/r38-engineering/evidence/smoke1/01-selected-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/smoke1/02-processing-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/smoke1/result.json: denylisted path
+- docs/research/spikes/r38-engineering/evidence/smoke2/01-selected-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/smoke2/02-processing-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/smoke2/03-terminal-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/smoke2/04-world-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/smoke2/result.json: denylisted path
+- docs/research/spikes/r38-engineering/evidence/smoke3/01-selected-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/smoke3/02-processing-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/smoke3/03-terminal-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/smoke3/04-world-MOCK.png: denylisted path
+- docs/research/spikes/r38-engineering/evidence/smoke3/result.json: denylisted path
+- docs/research/spikes/r38-engineering/evidence/start-plan.json: denylisted path
+- docs/research/spikes/r38-engineering/evidence/typecheck.log: denylisted path
+- docs/research/spikes/r38-engineering/evidence/vitest.log: denylisted path
+- docs/research/spikes/r38-engineering/owner_smoke.py: denylisted path
+- docs/research/spikes/r38-engineering/protocol-status.json: denylisted path
+- docs/research/spikes/r39-demo-room/.gitignore: denylisted path
+- docs/research/spikes/r39-demo-room/NOTES.md: denylisted path
+- docs/research/spikes/r39-demo-room/after-checks.json: denylisted path
+- docs/research/spikes/r39-demo-room/before-checks.json: denylisted path
+- docs/research/spikes/r39-demo-room/before.bundle.js.gz: denylisted path
+- docs/research/spikes/r39-demo-room/build.mjs: denylisted path
+- docs/research/spikes/r39-demo-room/capture.py: denylisted path
+- docs/research/spikes/r39-demo-room/check-review.py: denylisted path
+- docs/research/spikes/r39-demo-room/fixture-gift.png: denylisted path
+- docs/research/spikes/r39-demo-room/geometry-check.js: denylisted path
+- docs/research/spikes/r39-demo-room/geometry-checks.json: denylisted path
+- docs/research/spikes/r39-demo-room/harness.html: denylisted path
+- docs/research/spikes/r39-demo-room/index.html: denylisted path
+- docs/research/spikes/r39-demo-room/integration-checks.json: denylisted path
+- docs/research/spikes/r39-demo-room/integration.py: denylisted path
+- docs/research/spikes/r39-demo-room/manager-review.json: denylisted path
+- docs/research/spikes/r39-demo-room/manifest.json: denylisted path
+- docs/research/spikes/r39-demo-room/out/after-390-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/after-390-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/after-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/after-desktop-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/after-desktop-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/after-gift-carried.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/after-gift-on-desk.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/after-gift-placed.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/after-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/after-shelf.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/before-390-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/before-390-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/before-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/before-desktop-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/before-desktop-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/before-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/canonical-walk.webp: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-after-1280-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-after-1280-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-after-390-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-after-390-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-before-1280-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-before-1280-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-before-390-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-before-390-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-canvas-after-1280-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-canvas-after-1280-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-canvas-after-390-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-canvas-after-390-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-canvas-before-1280-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-canvas-before-1280-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-canvas-before-390-day.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-canvas-before-390-night.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/product-default-canvas.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/review-1280.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/review-390.png: denylisted path
+- docs/research/spikes/r39-demo-room/out/walk-sequence.jpg: denylisted path
+- docs/research/spikes/r39-demo-room/review-checks.json: denylisted path
+- docs/research/spikes/r39-demo-room/review.py: denylisted path
+- docs/research/spikes/r41-sim/PROTOCOL.md: denylisted path
+- docs/research/spikes/wonder-fix-20261105/REPORT.md: denylisted path
+- docs/research/spikes/wonder-fix-20261105/offline-results.json: denylisted path
+- docs/superpowers/specs/2026-11-01-nori-v2-design.md: outside product whitelist; original docs replaced by public README
+- docs/superpowers/specs/2026-11-02-nori-cam-design.md: outside product whitelist; original docs replaced by public README
+- requirements.txt: outside product whitelist; original docs replaced by public README
+- site/DEPLOY.md: outside product whitelist; original docs replaced by public README
+- site/public/oauth/threads/callback.html: denylisted path
+- site/sample/data/owner.json: outside product whitelist; original docs replaced by public README
+- site/sample/input/events.jsonl: posting/chat sample input
+- site/sample/input/feelings.json: posting/chat sample input
+- site/sample/input/social/actions.jsonl: posting/chat sample input
+- site/sample/input/social/drafts.jsonl: posting/chat sample input
+- site/sample/input/social/events.jsonl: posting/chat sample input
+- site/sample/input/social/feelings.jsonl: posting/chat sample input
+- site/sample/input/social/media/P-sample-1.png: posting/chat sample input
+- site/sample/input/social/posts.jsonl: posting/chat sample input
+- site/screenshots/demo-1280.png: outside product whitelist; original docs replaced by public README
+- site/screenshots/demo-390.png: outside product whitelist; original docs replaced by public README
+- site/screenshots/home-1280.png: outside product whitelist; original docs replaced by public README
+- site/screenshots/home-390.png: outside product whitelist; original docs replaced by public README
+- site/screenshots/journal-1280.png: outside product whitelist; original docs replaced by public README
+- site/screenshots/journal-390.png: outside product whitelist; original docs replaced by public README
+- site/screenshots/posts-P-sample-1-1280.png: outside product whitelist; original docs replaced by public README
+- site/screenshots/posts-P-sample-1-390.png: outside product whitelist; original docs replaced by public README
+- site/scripts/cam-a1b-r2-mutations.py: internal mutation/evidence runner
+- site/test/cam-experience-causal-v2.test.ts: test requires excluded private research evidence
+- site/test/cam-owner-live.test.ts: test requires excluded private research evidence
+- site/test/cam-r35-evidence.test.ts: test requires excluded private research evidence
+- site/test/cam-r37-batch.test.ts: test requires excluded private research evidence
+- site/test/cam-r37-ui-evidence.test.ts: test requires excluded private research evidence
+- tools/wonder_offline_check.py: offline simulation harness with developer-local output paths
+
+## Manifest
+
+- `.gitignore` (86 bytes; sha256 `5e9bf3a8232c219fb566f419933c6d769110912e56cdf7954464bdb9b3fd01cc`)
+- `app/cam/__init__.py` (73 bytes; sha256 `6fddf55bca02290e1c9e918c59f5d087fbb9ff76262fdf1f9653970c566d5706`)
+- `app/cam/__main__.py` (716 bytes; sha256 `b64c65a88e4c546f6af4cb96c28ec9522536b4cfd7cc55d2ad6d8ff12fbcf0ee`)
+- `app/cam/browse-config.json` (650 bytes; sha256 `1e4dea6c1b96c98cfec5ca69a715379b434096b1193759cc68e53c9ab3862274`)
+- `app/cam/clients.py` (9234 bytes; sha256 `4474c6a80229f3eda7367da7d86bf39698fc0f2ed98aa95ff7e7d8a94efb340f`)
+- `app/cam/experience_causal_v2.ts` (8577 bytes; sha256 `d3b76c87eccf1fab18c15c38f680473cfa4d17e0d6cd60664cb27fe6c632e4e9`)
+- `app/cam/fake_clients.py` (4634 bytes; sha256 `2638757aaf364160ee5ee6f1dbfab5ac6ef35b786459fea84b5079fda942e0f0`)
+- `app/cam/live_candidate.py` (4520 bytes; sha256 `327dce4f61d8019c34e7e71cc93d9cf0d5b6cf79f09135ba8f428d3822733f8d`)
+- `app/cam/live_photo_ui_candidate.py` (782 bytes; sha256 `a92bac8ca03a69b86ea4076a671f34cd6c6f923c94a2d086e05cfb78fee8d4d6`)
+- `app/cam/local_e2e.py` (51555 bytes; sha256 `ea1b3ccc13b8cb8eff12003ec160b53487d9c9ab23f7d66bc24396732092f545`)
+- `app/cam/observatory_assets.py` (1139 bytes; sha256 `03cc99f5e012cfa130a11e2414ccbd550b5c5524b7f8056f3d1a9450431496aa`)
+- `app/cam/observatory_owner.py` (6071 bytes; sha256 `3d8ff8efa2132be0cebd5137592c6dc47b5dcdea00e4040878e0c3bd1c0eda82`)
+- `app/cam/owner_budget.py` (7350 bytes; sha256 `ccad5b22bb8343bd34fd77419adee5919b9c60cb9c8f535ae7c209ad35c91bb8`)
+- `app/cam/owner_core.py` (14125 bytes; sha256 `498866e3adbad17e9295ea24c68c934d37805ffb13b73f1ceed716971e24bbeb`)
+- `app/cam/owner_live.py` (14184 bytes; sha256 `462c09c5c5b576ed00e8a7a43eba1af56387067c0efa1784ea87f257b99e312f`)
+- `app/cam/owner_spark.py` (1530 bytes; sha256 `5169f91c81609e4f8353eb3c66c757266f3b8801b94c1217f234ee08d6ad655a`)
+- `app/cam/owner_status.py` (5715 bytes; sha256 `a1ea551c27527735e30028ae8bdf07e3c9320ed539317ebd81a628f0879f1f69`)
+- `app/cam/owner_worker.ts` (3318 bytes; sha256 `10e57eba557aabb633b8dc00e5e25545fca3c3897a78b8fb3d53161dab4a0b50`)
+- `app/cam/pipeline.py` (18518 bytes; sha256 `1cf454ea233b3805f368b3aef021eaaaddd4ddaed875e40f66edd188dd700167`)
+- `app/cam/pixel.py` (3231 bytes; sha256 `64799c67f0f7ea25046b60988186ea5bedcc6174706d4b0ee081fdc09296259f`)
+- `app/cam/r35_capture.py` (1868 bytes; sha256 `4bbb7d2c0857d05ce56b76eecc373f41d388cb9cfe4fffb4da716c31a9e57226`)
+- `app/cam/r35_diagnostic.ts` (2461 bytes; sha256 `d8140c19689c949f230f3508eae1da71b245c96c2a5d7302b6ec41ccf98bfd8e`)
+- `app/cam/r35_plan.py` (1447 bytes; sha256 `b9744853bc544823f09bbcd3354fabce8170bdad8fbc247f810f1d32b4c0050b`)
+- `app/cam/r37_batch.ts` (9880 bytes; sha256 `3e6ebc18578cd1c1d4b21d8eddb6015273a29b1a57b9e867468cc3f3bca46e6c`)
+- `app/cam/r37_causal.ts` (4179 bytes; sha256 `d5a6c39af4c02b352203085289f44c7818fa2a4f53aa98c672400c883204bf96`)
+- `app/cam/r37_clock.py` (1643 bytes; sha256 `40cf6cd70242490b51490ee0f41dae3bcc6a941b582a8b251eb6d58de3879932`)
+- `app/cam/r37_negative_controls.ts` (1299 bytes; sha256 `9593615f9a0c9563bab06249efca378600d59ea645f58791f5adb141eafcf2d8`)
+- `app/cam/r37_observer.py` (2251 bytes; sha256 `9fe9f886960dd528e21d146b0458a663a6dd0850004a2df7cb7ef4fcadec6c18`)
+- `app/cam/r37_plan.py` (879 bytes; sha256 `6bd65ba4a15b34a0a34a005e25e52fbebf57b17bc4793f6f2b0803556d520114`)
+- `app/cam/r37_ui.py` (18108 bytes; sha256 `8be898bf5e83a28ff3d4c900af925fb1e0a2f785626e49938ba2b1e904e49c97`)
+- `app/cam/r38_plan.py` (1156 bytes; sha256 `4753c7d97c6012931e9a1e9b98c8a590e2cdc83bd4cdac3148f7427adf1a4c1e`)
+- `app/cam/reflect_evidence.py` (1977 bytes; sha256 `278b4abab0d5eb67c74229e1590e1553205bfe070cbddcd0a2d5233a6bf39a08`)
+- `app/cam/room_art.py` (3024 bytes; sha256 `70f810f1a7c57211ef1ca3a37580b47d6166b364b3db52896e52d1f954294daa`)
+- `app/cam/ui_local_e2e.py` (20695 bytes; sha256 `7b4af285c62a9faaa08ea70ec61452f0c6aa0f4592f3daa33fc28643537fed7c`)
+- `app/cam/wake.py` (14912 bytes; sha256 `459c732045cc6b5c805784f0d815f85a05732c7b107b03089549d56c7bd2d759`)
+- `app/cam/web/__init__.py` (0 bytes; sha256 `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`)
+- `app/cam/web/browser.py` (1651 bytes; sha256 `7f83c9ed8b8029f898659eb69e5ebbc0dfddfa9cf38db52c415d4e296eebf81e`)
+- `app/cam/web/explore_net.py` (12352 bytes; sha256 `ca6ecd83c32c4445e24fa4aeadcc94b822c133d9578952d9b71377ad9285e14b`)
+- `app/cam/web/net.py` (498 bytes; sha256 `a3c0ba5f112ac67bf24c7e72b91a77612e456a901f4e4246a15ad62fe9c51913`)
+- `app/cam/worker_base.py` (871 bytes; sha256 `188393833478d3c843d1a05c8fdee5aa35c16c1717c8d28bd919ca45a1a1fdf2`)
+- `app/requirements-cloud.txt` (56 bytes; sha256 `cc64be98df48c34298646e8b4813001aab8f4542a996c9dfccbc590336bbde29`)
+- `app/tests/test_cam_d1_fix.py` (4425 bytes; sha256 `528821f0569979ce66935f3361104415b7d750c6dc3106b48126af8eea94d151`)
+- `app/tests/test_cam_d1fix6_image_format.py` (9954 bytes; sha256 `cb4fae32f42cebdd218158f9b68d3138d717d207111e2084ab8bb74fc8120ea6`)
+- `app/tests/test_cam_d1fix6_missing_output.py` (1823 bytes; sha256 `bd05bef018e1e4cfb6b02ed8bb4ac760ee58bfae6f41efb3708fe471d7f9d04f`)
+- `app/tests/test_cam_d1fix7_placement.py` (1760 bytes; sha256 `68a5715175a4b7a8162ccc9614921e523bc48bc7ae8bbd9c3048815b60aa5a0c`)
+- `app/tests/test_cam_d1fix_contract.py` (12629 bytes; sha256 `9f857c0ee8e49652d9b0b4caf5b0c330d74d4f7537321e534b9b3c514b5b0fa5`)
+- `app/tests/test_cam_gift.py` (12809 bytes; sha256 `b0308966f5bafcb7b3b38539d18d31ed41b7932b4699025f5e936a79b6fd3bef`)
+- `app/tests/test_cam_h1_timing.py` (1006 bytes; sha256 `7310b8df04e7f773eb1a98af3d3e9d470013f277249d1d527c3221bbb09af487`)
+- `app/tests/test_cam_p1h.py` (7039 bytes; sha256 `91537e3afcfad914c0aef9176f29a1819b13c164966fe1e02d92bb8a5652d277`)
+- `app/tests/test_cam_r30_acceptance.py` (6803 bytes; sha256 `797ffdff05cf4efa01b3ab23df138ff841d6b551a6f7f9a77850fbdd2b9a83a8`)
+- `app/tests/test_cam_r31_ui.py` (1489 bytes; sha256 `d2e84ff56a822ae81820506f7b35eab059ac8eedf921a28be434cf8fdf330fe1`)
+- `app/tests/test_cam_r33.py` (1039 bytes; sha256 `68b4b163404d8ffb78fd6abd1f6414ec7440835c810c7ec41eb8a44d24a10ce3`)
+- `app/tests/test_cam_r37.py` (2421 bytes; sha256 `d1086fb6a4ba0c7c2d1e1d0c8c94108c240a9226e47416f74b9133b208dc71cd`)
+- `app/tests/test_cam_wake.py` (7402 bytes; sha256 `a6062a6682dbb0d4bc428d5296bf30e60ce86a27e8e421e2dbf7bd41252410fd`)
+- `app/tests/test_cam_worker_base.py` (1268 bytes; sha256 `2e16b995265e1ee2c41fa046536ae6f25893a26f94560cb9f881689fa3a30ef0`)
+- `app/tests/test_owner_end_state.py` (5169 bytes; sha256 `34027f36117002ef6071997352e6f9bbb46522d4a32186b1c990acc81ccd0de3`)
+- `app/tests/test_owner_live.py` (5738 bytes; sha256 `45be78df776abafa13a310652eb4ec12fd66d7a32c8bd0550f063edbe8407d91`)
+- `app/tests/test_r40_layout_sql.py` (953 bytes; sha256 `a43b770e44ca913e969b1c61e554385e76ecf6854f8c3d4967dee078c0f32964`)
+- `app/tests/test_wonder_reflection_fix.py` (8585 bytes; sha256 `1966887a02ff4d09ecf356004a2ac0e9d3a74562db14195e6e29531c785abd79`)
+- `README.md` (8274 bytes; sha256 `e0124f3a0e8f4558a9797b486313dcd54e6018d6f88bd54af1a6cc24e9862ced`)
+- `site/.gitignore` (313 bytes; sha256 `1a07e8a9110582e3e7abe0fd162997b054dff5a93f5fc3386f6d2736daf7b29c`)
+- `site/migrations/0001_init.sql` (1073 bytes; sha256 `3b0a35e786ef1bc7f699e0653569260b368477f66c5104ea6414821611445c77`)
+- `site/migrations/0002_cam.sql` (10055 bytes; sha256 `d0aef8a154250577f35b74ac1b8a15585164f6b1c09afc9ae50f481f82e85515`)
+- `site/migrations/0003_cam_seed.sql` (15386 bytes; sha256 `2127142c84dbb4a9bf3cadd51f182a97fc02ea96615e70c26f44cbcd81872525`)
+- `site/migrations/0004_cam_heights.sql` (6158 bytes; sha256 `8b64d47f5cec649d2625f454cc9e5d2dd5245ea1492331ec5d946d3f4212ce6d`)
+- `site/observatory/model/build.py` (53715 bytes; sha256 `50b6ab6bd2d2d0a11c49e7f44f0a8e8a4df394385483f14d37cfc71045bf22ca`)
+- `site/observatory/model/NOTES.md` (2492 bytes; sha256 `29b417690e7e71cbb1ba3e54206e5bee543d5e5d5ade0c8aa830e11152775293`)
+- `site/observatory/model/render-front.png` (1078732 bytes; sha256 `c6009bd96d1e92c019955b9d12b187126c120ed07e8e3a69003fbd6e719cc181`)
+- `site/observatory/model/room-contract.json` (12943 bytes; sha256 `9480952e1ccbca3f4b38fba21807da7448c8f57ca2808452331e6aa510702507`)
+- `site/observatory/model/room.glb` (7248424 bytes; sha256 `5654bec1da39dccae2c19e404412694248772a36f891e1ae2818e017641b5a08`)
+- `site/observatory/observatory.js` (18107 bytes; sha256 `c6da283c61eb24beeca5e2369a922b27df04ed8fe249e5413fc1249a448c82ee`)
+- `site/oneoff/r40_layout.sql` (5826 bytes; sha256 `c978de75a0972268880958679f6d2241818cfac1c32bab7f6591165a0eef01cf`)
+- `site/package-lock.json` (98095 bytes; sha256 `28bc5e3e3bd1a67d1102b8fbee18dfefa067e808fe85b6992ab75e287c6e555a`)
+- `site/package.json` (874 bytes; sha256 `9e42253f306973967bcb562d039d3b4e78be0134317983c35c6e4732f1ede419`)
+- `site/public/.gitattributes` (68 bytes; sha256 `b17c2b8164e10d70ccb0a82558785702825c2dfd3c4be3e3a3bc75695cc0a599`)
+- `site/public/_headers` (523 bytes; sha256 `363a91da1de72dcc9a692d0af95a555ea1e2fa2eba44a0d5408de63217c0f4c5`)
+- `site/public/cam/catalog.json` (30473 bytes; sha256 `bb8bce0d92dbef66758488a0fd53356a279d66554a96649064e9b271eda3a925`)
+- `site/public/cam/executor.json` (1512 bytes; sha256 `65dbbec6847736efe64041e387409d3df1f4ccb32e22be3d95941a284190ef41`)
+- `site/public/cam/fixture/now.json` (11078 bytes; sha256 `a73a7843f05b784a29878c6ad42eebfa10cbe96186f926b812c2d2511e5608b5`)
+- `site/public/cam/fixture/r29-heights.json` (20273 bytes; sha256 `69cf55daa94fbccbf56847fb328f427fd086d5564f43d5b4c19c3f7a30a6239c`)
+- `site/public/cam/fixture/weather-rows.json` (11847 bytes; sha256 `437516fad3147155faafaf70b0f2ae94d204f704f36b4477ac114682ebf5835c`)
+- `site/public/cam/manifest.json` (1685 bytes; sha256 `295164f75018a7dece118ba7087ee3f9d72abe2731dcfede33309c42244add3c`)
+- `site/public/cam/miniature/scene.glb` (1525852 bytes; sha256 `38430bbb698bfee30c38cd8343e447203fd4c070693c7348ec3307c907311540`)
+- `site/public/cam/miniature/THREE-LICENSE.txt` (1081 bytes; sha256 `8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc`)
+- `site/public/cam/rig.json` (100408 bytes; sha256 `bbb67a8d081dd7d977e729570952e84fd0fa315f3861fd370debe47c65b2ac8b`)
+- `site/public/cam/schema/interaction-spec.json` (6127 bytes; sha256 `b48f1c5061ed7570bb47babd6e65ab12d4ab3e28f60e7624dc5ad4f287074353`)
+- `site/public/cam/schema/object-card.json` (8130 bytes; sha256 `649d0b182b8f9df22a01d18131585a4559e84e951c736f685a731452591b0ab8`)
+- `site/public/cam/schema/validation-result.json` (8427 bytes; sha256 `db4b46ca0d69388ed96e7643257bf22cf206e9b6a561df9876528ab956bbaca0`)
+- `site/public/cam/sprites/alert_loaf.png` (1474 bytes; sha256 `1db28c1e65c0eba90173128a3d489439a70bc7148cb3fbdd1a34709a8c965426`)
+- `site/public/cam/sprites/jump.png` (3132 bytes; sha256 `46526d79f738b38c3cf6b7b8690bf229d8621e1c4902eea027db66b5b203f53c`)
+- `site/public/cam/sprites/look_up.png` (2734 bytes; sha256 `4a8fecaa2b96cf7e2b47550375073e855925b628f5c0d3679c5efc5974c2650b`)
+- `site/public/cam/sprites/sit.png` (2720 bytes; sha256 `c164552cbe163b2d4953aecfeb201844ebdef547eead12d2bb78b8bd98dd58ca`)
+- `site/public/cam/sprites/sleepy.png` (1840 bytes; sha256 `b0a930e038e83f71d7573fac7273cab9ed4cf057cd3977ce765c4807222e1915`)
+- `site/public/cam/sprites/stretch.png` (3118 bytes; sha256 `695ae6ba6c5c0307ea917d5481d18ba146c30efc2ea8d3907eb0a866f9f17ea2`)
+- `site/public/cam/sprites/walk.png` (2985 bytes; sha256 `de1a0bed254de56a430cc28061b7020030bb84938d29dded832d762ad1abd571`)
+- `site/public/cam-anim.d.ts` (2308 bytes; sha256 `052ab3f66401b0d8201be31cd1897aa2d1e8508e26538fb36c8647727c18865a`)
+- `site/public/cam-anim.js` (12487 bytes; sha256 `f079b289acebc9314662d7ceafb67ed11b8b776f83c084bcfc4292dce9ef6d7d`)
+- `site/public/cam-carry.d.ts` (403 bytes; sha256 `2991bbec5bfb24354e45e046891b814fde8a33330b180683093bb584fa806db4`)
+- `site/public/cam-carry.js` (797 bytes; sha256 `00c86273e6283a51c7e3e286f0858d9bf828b1375d010f42fdf4f37821a83e88`)
+- `site/public/cam-gift.d.ts` (3372 bytes; sha256 `867262773e15ad5430e01c8fbb44de9aa3dfc03b5246882e4f0dec079e6e421f`)
+- `site/public/cam-gift.js` (18662 bytes; sha256 `f95dde5fc579459b85380c3c1f9232afd5a05e21848a3d6a70790a1c8c2f3a24`)
+- `site/public/cam-home.css` (1576 bytes; sha256 `a542157982a22331c63678065d5977ebdc0fe575a78adc9c2cdec541bf1922f6`)
+- `site/public/cam-live.d.ts` (4486 bytes; sha256 `8c152663cf2b8ca622df07dc6b7328aa76451d85320a0604ce4ba8117ea01a81`)
+- `site/public/cam-live.js` (11918 bytes; sha256 `f9c6a8a1791e1349fe22b16145f705976e12482063bf64ead6c7257106e3341b`)
+- `site/public/cam-look.d.ts` (1697 bytes; sha256 `353068f9aebcb2ed2e5f79b15b4ebd7913dba5122ad5e3889b6ee488f7fcd86c`)
+- `site/public/cam-look.js` (10851 bytes; sha256 `a1e1224505ff4719907fecb84ec4300a7862ed05da2e20097cd197d77428a8d7`)
+- `site/public/cam-miniature-world.d.ts` (789 bytes; sha256 `ddaeb12ed976374ee20d0c809b05a898c070e1fd1fed7184e3222b10da25946e`)
+- `site/public/cam-miniature-world.js` (2767 bytes; sha256 `44546356f02514949807d1f1bd8340fc320ebb4babd8253a5874d523b5656d89`)
+- `site/public/cam-miniature.js` (906163 bytes; sha256 `51f29ef982e0d02e6b43b3e5a6d8fe742451325f6d25e08ede77a66eb692a5be`)
+- `site/public/cam-miniature.js.LEGAL.txt` (188 bytes; sha256 `cc7cc7e2f53d5db0235ab2226e85fc6e91655161573b39813b41bb00e5919674`)
+- `site/public/cam-observatory.js` (894711 bytes; sha256 `286bbdb62bdaafaf2c7f6cd6836d7b4e026c3ec6beed2c95216368395f71ecdd`)
+- `site/public/cam-props.d.ts` (2489 bytes; sha256 `ab190b51c02fb6555305405c8276f3d2fbaf7f1b4e2fe2c98622cdf2b8f5b532`)
+- `site/public/cam-props.js` (24572 bytes; sha256 `b651fe06266e73fbc346549bd128b5d6ec9e581a4e5f6ec2843a8b8d73aae382`)
+- `site/public/cam-replay.d.ts` (349 bytes; sha256 `58c270035fdf6c732c29f479676420f0448ee94b7481bcf14a27747ab1181724`)
+- `site/public/cam-replay.js` (2229 bytes; sha256 `34d99ec779b02000d5495bfda892762dd466e20751885cd3a351a403b1a756a5`)
+- `site/public/cam-rig.d.ts` (1493 bytes; sha256 `5169b9b986f6eb8ab174b41314621cf2a5a192658bae05ef35913bb6392ab484`)
+- `site/public/cam-rig.js` (4360 bytes; sha256 `7e85071f70f8a2f10e22a65dc41fe7ce1486f28a45d8f8f548c6afe77236a9b0`)
+- `site/public/cam-scene.d.ts` (4568 bytes; sha256 `1a6a7d4d3c056f683906a501c6c1cd42d43740e92ea67c665b0b05cc9146ef16`)
+- `site/public/cam-scene.js` (39713 bytes; sha256 `ba80cab9cbb41620bfde05e99b95ee8fc319f6ada2c9de0304efc76f5b3f8845`)
+- `site/public/cam-shared.d.ts` (3103 bytes; sha256 `751ebd60c8797d36d471232b26204efddd01ff5e258472f5edba03eaef5dcca7`)
+- `site/public/cam-shared.js` (18889 bytes; sha256 `9d928d42b343a8377eae34552252404068c141a3dc87f39f53e54a1d9a4e06bb`)
+- `site/public/cam-weather.d.ts` (1716 bytes; sha256 `c9e426a61487df9b01191fad0b9e590b1a0e414df5edd798eacad6ca6afbb159`)
+- `site/public/cam-weather.js` (9071 bytes; sha256 `7caa20535f687f268cdead976a5dcf573e1c17a0f3ea3df2b9b056f570cf8461`)
+- `site/public/cam-window.d.ts` (2585 bytes; sha256 `118f09ffab605d6df0c5cefa298fa6903734b79db26142597ccbd448121cccae`)
+- `site/public/cam-window.js` (9128 bytes; sha256 `130a302770c4eb51ea877988cd3ad48494eaaa11386d7edef58daf8d87f9f87b`)
+- `site/public/cam.css` (4920 bytes; sha256 `f1b625406bf67028e8aa463551dab55374b87075b0c306a6cec92847218615d3`)
+- `site/public/cam.html` (559 bytes; sha256 `2b2e832762400f96c3bd5ecb8a56b3a01fbeac435ed490579a67e8da12fc6e13`)
+- `site/public/cam.js` (43509 bytes; sha256 `cf129f839fe4fe3e8e5337de8f31f8acf3eefa245a8d57b82b12cb33ad4d7b4d`)
+- `site/public/common.js` (1598 bytes; sha256 `e3ac0838cfd0b016709b7f58aba626601d3e97d8951595502893d63eb0b2863e`)
+- `site/public/data/demo-events.json` (28292 bytes; sha256 `c5a26aa9f8eb2ffff2014878cae851dda40b089bcef73da66209995a86b49055`)
+- `site/public/data/demo-examples.json` (2021 bytes; sha256 `bb687b62a52214ee8a2e1893d2d4224b9a1bc6d686a40f112cc69503e328da64`)
+- `site/public/data-deletion.html` (2199 bytes; sha256 `4a6fd9fc00933ff6622ec4d6c3a6e4186a66749dd1fb7ffd776c44224edac7f4`)
+- `site/public/demo.html` (3540 bytes; sha256 `49be20fc75c4b9ebdbc54fb936b68eb6d877ea9fd7d1bfba76ce0176067c5558`)
+- `site/public/demo.js` (9943 bytes; sha256 `fbf3a1f4ddfc2902be6870268f5df2fcc99ebde890cb2c8b8bac951383bf0755`)
+- `site/public/index.html` (2008 bytes; sha256 `a1c6853d378727ef971b77b0e8057b2ee4d53f922f4f7c70bb9547586df386eb`)
+- `site/public/journal.html` (1779 bytes; sha256 `72b833c0a9a6a6b5f9e74c63de6c7a460df65803cdf3be56022180ebad373d2e`)
+- `site/public/journal.js` (6154 bytes; sha256 `2310b8ee8a80547cf70aed15d58410dafaa17083c9e4b692c9d090a0113c2ed6`)
+- `site/public/observatory/room-contract.json` (12943 bytes; sha256 `9480952e1ccbca3f4b38fba21807da7448c8f57ca2808452331e6aa510702507`)
+- `site/public/observatory/room.glb` (1397472 bytes; sha256 `f4ce67731d280b8257e6348d735b44517c83afad9b0513ee9dfd921434867a56`)
+- `site/public/observatory/tex/room-0.png` (90383 bytes; sha256 `121d1895839d2f96b8503a7f9c97da17098aeb76ffb9422574e35aca563d1cd2`)
+- `site/public/observatory/tex/room-1.png` (68995 bytes; sha256 `5b8c50ada0a46f9ac62e7fadccf21b53fe5adc73765ae239f78501059f765b82`)
+- `site/public/observatory/tex/room-10.png` (38476 bytes; sha256 `a9f43f511e33512293e7bb6a2f41c5c43f74e27fa2893a8168e369cce6daff72`)
+- `site/public/observatory/tex/room-11.png` (24247 bytes; sha256 `3fbe3da02b2f6ac96622e301d2c02af0801cfc5943121d36f6967eb9729c6396`)
+- `site/public/observatory/tex/room-12.png` (72082 bytes; sha256 `c8139473b532bed10388d3f50e1dea993a9869d932bb943cbdb1a8ff20f62267`)
+- `site/public/observatory/tex/room-13.png` (12998 bytes; sha256 `123fee07f4de726b6f11645b17c1ca8fcd5d4b3c8f1d693c5e53008272f5f91f`)
+- `site/public/observatory/tex/room-14.png` (7189 bytes; sha256 `d99712d8853ea0735aa0b393329b08a6904d19879e79ae680150c7526608170f`)
+- `site/public/observatory/tex/room-15.png` (1810025 bytes; sha256 `36f4516321a49bb32e2c2420653ce47bf7d368bf6e3af4c0540745ec2ec56a35`)
+- `site/public/observatory/tex/room-16.png` (1106458 bytes; sha256 `5e38413fa5b477b07d2a1e0e912b7f5b2d435a69a1d8979025b3f0e99d78b26c`)
+- `site/public/observatory/tex/room-17.png` (272696 bytes; sha256 `37f76ac4d4750b9c52dcae5802ba53ee509b3212b82eeabab2f66260efa28e61`)
+- `site/public/observatory/tex/room-18.png` (2310 bytes; sha256 `d7068ecdb8665bafecf2b54a3f9f97cb440cc4f8796452a8079d76f17b9bbe8c`)
+- `site/public/observatory/tex/room-19.png` (70883 bytes; sha256 `e29c4795166de1248e7456f163a3346e7c0e3d934d8695ff3ffb6e3c5914d321`)
+- `site/public/observatory/tex/room-2.png` (248419 bytes; sha256 `033c66321c9984120b98be8843b92251f3ea4593e69a7d9500b8717d89ce69dd`)
+- `site/public/observatory/tex/room-20.png` (124513 bytes; sha256 `bc55595866f3e5078f7937547c1b6a9e134453e7fa7673945b08839fd25d10fb`)
+- `site/public/observatory/tex/room-3.png` (56238 bytes; sha256 `504ea22cf139bdfacb0cfa3c4fe9d2653dd5a38369007128e44eca3870a22826`)
+- `site/public/observatory/tex/room-4.png` (97876 bytes; sha256 `8431d604242b9c91aa7d61c01094f666b9c2181bb46dfbdf9639ac0729250791`)
+- `site/public/observatory/tex/room-5.png` (13092 bytes; sha256 `326cc0331ebe6a53a515f1dfcd6a3d3d5f3dbda9135010bd48b045d951ee2874`)
+- `site/public/observatory/tex/room-6.png` (8034 bytes; sha256 `c6cb55c3c4c3b51e1baff73abc83dc517d862511e56fa19fc23f184be6fe9efc`)
+- `site/public/observatory/tex/room-7.png` (18921 bytes; sha256 `794dafa48000531d3fd985b1cc5d948b16606683c05e3dd4ec73aed1083107b0`)
+- `site/public/observatory/tex/room-8.png` (179807 bytes; sha256 `b169af19a56138d6eadee62992752507ae680d13624b7fa8c4ad60b785bb1912`)
+- `site/public/observatory/tex/room-9.png` (120189 bytes; sha256 `e499187da2d2372ac7c50acd4a649bc70c58db3f1dbd84f4b4edffaf176e8304`)
+- `site/public/post.html` (1352 bytes; sha256 `8b86a3f09d9121e75eea9eaf305cd89b337836af1d16e4e8426f229be8bf77fc`)
+- `site/public/post.js` (2990 bytes; sha256 `0f6a23d52e2dbd23c7bc81f95a15123222e2765f19db6fe30420a890d4c192fb`)
+- `site/public/posts.html` (1456 bytes; sha256 `842d471854e7667f3ea1dc4f0efb17a4b6d19cbd19e89b8fea3a14b0e3bd5b53`)
+- `site/public/posts.js` (1860 bytes; sha256 `b8289de5ddfc8b1f1d64e3abcce689b90e3e1129d9e97cfd228a2a28fd62cb6a`)
+- `site/public/privacy.html` (2773 bytes; sha256 `289d11ce985e0c7e8cb55c71dabeecf7199674390da2cb5be9d59355d534f7e0`)
+- `site/public/room/bg-day.jpg` (149188 bytes; sha256 `052d61d29a39089d3abac27e525a3cf97555bc267501de14906bd6d60277f02e`)
+- `site/public/room/bg-night.jpg` (136310 bytes; sha256 `a70f63910ddd417620d103495c12799740f0e400c97ec56b9da51d3c2f00eefe`)
+- `site/public/room/desktop.jpg` (115361 bytes; sha256 `0cf7c57a97b8dd808c9ccca00c833a916d744bc9550b1c20b372710f10860aad`)
+- `site/public/room/manifest.json` (4806 bytes; sha256 `dda80d1e65443bc1f90353e0875ab6023159dd5a38eb116c60963a83a3d3ed9c`)
+- `site/public/room/react.jpg` (85097 bytes; sha256 `57e3bf33fb81ed6bc53df51bcde09c78bae7ffa21c79466d9c2101a9f9a6c121`)
+- `site/public/room/README.md` (771 bytes; sha256 `d36ad85a27587324bb4c93411f56dba258c64b9d8587fdae3bb76cc2ff4cf10f`)
+- `site/public/room/sprites/nori-alarm.png` (42677 bytes; sha256 `2e34bb17f55cf4b4b3d33f4041c1366ea46fb3a65490eb87a504b0ad66df0bf0`)
+- `site/public/room/sprites/nori-alert-loaf.png` (40520 bytes; sha256 `91a81fef072e4c997e55de711a85ad68f0ad6e0fb05e18086cd31a017788bef7`)
+- `site/public/room/sprites/nori-alert.png` (43775 bytes; sha256 `f3deea2bc6f33b7fb4417a3479021b5eb8556c0951ca91c23cddfc94523b7c02`)
+- `site/public/room/sprites/nori-back.png` (25767 bytes; sha256 `0c10d04cbb9af61d3241edfe0c2c971e25e005feae4b7d676068da6c19507410`)
+- `site/public/room/sprites/nori-belly-up.png` (41932 bytes; sha256 `74622ce89d113155d5e9cb108655e898923ca7c0fe44073ecceab3d092180b3b`)
+- `site/public/room/sprites/nori-boba.png` (42865 bytes; sha256 `eb1c7bacd48a80606fdc5fc9b8545ca3090130a558d505519b7202c9cd3f3699`)
+- `site/public/room/sprites/nori-box.png` (47882 bytes; sha256 `dec799ff2adfbf2c5abd527f7e730422a57fa08b1723844ea585570baf6eccc4`)
+- `site/public/room/sprites/nori-browse.png` (53606 bytes; sha256 `86479eb53f9141b6e9eccf4fb985303e9bde4d904695a3b27c377fc5f927c2ab`)
+- `site/public/room/sprites/nori-chat.png` (48882 bytes; sha256 `e4123f957cacaee67f8dca4c4d5abbeb27b3fa7c35329eb9ed5e29aa66bd0ddd`)
+- `site/public/room/sprites/nori-cool.png` (42742 bytes; sha256 `33c2ef0d9f3aa9ce9ea1316a9053bf18e5fefbb48ecde74ae08495fc54fffb20`)
+- `site/public/room/sprites/nori-curious.png` (105468 bytes; sha256 `24d242b23ad65a93c32aa720aa6a18a769e52a36959113a65ee94da85ab5464a`)
+- `site/public/room/sprites/nori-dash.png` (42701 bytes; sha256 `8817e3a5b0e26c7b241e6b9378c4b84af41042d780a46a8a7c53958ad107cf08`)
+- `site/public/room/sprites/nori-dino-hoodie.png` (47722 bytes; sha256 `c4bf955e62b28d572375b8208a838d8ff746aad0fe40c1db306a9a664415cc8e`)
+- `site/public/room/sprites/nori-eat.png` (39476 bytes; sha256 `de0832326f148686b2a19d519c6de7c4aba360ab9dcc27571d9ad25a965249cc`)
+- `site/public/room/sprites/nori-gaming.png` (46614 bytes; sha256 `946bd4e9233bd42ec1f560e649d2d7139e959e5dcdfb6fda84b30c8986b887a5`)
+- `site/public/room/sprites/nori-giggle.png` (35468 bytes; sha256 `b1ee3c9503a2af097641024b7d2c5d5b046b85b8a775ea98b24724ca5f541b99`)
+- `site/public/room/sprites/nori-grumpy.png` (39839 bytes; sha256 `040e7c8552a02525147576bd27795f61a7789804fe6fe3f2b06e8cd5ea40a8e8`)
+- `site/public/room/sprites/nori-idea.png` (44907 bytes; sha256 `ef6ae6a4fe224a68b86a415c4ac790f536074ef32db6bd8ef2925d99468fb637`)
+- `site/public/room/sprites/nori-jump.png` (36071 bytes; sha256 `9e1edfd38afc567eb03276fad4edfc871a5d8a1a7d8da4e997a5b8bff27fc173`)
+- `site/public/room/sprites/nori-lamp.png` (45158 bytes; sha256 `8752982f4f9bca2f492dc61eb93ebb3db178e718b2dc7c61665ff37c03ce4d61`)
+- `site/public/room/sprites/nori-laptop.png` (40173 bytes; sha256 `4cb72b1a0a7c628664af28cb9b9c69e70c2155964fa6ac005c283189843e3c6d`)
+- `site/public/room/sprites/nori-look-up.png` (32416 bytes; sha256 `1a9cdad32447f7958890547c644f2cbd5d8060887c97b1e35aa24f979f345772`)
+- `site/public/room/sprites/nori-love-fish.png` (47078 bytes; sha256 `e923277fe939badd7188cb6bdd3a87359c743618e401a43bec73b8ec65f2a1b0`)
+- `site/public/room/sprites/nori-love.png` (135823 bytes; sha256 `3884e2863d1718d447526d3cd07ae6b107a20d6099b343760c20004cfb22c35b`)
+- `site/public/room/sprites/nori-magnify.png` (43116 bytes; sha256 `88ac69df4004c21c49f9741800eb4af2d983e1a599756fbe9f78c187d5c98cbb`)
+- `site/public/room/sprites/nori-meh.png` (39392 bytes; sha256 `7efa70bf4fb59e2fea9b8c0d234f9577b626a918989c35a8662d3319691a6993`)
+- `site/public/room/sprites/nori-music.png` (47694 bytes; sha256 `91417f45d27f03ad86056ea965098df5dc89e0e855b0e4a466915aa4432e1790`)
+- `site/public/room/sprites/nori-neutral.png` (131585 bytes; sha256 `d92f4a3c1d73076010d4d6042da175d13ba8f7c88b53bf16e3d8be08ce6be9e4`)
+- `site/public/room/sprites/nori-night-window.png` (36297 bytes; sha256 `77aa64b3c72bd430e4b67f4d8a04c37b5464cb4b850c14d26574cdb30e6cb3d8`)
+- `site/public/room/sprites/nori-note.png` (36608 bytes; sha256 `5da9b2566c50685efd322c146343a15ef70e49fa6d99fa461bcc134a3895781c`)
+- `site/public/room/sprites/nori-oops.png` (40537 bytes; sha256 `f06419b79e21551b913dd32e7c2c47dad35595ae2f7bd40964ac3eb4708b3334`)
+- `site/public/room/sprites/nori-peek-browser.png` (36541 bytes; sha256 `5fcf2cc2d649acbdc4b9aeee6b4f266c904e645b07fa2c67dc9b08716a2f835b`)
+- `site/public/room/sprites/nori-peek.png` (111073 bytes; sha256 `6702b9282541c830a7bcc0064a2c34d9389551808445ffb4e7c585770c848db4`)
+- `site/public/room/sprites/nori-phone-send.png` (36923 bytes; sha256 `96ff355e027a5cc1b0b41075a7d911c13c48d5ca62c51845ea8fb5abe33c1162`)
+- `site/public/room/sprites/nori-phone.png` (36239 bytes; sha256 `c60a29cec04f210460dd0909bdf27237442fc4f5e9b6345dc227bea50d428d25`)
+- `site/public/room/sprites/nori-pin-drawing.png` (42309 bytes; sha256 `fb3a7aa84dcb60707c4e84f2f9375b1d37290f4d3599cdca0fb41ef0605a65dc`)
+- `site/public/room/sprites/nori-ponder.png` (33328 bytes; sha256 `a0129995dcf0ecc0fc71127c4cde585429d94f9ed9019f0ea77338bc13674065`)
+- `site/public/room/sprites/nori-question.png` (39777 bytes; sha256 `5d2521bdef37be306c7887aa2b74fa6e603ca5afbaba0958348ca032f8672b1a`)
+- `site/public/room/sprites/nori-rain-window.png` (42841 bytes; sha256 `37db0edc8277826ba5e91f7480c83d2f40adc3a8bf1e587b4f828160c135a658`)
+- `site/public/room/sprites/nori-reading.png` (49536 bytes; sha256 `3b1f1480a4a75ea476067c3a79613c19e352210574aad5130896216f1df56b37`)
+- `site/public/room/sprites/nori-show-drawing.png` (45161 bytes; sha256 `3c6a3a0de6846b42c553c38a1ceb38f70c1e8489d301e2edd39cc4253198c6f0`)
+- `site/public/room/sprites/nori-sit.png` (32275 bytes; sha256 `e638b891e4daeda7a31d20b0d73e1db5917f89050bfbbdf161972b1e6836e0be`)
+- `site/public/room/sprites/nori-sketch.png` (44942 bytes; sha256 `1dab27b10add970625e5a1ce6b0d89690b76e6b01233343c573b2d23d4d0ceb4`)
+- `site/public/room/sprites/nori-sleep-bed.png` (44103 bytes; sha256 `bb9c274025431ccb7cd5458ce565f8a25f91544a3434f9f0afa183a67d44d57b`)
+- `site/public/room/sprites/nori-sleep-pillow.png` (39224 bytes; sha256 `5c8db50c070924616a987656fd50cb26e2815fec3c1d88a493a6a78d65d3dfb7`)
+- `site/public/room/sprites/nori-sleepy.png` (113148 bytes; sha256 `f2c6c2d541c6dcb4baa4433aed82782da6f9668642499f429a0993f6c1ca8d64`)
+- `site/public/room/sprites/nori-sneak.png` (33282 bytes; sha256 `0d5ebb9cc04eb650eb4cfcf4fe0b6bbe6dfc081eddebf86f693ce7fe877b216a`)
+- `site/public/room/sprites/nori-sniff-plant.png` (46968 bytes; sha256 `5a8ad73085b952168231ddc1f00b1479c42169744c6404fac2b80a19d4037fce`)
+- `site/public/room/sprites/nori-social.png` (43214 bytes; sha256 `83d7da09b71aed9601b8eb73571e91b36878104bf2e577fa9ef24dea6020e8b4`)
+- `site/public/room/sprites/nori-sparkle.png` (46237 bytes; sha256 `20bed5441c6cfcc11681193e420a6752885cd7828bf0953ee7beba76973cb4e8`)
+- `site/public/room/sprites/nori-starstruck.png` (33186 bytes; sha256 `8ca52588d8bd5d1d2ea1acdb2b11706e7e33d809cf81b076e80e4b3d775afba5`)
+- `site/public/room/sprites/nori-startled.png` (46440 bytes; sha256 `8752dc60ed001c4af69048c2ddc03c67906e29b85bda6992cc341ee2b83748f5`)
+- `site/public/room/sprites/nori-stretch.png` (36568 bytes; sha256 `cb0b16fb7cf5c6d24ae3d8e8317b769654b5b3d57afecea97a47ab7b102a1049`)
+- `site/public/room/sprites/nori-surprised.png` (137140 bytes; sha256 `580bbe6e5460747744702d791a2bfb758eaf254693bd2d47f1419cd14d3fca24`)
+- `site/public/room/sprites/nori-tablet.png` (36194 bytes; sha256 `080c8503a76f85724890f0850efe857ffdf34e238f8af436a628703518e6eacf`)
+- `site/public/room/sprites/nori-treat.png` (44528 bytes; sha256 `24781ed163121471bfea225f55008319fb2005384ff566cb1394597cd0de21f8`)
+- `site/public/room/sprites/nori-unimpressed.png` (31653 bytes; sha256 `b322d5de8744b9e563345f4081f32cd0b0757abe58343a85217be1b0d5130864`)
+- `site/public/room/sprites/nori-walk.png` (34389 bytes; sha256 `3dfa0968911afb6241d851a903e080d0deabfb2ddce54a7bb6c906dca1e3c1e8`)
+- `site/public/room/sprites/nori-watching.png` (36846 bytes; sha256 `49daee6eba9bd1e13a0ffa182f8318081aa8020d2a20548fd4c5dbfaf033547a`)
+- `site/public/room/sprites/nori-wave.png` (42703 bytes; sha256 `e688773b69684db399fa76ca44815566bafcab70000a6d61a2bf6d61d22ceea8`)
+- `site/public/room-logic.d.ts` (2345 bytes; sha256 `efa0adc49b62cc3a5a2ec7d3447c68ef84983e69da958c8167f0a24a835c69c3`)
+- `site/public/room-logic.js` (6103 bytes; sha256 `d7050540086edbff956d97fa9b38941f09c4cf09c2fc1f6d512dffddba78d8e3`)
+- `site/public/room.js` (19720 bytes; sha256 `089e2d1aca33ee5d7c28f22e56ce8786fbd3b65c2bc2b866f2fc23a6c1362762`)
+- `site/public/site.css` (15630 bytes; sha256 `e9d5ff2182b9018e3726ec0a64a9cfc1d788f78bac0b91f280460798dd7306c1`)
+- `site/sample/cam/ingest-gift-ready.json` (2534 bytes; sha256 `f88c96b3630066b00c9b55b625606b0a951b625956379700f944844d479ec6e9`)
+- `site/sample/cam/now.json` (3420 bytes; sha256 `594adbfe452ce93aa82a5026055ede65093862fb7deb383c31aa5e0cec51f41f`)
+- `site/sample/cam/weather-openmeteo-london.json` (8573 bytes; sha256 `dfa228569ba24df70f9512012f8ff5ddcbe156cbcf0f6c65f1415da893af06c3`)
+- `site/sample/cam/weather-rows.json` (11847 bytes; sha256 `437516fad3147155faafaf70b0f2ae94d204f704f36b4477ac114682ebf5835c`)
+- `site/sample/data/demo-events.json` (1318 bytes; sha256 `8a191686d6380fc4e547716dcbd8ce85a13e045ccfbb033a9d2e937db74a93b0`)
+- `site/sample/data/experiences.json` (1537 bytes; sha256 `d0ac564063cf63b197e09482f500447e300557841d929587d32da487e3128ed7`)
+- `site/sample/data/journal.json` (6188 bytes; sha256 `05ae0f7ffcd6f71a8f2d651786cc5772dd1f3255a0c04746cd51124ed45cb162`)
+- `site/sample/data/media-manifest.json` (321 bytes; sha256 `3719b522a932579a6f97a4ce5c939f05732b51eff74917866f8914338534259e`)
+- `site/sample/data/posts.json` (2546 bytes; sha256 `58aba806155d89e37e9b0f23f5651647177111d950663f94f3314699151d8850`)
+- `site/sample/data/room.json` (2009 bytes; sha256 `4f9c50ed62f67ff7b855217d1942f93f11b10ddd70d7eaea5cda7f9a305ac4ae`)
+- `site/sample/data/x-reading-list.json` (17 bytes; sha256 `0b68bab6d2c6e338dce8e32bc4e1f2468515b6d993d600bbee8bcb6a8fb150a5`)
+- `site/scripts/blind-test.ts` (30501 bytes; sha256 `393ff1c884af1d8ee9e4dbe0e50a1675f4503318201c4f646e4e416a81d2c497`)
+- `site/scripts/build-miniature.mjs` (1091 bytes; sha256 `eacdcfc545142ebd5adfcbb829107131e9ecb8b2ba7cf14ad1cf1a2a889930fc`)
+- `site/scripts/build-observatory.mjs` (4830 bytes; sha256 `88b2f3c78fd7fbe76c369ae45d004d6ca1c89d0e8e7f09e29551668e9fa73689`)
+- `site/scripts/cam-local-reset.sql` (584 bytes; sha256 `c6173869a41e719aef8539b50d249f2439a1ae7bdede5ba4498d21e0df2060d7`)
+- `site/scripts/cam-local-smoke.ts` (801 bytes; sha256 `cdcc49212baa1969909db3c1a8f5c61a940d570a8db72a9579bd8ce984d9b032`)
+- `site/scripts/cam-m2-local.ts` (7876 bytes; sha256 `35ccefe36ec255bf0038e40a6c19a001ead42123c456ce524b02f6e505c70cad`)
+- `site/scripts/cam-test-db.ts` (1578 bytes; sha256 `567b287fff0d28a64338a6667dc99ea3252842ede7276127837602e9295b0e25`)
+- `site/scripts/demo-flow-check.mjs` (2837 bytes; sha256 `75bb46e11f27272ab35b7cb8e2a28cebdcbb36b6a9c0a498ecf1be0254f7cda6`)
+- `site/scripts/fake-upstream.mjs` (1825 bytes; sha256 `dcfddf784d3d86a55370260447e000852ae68689a1fabad60101e330d29ddefe`)
+- `site/scripts/frames_gen.py` (16039 bytes; sha256 `3f706d44aa8ab6e9190aacc90cf5865115845921e27d0574ba1b53e0fa2d6d91`)
+- `site/scripts/frames_plan.json` (2712 bytes; sha256 `2593d7b21791b6a45c03c3725b4a46f7ef23972cf1834bba7cb1541f6cc027a9`)
+- `site/scripts/gen-executor.ts` (197 bytes; sha256 `fef41e352d445607d81c32197c8b43b0293c44eca5c9218b1da7f3065aa9aa73`)
+- `site/scripts/mock-cam-api.mjs` (4638 bytes; sha256 `52199b52c6aedb4abf7178c2d8da7481ec566a6eea0cfe43d746eb03c40c0e63`)
+- `site/scripts/pixelize_sprites.py` (5035 bytes; sha256 `31fcda6ece9a22805b4cb9aa9360052d5befab41ae04e5c7d164df414babe3e5`)
+- `site/scripts/screenshots.mjs` (2932 bytes; sha256 `10dba5eb88db8bf4dd35b4c1a138c94180064e4aa718bbe1febdb916b5a927a0`)
+- `site/scripts/seed-cam.ts` (2080 bytes; sha256 `59aa58d653c03bc7e86f8b7708fc1fecdb63040468f4a955722eaee911076c92`)
+- `site/scripts/seed-sample.mjs` (870 bytes; sha256 `a8bd704eaa48a6d733ed7d57c152461fecad5e8922fca873c223f11727cc1827`)
+- `site/scripts/simulate.ts` (3662 bytes; sha256 `4eff1ee5750cedc66ca5e448613ccc3211296203c7c54496433738eb8b83d9ae`)
+- `site/src/worker/api.ts` (10950 bytes; sha256 `04f002488358af055a41b43a24aa645a95f9ccc4589939fa829d12add2424a55`)
+- `site/src/worker/cam/api.ts` (3093 bytes; sha256 `f64b3a20a859740ecf698993acfc35d284d2fb7086305341ef85a28609879fd4`)
+- `site/src/worker/cam/auth.ts` (2687 bytes; sha256 `7c24406f7258ee39e385929e1601d60455485840034dcc89026e70bd3f76389a`)
+- `site/src/worker/cam/blind.ts` (40589 bytes; sha256 `7ca2af4c6b6dad1113c4ed854da266cdcc1e33ae06658b81e609114e671d468c`)
+- `site/src/worker/cam/budget.ts` (2507 bytes; sha256 `5ef2a21c8ef4fbaea2cb692cd39e5725bb639a3031f8ee3c8f67fde7625c01ef`)
+- `site/src/worker/cam/clock.ts` (2212 bytes; sha256 `c9b0118b535d38a04df6608df17d044534f0f3d34a87547f49254c0016b24288`)
+- `site/src/worker/cam/cloud.ts` (1694 bytes; sha256 `98fb07b6b6bf84f4d8dfcbfb4b8b3cb6d674f93b4cdb58c0202907abaa2a3d0a`)
+- `site/src/worker/cam/dispatch.ts` (1550 bytes; sha256 `6b13b146822f981cb2f9830ccf2a066a1500e6882ff56f32cd3dc2da37fa6077`)
+- `site/src/worker/cam/drawing-plan.ts` (2018 bytes; sha256 `685af20e1096d70e76a5f14e6c8eb352914669a44b7813912c34b11c95b36734`)
+- `site/src/worker/cam/engine.ts` (7053 bytes; sha256 `b8c05505710b07e44369c11870bec8082a8c7912712820b658ccbdd03faeb8dc`)
+- `site/src/worker/cam/evidence.ts` (1375 bytes; sha256 `180afc1638ed9ad584eb50ec9d0f0ea916a135b4ab07c91eae5f669c1e18f1b7`)
+- `site/src/worker/cam/facts.ts` (4461 bytes; sha256 `152c804a4e0497c98a2fa93df0913c42610561fa31f2065c23940cd45fffd173`)
+- `site/src/worker/cam/gift-costs.ts` (2293 bytes; sha256 `24f04b0020898aefb79dae23307cf039236985c3ce2f9a9ac37679c228661b48`)
+- `site/src/worker/cam/gift-timeout.ts` (1171 bytes; sha256 `53234236dc3934bfeff0e777567d067c8af565f523701e86ebb3220bc08a8d77`)
+- `site/src/worker/cam/gifts.ts` (37448 bytes; sha256 `7cf45c1f61455760d2addf9f993047f27d8b728406db283dca4c1b2888fd3f7d`)
+- `site/src/worker/cam/heights.ts` (4101 bytes; sha256 `de5a7df0ef1ac11aceb101db0a063e659f6eb0492ba3d7b9d3c38cf3b43e5fe5`)
+- `site/src/worker/cam/ingest.ts` (8306 bytes; sha256 `6ef07c294a39fc23a8fd4d0f10c2c50ed2fc0e46625adbd43c2eab6e603207b6`)
+- `site/src/worker/cam/inspect.ts` (16901 bytes; sha256 `d27f04f7cecf5de9ede5dcfdcd7cd5cff86ad566e399aef13e9e5fa603af511c`)
+- `site/src/worker/cam/intent-plan.ts` (5651 bytes; sha256 `93b15b3cffe7c3dba66ffde3ef4d4d2d00a169e5b4a3c3bf1544bd73321c7527`)
+- `site/src/worker/cam/PHYSICS.md` (1365 bytes; sha256 `bdaca1a9d618670728b23a22235cae331ccb9f7391aec6f0e45ec34ab61f9ae7`)
+- `site/src/worker/cam/physics.ts` (4524 bytes; sha256 `8db381def44aaaedb18ea6ea344fe3b46a786a8bafc284549618ead9aacb8038`)
+- `site/src/worker/cam/placement.ts` (765 bytes; sha256 `eb920878c982b25a09524719ae17df59ddd5c62c1039f170742db2945dba2903`)
+- `site/src/worker/cam/plan.ts` (26818 bytes; sha256 `ac281fd2de3a6a08877f8b4d6a04ed9b929ca9412f431a8a6156f2205d7c1e47`)
+- `site/src/worker/cam/replan.ts` (15044 bytes; sha256 `58ae1dfed7ae27da12a0c5a59f864d79f7aa5d6ac5907df04d317bfa449bca4c`)
+- `site/src/worker/cam/rng.ts` (596 bytes; sha256 `7ec2a7842b6cb6fa6c1b7b5f3035ead15635dcda773cf477f341729a5cfa430b`)
+- `site/src/worker/cam/segment-gate.ts` (8090 bytes; sha256 `28091c37a64bc4638ed0dbdee950a505131b51667ecc07ff50f7ba81f1ee74b8`)
+- `site/src/worker/cam/settle.ts` (10661 bytes; sha256 `c05cac125a52e37c85435a74bf7f436d4a9bcf23513e58ef31b2c727baa95948`)
+- `site/src/worker/cam/smoke.ts` (403 bytes; sha256 `2fe7a9f8df86551192b0780b893f399489e99132b91cd751af0773fe838b7fdd`)
+- `site/src/worker/cam/spark-validate.ts` (4631 bytes; sha256 `213044bb6924d7951be3614c412af81f45765d046abf1908c4998f3b18631ff6`)
+- `site/src/worker/cam/spark.ts` (12506 bytes; sha256 `6c570d3ab82569a20f2d9549e064b6fa7a4c59418ec4de8477fc37e5f3bb3b43`)
+- `site/src/worker/cam/store.ts` (8598 bytes; sha256 `5391413668da76afd083b2508ea75a60a6217e2a7650fd392e7012b5774e55a7`)
+- `site/src/worker/cam/timeline.ts` (13611 bytes; sha256 `d0e35ed65c21e4c006e9598454aa69188465271c863db9861720a719e8d78173`)
+- `site/src/worker/cam/triggers.ts` (4723 bytes; sha256 `70c22cc994a9642476c33d035811bcce9d444bbd495c6d43f21756313f5ecd1f`)
+- `site/src/worker/cam/types.ts` (5945 bytes; sha256 `c0ff788c29bb1cf537c8d09e9135d3931b6ee35bb129179925ff9eacd4145103`)
+- `site/src/worker/cam/validate.ts` (21336 bytes; sha256 `0affdc4f4340cf4eb85449d2a6fcd3821ae00f1ee636c7798b5a2c5a4922fa46`)
+- `site/src/worker/cam/weather.ts` (14572 bytes; sha256 `305fe8259328e93e2da8f6ee8d1feb3dbcd90b557b6cc8156c18e403374d0f8c`)
+- `site/src/worker/headers.ts` (1492 bytes; sha256 `67e65f2aca29cff859be16ec47538d50ae74c57233e8679a90a385611eeecc34`)
+- `site/src/worker/index.ts` (4800 bytes; sha256 `e03a8a666df90ac30f15343967f6c100259a60a22f0c69142f37c55bf9b75249`)
+- `site/src/worker/limits.ts` (4873 bytes; sha256 `e55a7889e0e41961f938aaf20aa485400a237a2b6010f6a7ed9ade9a1de16b89`)
+- `site/src/worker/live.ts` (2279 bytes; sha256 `33e50dc20a7f4d563ce3d4a87e9a7365ecad5da046bb5489a487f140a6a2ba79`)
+- `site/src/worker/media.ts` (2249 bytes; sha256 `11e0a9fab3013bba16637856185ebb72d1762d1e828f29af6e2cae5b5df7c121`)
+- `site/src/worker/nori.ts` (6456 bytes; sha256 `64840a47bd4850bc4aea5264df313de5f66314c7751274426a872da17c741d1b`)
+- `site/src/worker/wake.ts` (2925 bytes; sha256 `7e8b02bc46c0e66e845f7d1dfdb5cdb8bd70a7d7a5fd54ff354a5be311e45725`)
+- `site/test/api.test.ts` (19882 bytes; sha256 `27d256937b974accf2dde8d8e56658ad329e6ec8c661894de09c5532a57af683`)
+- `site/test/cam-a1b-r2-simulation.test.ts` (1992 bytes; sha256 `96c27057e0c0b52ef1ed6f571fbea94e9f0d60c73ddb426d7fce8cc366393bd7`)
+- `site/test/cam-a1b-r2.test.ts` (11009 bytes; sha256 `8d6e18e6c0cfbe9f100ac66a16e41e9a1d5bd8f863456db4a192be8ac14cf73d`)
+- `site/test/cam-a2d.test.ts` (8907 bytes; sha256 `dcec5ee17a1079711d5da00e95d76172f1ecd8733f4c2f61517f3bc67df58731`)
+- `site/test/cam-anim.test.ts` (6220 bytes; sha256 `0e12ff5a2f851684d5f9dcaa15bb5846d685fbf31b3b01a594cd753c22f1a0dd`)
+- `site/test/cam-b7-render.test.ts` (4528 bytes; sha256 `a18bc91db7fc00ab4500f784f2e40da98eac9ee88f45e23e0eaf8c9033855013`)
+- `site/test/cam-b8-fixtures.test.ts` (2487 bytes; sha256 `043a441c39bcba700789659c3e23c72388b8b53e2dc3e6de9b2129014d2ff6fe`)
+- `site/test/cam-b8-render.test.ts` (8822 bytes; sha256 `58eff6b1aca17086f64f3db50d16b65df0b002556bfe75106535d0efe90a71af`)
+- `site/test/cam-b8c-visible.test.ts` (5671 bytes; sha256 `33eecdc2c0a3b2b69ffd73e8c9bc7c10ae440b860fa0ebc65242033890a2f862`)
+- `site/test/cam-bench.test.ts` (1543 bytes; sha256 `a142c75d4855e9ec7d3d8993165b1adbfb3556610ce17dbfba8d4eefe2bc9976`)
+- `site/test/cam-blind.test.ts` (45185 bytes; sha256 `64eb01e80d94e4e93bc2bfdcc680259ef324d24f732ce54d43bc9c63619222ef`)
+- `site/test/cam-c1-gift.test.ts` (7591 bytes; sha256 `860e74d9999cc5d3539b964ff3ed50fc89f6cae780e71956075e54f2466b0ca5`)
+- `site/test/cam-carry.test.ts` (2181 bytes; sha256 `eabb5b81c1054c3bd6e341a12ebbcb71b0695a3b17093c8211d971fdf44a0898`)
+- `site/test/cam-clock.test.ts` (4995 bytes; sha256 `a1b4efa00e10e443c9922eb21067231ae7fdfd6c9ab5b8d75e0e515b9e89b85a`)
+- `site/test/cam-d1fix.test.ts` (44268 bytes; sha256 `a35222b6d2f971f5696eac7d06e2e8c2d230c6a8ab997c071dbe6eae08a491a5`)
+- `site/test/cam-d1fix7-surface-placement.test.ts` (9396 bytes; sha256 `0e81b6f81050ab7ddacdad039ab6580099e6703940fdd514bca5e25a3d224b63`)
+- `site/test/cam-engine.test.ts` (4214 bytes; sha256 `6d7fbfe9e36342779f32a0d1833deed76d724851124e62a8c167008bfaa66207`)
+- `site/test/cam-g1-sprite.test.ts` (1839 bytes; sha256 `08e36cb08d1ed9e8c4a318e42cbf623a8848ef47305e5627bbab9c1cb9a9e506`)
+- `site/test/cam-geometry.test.ts` (3035 bytes; sha256 `a2f8c669a5d07bf131114e98913d313cc664dc7f1a39bb555185c8dd1dd2acfd`)
+- `site/test/cam-gift-status.test.ts` (7616 bytes; sha256 `397b729dac69fb887c4d2ae06d92491628950879565aa8d09ec7672e20dcfe59`)
+- `site/test/cam-gift-ui.test.ts` (19114 bytes; sha256 `993d737da18b748b975368d30345ee972d846175e26973d9fb3002cc8345e469`)
+- `site/test/cam-gifts.test.ts` (56587 bytes; sha256 `d25c6418289fb9ee88e5cb71999bc65c65fca8bdd3fc2cdd7715c58e4a9a2743`)
+- `site/test/cam-heights.test.ts` (11780 bytes; sha256 `1e93dccbb2ed8e919b3a4f4e85c50dccc4031f30e2a66b28b8d9a23bb19232d1`)
+- `site/test/cam-inspect-ingest.test.ts` (24239 bytes; sha256 `d7d7b985807fd3e27d9292f29fb396e46b5075999aced9b31e18f66abba4f791`)
+- `site/test/cam-live.test.ts` (9903 bytes; sha256 `d26c79ce1b69a7e4460b681c685706df9bacb55b85c6884ee811112dcdce06a2`)
+- `site/test/cam-look.test.ts` (7761 bytes; sha256 `1772552fb82510de8d6e0b06ee27902f192a0af2970371d64c5917e6d4cac935`)
+- `site/test/cam-miniature-world.test.ts` (2412 bytes; sha256 `93d23a1b1fe95ed3d50e339a8a80ee94a0db17120d89143420806a0f4bcd8e72`)
+- `site/test/cam-nori-night.test.ts` (9569 bytes; sha256 `0432f840ed5532118c035e3e519025b4743d80b137d8932b4f9c1ed60fe97c4b`)
+- `site/test/cam-physics.test.ts` (4495 bytes; sha256 `9d63bd94d0d9b97d3454946ad3aa80c4be28a82a39c54ec8c681a425104404c4`)
+- `site/test/cam-plan.test.ts` (4699 bytes; sha256 `b877760de24b409a83b362ec7ac45aaae254bda78f65ce44dc030b9a6b701840`)
+- `site/test/cam-props.test.ts` (6356 bytes; sha256 `555307286327073d192aa2159938186f95b5111423be456de586aa131ed1af43`)
+- `site/test/cam-r2.test.ts` (8436 bytes; sha256 `4677a6865bd1e86cdf282c9a09082c85e3db2c6e97cc90dc1b537a2c02995372`)
+- `site/test/cam-replay.test.ts` (2898 bytes; sha256 `2c3d124a3a53d78983428428f76853227d598f147e9d3f566cc85c70a86035ae`)
+- `site/test/cam-rig-render.test.ts` (4809 bytes; sha256 `07349179c6b0486875785052f44077d902a35e2f5cec7203615618732e6728c0`)
+- `site/test/cam-rig.test.ts` (6438 bytes; sha256 `606d8c677aaac17c14fdc88617424b293ea9bb804229e99f4dbdb487bd5f7e0d`)
+- `site/test/cam-scene.test.ts` (18941 bytes; sha256 `182c4b8d00c4b1a90d68efcaf2ac88fd5281f25ffe5ff258e0534ef11d36bea0`)
+- `site/test/cam-settle.test.ts` (4298 bytes; sha256 `1ee7996053d15205b68f1ed89f4697309677c86c1f6e257dd03ffed97ab7aafa`)
+- `site/test/cam-shared.test.ts` (4531 bytes; sha256 `31910082ad9eded23f7c20975ce2c7893ad3eb05bab73a709dfa91d9911595cc`)
+- `site/test/cam-sleep-get.test.ts` (1714 bytes; sha256 `7936cf164a37184b3dbf58c056ae4fc2b2bd39cf876fc8608c26a738c85bc2ae`)
+- `site/test/cam-spark.test.ts` (41943 bytes; sha256 `8b0308248736e6779d281aa9ae29d6b4ef1254cbf7ab2104ed04f271ba03d6f8`)
+- `site/test/cam-timeline-edges.test.ts` (4069 bytes; sha256 `394256c35c7176c568f921b8043c9144be8a89a525739d1bbbb99ea9686d0038`)
+- `site/test/cam-timeline.test.ts` (7667 bytes; sha256 `3d20b3e8c660805da22c3bb73137e5c5a23566598a9e61df75efdad1c17378c2`)
+- `site/test/cam-weather.test.ts` (18295 bytes; sha256 `51497d05a4029f00da606907ff3e924c6ddeb80dc2320d9972b77a7c754d2073`)
+- `site/test/cam-window.test.ts` (8396 bytes; sha256 `106a07bbe998938b9bb58340e7eaec9c1dba608df548a68c4853ae486c12b51b`)
+- `site/test/cam-wonder-prompt-contract.test.ts` (1839 bytes; sha256 `8612a5c7a7ba0ec97497326d7c0382cdb6acfd01308bb11fcf19687af963c761`)
+- `site/test/consistency.test.ts` (2687 bytes; sha256 `8c4b535526cfa852cb861be5af0dc0fffc7905d036644b2363c2c538f6d433e8`)
+- `site/test/d1shim.ts` (1229 bytes; sha256 `fca686d6e7fb92aa2c531c19e402ea126f0f6c49d51a29a984dcc8820765b5c8`)
+- `site/test/fixtures/blind/cardboard-box.raw.json` (2223 bytes; sha256 `d817dc5649d8d403dec90594bd97ebf3debf99089535316c6605fb21284e718c`)
+- `site/test/fixtures/blind/cardboard-box.registration.json` (113 bytes; sha256 `092c52059c46a638682d16d743364cbb0ca85c7b6a61e6fb8c5ca93e5edf351c`)
+- `site/test/fixtures/blind/toy-piano.raw.json` (2329 bytes; sha256 `e972950f77102067a9df3acb13d9c4a244959c63a2df2a28858343fd8eca9cf2`)
+- `site/test/fixtures/blind/toy-piano.registration.json` (116 bytes; sha256 `1a79ca85504cf843ea83de1ad8af2a154e0d24cf088d7128a2bc23473acaa2f3`)
+- `site/test/fixtures/blind/wall-poster.raw.json` (2355 bytes; sha256 `a6ca82a5da5b69a5fc44f3421ec1856c2587a2b250439f9d886907c54bbf9084`)
+- `site/test/fixtures/blind/wall-poster.registration.json` (91 bytes; sha256 `a6ab4f6f1fab3be414d0ea32e29b6e53464b7aaf74ffcda172a4634896e06fbd`)
+- `site/test/fixtures/cam-live-1.json` (1272 bytes; sha256 `9eac64ae95360480a0fa0580556eb48517267c1ee18bc570d31a7ad2ba9243d6`)
+- `site/test/fixtures/cam-live-2.json` (1056 bytes; sha256 `eb51b6334d86e280a07686095ec34f4ca3fdba9ac941c94e6246231524139f2a`)
+- `site/test/fixtures/cam-live-304.json` (344 bytes; sha256 `0e885203f0f00b65604dfbcefa13dfdbff1022527301b7271cd699527e0955d0`)
+- `site/test/fixtures/cam-live-bed.json` (4139 bytes; sha256 `b57715303e79d3113040a22348d0bc98d382b4a29632b79c7b6cd515bec4f784`)
+- `site/test/fixtures/cam-live-computer.json` (4153 bytes; sha256 `82d64bf47b94107e7e3d1eee7cf0ca251682e005f214b39963ca61cc84ab7675`)
+- `site/test/fixtures/cam-live-desk-behind.json` (4135 bytes; sha256 `2c85a3ff84b58552b459e3c4ceb06ab2a79a4e431398446692c72ae55b2056c8`)
+- `site/test/fixtures/cam-live-desk.json` (4149 bytes; sha256 `578cb1b74925d023eb7fe90c0ed7c8d944aae5dbff93fab62fc7cdf9e143771a`)
+- `site/test/fixtures/cam-live-drink.json` (4143 bytes; sha256 `0c8818b850ad9df9acce9e665e27de550e2954901b00a2bfe1f5598e8d1185b5`)
+- `site/test/fixtures/cam-live-gifts.json` (6422 bytes; sha256 `e5c1d0e5f4095bbe017b1aa31d251684b3d98c45837da0238e475be506477de7`)
+- `site/test/fixtures/cam-live-heights.json` (20273 bytes; sha256 `69cf55daa94fbccbf56847fb328f427fd086d5564f43d5b4c19c3f7a30a6239c`)
+- `site/test/fixtures/cam-live-real.json` (7787 bytes; sha256 `9e4e2eb299348fe8e2f9acff9ccb2a5a6e23f6fed7f2288e826b8d4352c14c72`)
+- `site/test/fixtures/consistency.json` (115332 bytes; sha256 `de817356a6d630e26178bca9cd122e1cc2cb473513551fb8e46ef667e2bbfc82`)
+- `site/test/fixtures/edit-logs/case-1.jsonl` (0 bytes; sha256 `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`)
+- `site/test/fixtures/edit-logs/case-2.jsonl` (71 bytes; sha256 `07488315898be560feaef0045b96ec80a85a3ced1a7c19b81c832aa37a7bc665`)
+- `site/test/fixtures/edit-logs/case-3.jsonl` (146 bytes; sha256 `a6d6410c10e8c6067e3f57da118b277b0b10fc819c1493e5e72d5ef52a28fb9f`)
+- `site/test/fixtures/edit-logs/case-4.jsonl` (292 bytes; sha256 `c1ab517aa55af9162e2dffc8633c222191f32e8aadaa967722fa9e06f0c747cd`)
+- `site/test/fixtures/edit-logs/case-5.jsonl` (730 bytes; sha256 `d992d12af59ed741c789c11b6b65849106a5a44dbe69d6b3ff369ee4ec9f6cb4`)
+- `site/test/helpers.ts` (3229 bytes; sha256 `58aa9eeca69da59fa9fa0e2fdad2d5321a8986144f495f5a046453cfdfdace44`)
+- `site/test/live.test.ts` (2715 bytes; sha256 `fef1625f7c7241b6bf0774475f00a722035e6028b0ac1755d2e85062814894db`)
+- `site/test/media.test.ts` (1920 bytes; sha256 `1ba1e19dba23d2be07dcd75cb4641c5c3a8f9a99f47b1ded25d4d88dad8fc651`)
+- `site/test/room.test.ts` (6403 bytes; sha256 `6e2414279cc890aa28eed5b306d6d0497d3cf5769706a8fdb4d489481a58168f`)
+- `site/test/wake.test.ts` (3860 bytes; sha256 `67dcc23ff76cb13681481043b30fad6f0680ce7de80d141ad692656aafd3c744`)
+- `site/tsconfig.json` (362 bytes; sha256 `7c22f5a2035056f68c93f28284526bdd03bb5bc4ed0734b925b5d102912dbeb8`)
+- `site/visual/miniature.js` (23696 bytes; sha256 `a273f5252a278c6158ec1fbc03c84cc9d60e4574865bd3197dd26fd9e0acf958`)
+- `site/visual/r39-room-dressing.js` (10166 bytes; sha256 `683daf66d84a21bee76303325758fca560b1f742b80e0a2a45aeb22df80d0e60`)
+- `site/vitest.config.ts` (121 bytes; sha256 `62977309b9fe0074821a45826f88a738e95f0e770b4071115a585849698319ad`)
+- `site/wrangler.toml` (3008 bytes; sha256 `1672012b8fc70292be8735d2f34d01b6628b2606e21efddfcb5f5c3b97b77e5b`)
+- `THIRD_PARTY_NOTICES.md` (2023 bytes; sha256 `a47602b9190d8c55a7ed5d26bea1b6c628a7d4a8d18deec63c436af5c3078c8f`)
+- `tools/r40_layout_sql.py` (5995 bytes; sha256 `10394bb78550cc811bcc8891d7ae0bfbf7327c0898e7692e60c5fad856b22eae`)
+- `tools/record_observatory_gift.py` (8125 bytes; sha256 `fffce198aabaefe3bfc1dd86cc91e8c5f7c968fb68f51a5e4ec34b7344278fe9`)
+- `tools/wonder_live_probe.py` (4468 bytes; sha256 `c558e68a8133b6a42307b2ede534e8cefc436f6cd54ea3db688a1f82bec8821d`)

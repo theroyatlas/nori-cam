@@ -1,0 +1,11 @@
+import {readFileSync,copyFileSync,existsSync} from 'node:fs';
+import {resolve,dirname} from 'node:path';
+import {fileURLToPath,pathToFileURL} from 'node:url';
+const site=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+const dependencies=resolve(site,'node_modules');
+if(!existsSync(resolve(dependencies,'three')))throw Error('Run npm ci in site before building.');
+const version=JSON.parse(readFileSync(resolve(dependencies,'three/package.json'),'utf8')).version;if(version!=='0.187.0')throw Error('Expected Three.js 0.187.0');
+const {build}=await import(pathToFileURL(resolve(site,'node_modules/esbuild/lib/main.js')));
+await build({entryPoints:[resolve(site,'visual/miniature.js')],nodePaths:[dependencies],bundle:true,format:'esm',platform:'browser',target:'chrome120',minify:true,legalComments:'linked',external:['./cam-shared.js','./cam-props.js'],outfile:resolve(site,'public/cam-miniature.js')});
+copyFileSync(resolve(dependencies,'three/LICENSE'),resolve(site,'public/cam/miniature/THREE-LICENSE.txt'));
+console.log('Built opt-in miniature renderer using Three.js '+version);

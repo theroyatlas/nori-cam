@@ -1,0 +1,6 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; font-src 'self'; media-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; img-src 'self' data: https://upload.wikimedia.org https://images-assets.nasa.gov https://images-api.nasa.gov https://apod.nasa.gov
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

@@ -1,0 +1,124 @@
+{
+  "name": "wall poster",
+  "category": "household",
+  "contract_version": "cam-d1fix-2",
+  "content_safety": {
+    "ok": true,
+    "reason": "ok"
+  },
+  "identifiable_person_present": false,
+  "initial_state": "default",
+  "size": "M",
+  "object_card": {
+    "name": "wall poster",
+    "category": "household",
+    "size": "M",
+    "height": "mid",
+    "tags": [
+      "viewpoint"
+    ],
+    "sensations": {
+      "light": 0.5
+    },
+    "parts": [
+      {
+        "kind": "front",
+        "label": "printed poster sheet",
+        "side": "front",
+        "height": "mid"
+      }
+    ],
+    "states": [
+      "default"
+    ],
+    "hazards": [],
+    "space": {
+      "cm": {
+        "w": 40,
+        "d": 5,
+        "h": 60
+      },
+      "blocks": false,
+      "placement": "wall",
+      "movable": {
+        "push": false,
+        "rotate": false,
+        "stack": false
+      },
+      "state_cm": {}
+    },
+    "affordances": [
+      {
+        "verb": "gaze at poster",
+        "effect_text": "look up at the flat paper poster on the wall",
+        "sensations": [
+          "light"
+        ]
+      }
+    ],
+    "beyond_executor": [
+      "peel corner of wall poster"
+    ],
+    "summary": "Flat paper poster mounted flush on the wall."
+  },
+  "interactions": [
+    {
+      "verb": "push_poster_noisy",
+      "sensations": {
+        "light": 0.5
+      },
+      "steps": [
+        {
+          "p": "move_to",
+          "part": "front"
+        },
+        {
+          "p": "push",
+          "part": "front",
+          "dir": [
+            0,
+            -1
+          ],
+          "ms": 1000,
+          "effects": [
+            {
+              "e": "emit_sound",
+              "pattern": "single",
+              "at_ms": 200
+            },
+            {
+              "e": "move_object",
+              "dx": 0,
+              "dy": -1
+            }
+          ]
+        }
+      ],
+      "end_state": null,
+      "cooldown_min": 15
+    },
+    {
+      "verb": "look_at_poster",
+      "sensations": {
+        "light": 0.5
+      },
+      "steps": [
+        {
+          "p": "move_to",
+          "part": "front"
+        },
+        {
+          "p": "face",
+          "part": "front"
+        },
+        {
+          "p": "hold_pose",
+          "pose": "look-up",
+          "ms": 3000
+        }
+      ],
+      "end_state": null,
+      "cooldown_min": 15
+    }
+  ]
+}

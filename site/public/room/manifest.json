@@ -1,0 +1,322 @@
+{
+ "bg-day.jpg": {
+  "w": 1600,
+  "h": 900,
+  "bytes": 149188
+ },
+ "bg-night.jpg": {
+  "w": 1600,
+  "h": 900,
+  "bytes": 136310
+ },
+ "desktop.jpg": {
+  "w": 1600,
+  "h": 900,
+  "bytes": 115361
+ },
+ "react.jpg": {
+  "w": 1024,
+  "h": 1024,
+  "bytes": 85097
+ },
+ "sprites/nori-alarm.png": {
+  "w": 142,
+  "h": 160,
+  "bytes": 42677
+ },
+ "sprites/nori-alert-loaf.png": {
+  "w": 221,
+  "h": 155,
+  "bytes": 40520
+ },
+ "sprites/nori-alert.png": {
+  "w": 223,
+  "h": 168,
+  "bytes": 43775
+ },
+ "sprites/nori-back.png": {
+  "w": 107,
+  "h": 135,
+  "bytes": 25767
+ },
+ "sprites/nori-belly-up.png": {
+  "w": 217,
+  "h": 133,
+  "bytes": 41932
+ },
+ "sprites/nori-boba.png": {
+  "w": 173,
+  "h": 165,
+  "bytes": 42865
+ },
+ "sprites/nori-box.png": {
+  "w": 239,
+  "h": 157,
+  "bytes": 47882
+ },
+ "sprites/nori-browse.png": {
+  "w": 248,
+  "h": 153,
+  "bytes": 53606
+ },
+ "sprites/nori-chat.png": {
+  "w": 247,
+  "h": 175,
+  "bytes": 48882
+ },
+ "sprites/nori-cool.png": {
+  "w": 199,
+  "h": 146,
+  "bytes": 42742
+ },
+ "sprites/nori-curious.png": {
+  "w": 429,
+  "h": 362,
+  "bytes": 105468
+ },
+ "sprites/nori-dash.png": {
+  "w": 228,
+  "h": 141,
+  "bytes": 42701
+ },
+ "sprites/nori-dino-hoodie.png": {
+  "w": 249,
+  "h": 136,
+  "bytes": 47722
+ },
+ "sprites/nori-eat.png": {
+  "w": 149,
+  "h": 148,
+  "bytes": 39476
+ },
+ "sprites/nori-gaming.png": {
+  "w": 231,
+  "h": 145,
+  "bytes": 46614
+ },
+ "sprites/nori-giggle.png": {
+  "w": 134,
+  "h": 167,
+  "bytes": 35468
+ },
+ "sprites/nori-grumpy.png": {
+  "w": 161,
+  "h": 161,
+  "bytes": 39839
+ },
+ "sprites/nori-idea.png": {
+  "w": 191,
+  "h": 168,
+  "bytes": 44907
+ },
+ "sprites/nori-jump.png": {
+  "w": 151,
+  "h": 196,
+  "bytes": 36071
+ },
+ "sprites/nori-lamp.png": {
+  "w": 171,
+  "h": 203,
+  "bytes": 45158
+ },
+ "sprites/nori-laptop.png": {
+  "w": 193,
+  "h": 150,
+  "bytes": 40173
+ },
+ "sprites/nori-look-up.png": {
+  "w": 133,
+  "h": 147,
+  "bytes": 32416
+ },
+ "sprites/nori-love-fish.png": {
+  "w": 215,
+  "h": 153,
+  "bytes": 47078
+ },
+ "sprites/nori-love.png": {
+  "w": 447,
+  "h": 399,
+  "bytes": 135823
+ },
+ "sprites/nori-magnify.png": {
+  "w": 207,
+  "h": 142,
+  "bytes": 43116
+ },
+ "sprites/nori-meh.png": {
+  "w": 224,
+  "h": 121,
+  "bytes": 39392
+ },
+ "sprites/nori-music.png": {
+  "w": 214,
+  "h": 148,
+  "bytes": 47694
+ },
+ "sprites/nori-neutral.png": {
+  "w": 454,
+  "h": 359,
+  "bytes": 131585
+ },
+ "sprites/nori-night-window.png": {
+  "w": 168,
+  "h": 178,
+  "bytes": 36297
+ },
+ "sprites/nori-note.png": {
+  "w": 145,
+  "h": 148,
+  "bytes": 36608
+ },
+ "sprites/nori-oops.png": {
+  "w": 191,
+  "h": 148,
+  "bytes": 40537
+ },
+ "sprites/nori-peek-browser.png": {
+  "w": 221,
+  "h": 174,
+  "bytes": 36541
+ },
+ "sprites/nori-peek.png": {
+  "w": 484,
+  "h": 287,
+  "bytes": 111073
+ },
+ "sprites/nori-phone-send.png": {
+  "w": 161,
+  "h": 198,
+  "bytes": 36923
+ },
+ "sprites/nori-phone.png": {
+  "w": 137,
+  "h": 132,
+  "bytes": 36239
+ },
+ "sprites/nori-pin-drawing.png": {
+  "w": 151,
+  "h": 188,
+  "bytes": 42309
+ },
+ "sprites/nori-ponder.png": {
+  "w": 138,
+  "h": 136,
+  "bytes": 33328
+ },
+ "sprites/nori-question.png": {
+  "w": 183,
+  "h": 185,
+  "bytes": 39777
+ },
+ "sprites/nori-rain-window.png": {
+  "w": 141,
+  "h": 203,
+  "bytes": 42841
+ },
+ "sprites/nori-reading.png": {
+  "w": 234,
+  "h": 152,
+  "bytes": 49536
+ },
+ "sprites/nori-show-drawing.png": {
+  "w": 146,
+  "h": 176,
+  "bytes": 45161
+ },
+ "sprites/nori-sit.png": {
+  "w": 129,
+  "h": 141,
+  "bytes": 32275
+ },
+ "sprites/nori-sketch.png": {
+  "w": 145,
+  "h": 173,
+  "bytes": 44942
+ },
+ "sprites/nori-sleep-bed.png": {
+  "w": 228,
+  "h": 174,
+  "bytes": 44103
+ },
+ "sprites/nori-sleep-pillow.png": {
+  "w": 227,
+  "h": 118,
+  "bytes": 39224
+ },
+ "sprites/nori-sleepy.png": {
+  "w": 471,
+  "h": 352,
+  "bytes": 113148
+ },
+ "sprites/nori-sneak.png": {
+  "w": 152,
+  "h": 124,
+  "bytes": 33282
+ },
+ "sprites/nori-sniff-plant.png": {
+  "w": 221,
+  "h": 147,
+  "bytes": 46968
+ },
+ "sprites/nori-social.png": {
+  "w": 245,
+  "h": 158,
+  "bytes": 43214
+ },
+ "sprites/nori-sparkle.png": {
+  "w": 206,
+  "h": 180,
+  "bytes": 46237
+ },
+ "sprites/nori-starstruck.png": {
+  "w": 140,
+  "h": 152,
+  "bytes": 33186
+ },
+ "sprites/nori-startled.png": {
+  "w": 164,
+  "h": 187,
+  "bytes": 46440
+ },
+ "sprites/nori-stretch.png": {
+  "w": 158,
+  "h": 162,
+  "bytes": 36568
+ },
+ "sprites/nori-surprised.png": {
+  "w": 419,
+  "h": 433,
+  "bytes": 137140
+ },
+ "sprites/nori-tablet.png": {
+  "w": 227,
+  "h": 112,
+  "bytes": 36194
+ },
+ "sprites/nori-treat.png": {
+  "w": 201,
+  "h": 153,
+  "bytes": 44528
+ },
+ "sprites/nori-unimpressed.png": {
+  "w": 148,
+  "h": 113,
+  "bytes": 31653
+ },
+ "sprites/nori-walk.png": {
+  "w": 145,
+  "h": 122,
+  "bytes": 34389
+ },
+ "sprites/nori-watching.png": {
+  "w": 219,
+  "h": 150,
+  "bytes": 36846
+ },
+ "sprites/nori-wave.png": {
+  "w": 155,
+  "h": 168,
+  "bytes": 42703
+ }
+}

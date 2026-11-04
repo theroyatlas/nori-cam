@@ -1,0 +1,73 @@
+{
+  "style_suffix": "Same soft chibi illustration style as the reference picture: thick dark-brown outline, flat warm colours, light cel shading. Plain solid #FF00FF magenta background filling the whole picture. No text, no logos. Keep the same character, same overall size, framing and lighting as the reference.",
+  "sets": {
+    "walk_cycle": {
+      "references": ["site/public/room/sprites/nori-walk.png"],
+      "target_pose": "walk",
+      "frames": [
+        {
+          "id": "contact",
+          "prompt": "Side view facing left like the reference. Walk cycle contact pose: front paw and hind paw both touching the ground, body at normal height."
+        },
+        {
+          "id": "down",
+          "prompt": "Side view facing left. Walk cycle down pose: body lowered slightly between steps, paws mid-stride closer to the ground."
+        },
+        {
+          "id": "passing",
+          "prompt": "Side view facing left. Walk cycle passing pose: one front paw lifted forward, hind legs passing, body at mid height."
+        },
+        {
+          "id": "up",
+          "prompt": "Side view facing left. Walk cycle up pose: body at highest point of the stride, paws gathered under the body."
+        }
+      ]
+    },
+    "sleepy_breath": {
+      "references": ["site/public/room/sprites/nori-sleepy.png"],
+      "target_pose": "sleepy",
+      "frames": [
+        {
+          "id": "inhale",
+          "prompt": "Same sleepy lying pose as the reference. Inhale: chest and back slightly higher, gentle expansion."
+        },
+        {
+          "id": "exhale",
+          "prompt": "Same sleepy lying pose. Exhale: chest and back slightly lower, relaxed."
+        }
+      ]
+    },
+    "sit_tail": {
+      "references": ["site/public/room/sprites/nori-sit.png"],
+      "target_pose": "sit",
+      "frames": [
+        {
+          "id": "tail_left",
+          "prompt": "Sitting cat like the reference. Tail swung to the left side of the body."
+        },
+        {
+          "id": "tail_centre",
+          "prompt": "Sitting cat like the reference. Tail centred behind the body."
+        },
+        {
+          "id": "tail_right",
+          "prompt": "Sitting cat like the reference. Tail swung to the right side of the body."
+        }
+      ]
+    },
+    "loaf_blink": {
+      "references": ["site/public/room/sprites/nori-alert-loaf.png"],
+      "target_pose": "alert_loaf",
+      "frames": [
+        {
+          "id": "half_closed",
+          "prompt": "Alert loaf pose like the reference. Eyes half-closed, sleepy blink mid-motion."
+        },
+        {
+          "id": "closed",
+          "prompt": "Alert loaf pose like the reference. Eyes fully closed for a blink."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,268 @@
+{
+ "server_now": 1793621714232,
+ "engine_version": "cam-1",
+ "world_version": 1,
+ "timeline_until": 1793622314232,
+ "room": {
+  "grid": {
+   "w": 10,
+   "h": 8
+  },
+  "window": "london"
+ },
+ "objects": [
+  {
+   "id": "env:sun",
+   "kind": "env:sun",
+   "x": 5,
+   "y": 3,
+   "z": 0,
+   "footprint": [
+    [
+     0,
+     0
+    ]
+   ],
+   "rotation": 0,
+   "blocks": false,
+   "placement": "floor",
+   "status": "placed",
+   "state": "default",
+   "size": "M",
+   "tags": [
+    "soft"
+   ],
+   "sprite": "procedural:env:sun",
+   "card": {
+    "name": "env:sun",
+    "summary": "Prefab env:sun"
+   }
+  },
+  {
+   "id": "o_bed",
+   "kind": "bed",
+   "x": 8,
+   "y": 6,
+   "z": 0,
+   "footprint": [
+    [
+     0,
+     0
+    ]
+   ],
+   "rotation": 0,
+   "blocks": false,
+   "placement": "floor",
+   "status": "placed",
+   "state": "default",
+   "size": "M",
+   "tags": [
+    "soft"
+   ],
+   "sprite": "procedural:bed",
+   "card": {
+    "name": "bed",
+    "summary": "Prefab bed"
+   }
+  },
+  {
+   "id": "o_cardboard_box",
+   "kind": "cardboard_box",
+   "x": 6,
+   "y": 4,
+   "z": 0,
+   "footprint": [
+    [
+     0,
+     0
+    ]
+   ],
+   "rotation": 0,
+   "blocks": true,
+   "placement": "floor",
+   "status": "placed",
+   "state": "default",
+   "size": "M",
+   "tags": [
+    "enclosed"
+   ],
+   "sprite": "procedural:cardboard_box",
+   "card": {
+    "name": "cardboard box",
+    "summary": "Prefab cardboard_box"
+   }
+  },
+  {
+   "id": "o_computer_desk",
+   "kind": "computer_desk",
+   "x": 8,
+   "y": 1,
+   "z": 0,
+   "footprint": [
+    [
+     0,
+     0
+    ]
+   ],
+   "rotation": 0,
+   "blocks": true,
+   "placement": "floor",
+   "status": "placed",
+   "state": "default",
+   "size": "M",
+   "tags": [
+    "computer",
+    "high_place"
+   ],
+   "sprite": "procedural:computer_desk",
+   "card": {
+    "name": "computer desk",
+    "summary": "Prefab computer_desk"
+   }
+  },
+  {
+   "id": "o_drawing_wall",
+   "kind": "drawing_wall",
+   "x": 0,
+   "y": 2,
+   "z": 0,
+   "footprint": [
+    [
+     0,
+     0
+    ]
+   ],
+   "rotation": 0,
+   "blocks": false,
+   "placement": "wall",
+   "status": "placed",
+   "state": "default",
+   "size": "M",
+   "tags": [],
+   "sprite": "procedural:drawing_wall",
+   "card": {
+    "name": "drawing wall",
+    "summary": "Prefab drawing_wall"
+   }
+  },
+  {
+   "id": "o_food_bowl",
+   "kind": "food_bowl",
+   "x": 2,
+   "y": 5,
+   "z": 0,
+   "footprint": [
+    [
+     0,
+     0
+    ]
+   ],
+   "rotation": 0,
+   "blocks": true,
+   "placement": "floor",
+   "status": "placed",
+   "state": "default",
+   "size": "S",
+   "tags": [],
+   "sprite": "procedural:food_bowl",
+   "card": {
+    "name": "food bowl",
+    "summary": "Prefab food_bowl"
+   }
+  },
+  {
+   "id": "o_slipper",
+   "kind": "slipper",
+   "x": 3,
+   "y": 2,
+   "z": 0,
+   "footprint": [
+    [
+     0,
+     0
+    ]
+   ],
+   "rotation": 0,
+   "blocks": true,
+   "placement": "floor",
+   "status": "placed",
+   "state": "default",
+   "size": "S",
+   "tags": [
+    "portable",
+    "pushable"
+   ],
+   "sprite": "procedural:slipper",
+   "card": {
+    "name": "slipper",
+    "summary": "Prefab slipper"
+   }
+  },
+  {
+   "id": "o_water_bowl",
+   "kind": "water_bowl",
+   "x": 1,
+   "y": 5,
+   "z": 0,
+   "footprint": [
+    [
+     0,
+     0
+    ]
+   ],
+   "rotation": 0,
+   "blocks": true,
+   "placement": "floor",
+   "status": "placed",
+   "state": "default",
+   "size": "S",
+   "tags": [
+    "water"
+   ],
+   "sprite": "procedural:water_bowl",
+   "card": {
+    "name": "water bowl",
+    "summary": "Prefab water_bowl"
+   }
+  }
+ ],
+ "segments": [
+  {
+   "id": 1,
+   "start_at": 1793621714232,
+   "end_at": 1793622314232,
+   "action": "drink",
+   "primitive": "hold_pose",
+   "pose": "sit",
+   "facing": -1,
+   "path": [
+    [
+     1,
+     6
+    ]
+   ],
+   "z": 0,
+   "target": "o_water_bowl",
+   "part": null,
+   "carrying": null,
+   "interaction": null,
+   "effects": [],
+   "cut_at": null
+  }
+ ],
+ "weather": {
+  "hour_utc": 1793620800000,
+  "condition": "clear",
+  "temp_c": null,
+  "cloud_pct": 0,
+  "precip_mm": 0,
+  "wind_kph": 0,
+  "is_day": 1,
+  "source": "fallback",
+  "effects": {
+   "cozyBoost": 0,
+   "sunPatchAllowed": true,
+   "startleEvents": []
+  }
+ }
+}

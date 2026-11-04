@@ -1,0 +1,93 @@
+{
+ "updated_at": "2026-10-30T09:09:00+00:00",
+ "next_wake_at": null,
+ "next_wake_kind": null,
+ "next_wake_reason": null,
+ "activity": "sleeping",
+ "last_wake": {
+  "started_at": "2026-10-30T09:01:00+00:00",
+  "ended_at": "2026-10-30T09:07:00+00:00",
+  "kind": null,
+  "steps": [
+   {
+    "at": "2026-10-30T09:01:00+00:00",
+    "tool": "read_wikipedia",
+    "label": "Read Wikipedia",
+    "event_id": "X1",
+    "title": "Sample Lighthouse",
+    "ok": true
+   },
+   {
+    "at": "2026-10-30T09:02:00+00:00",
+    "tool": "record_feeling",
+    "label": "Felt something",
+    "event_id": "X1",
+    "title": "Sample Lighthouse",
+    "ok": true
+   },
+   {
+    "at": "2026-10-30T09:03:00+00:00",
+    "tool": "look_at_image",
+    "label": "Looked at an image",
+    "event_id": "X2",
+    "title": "Sample tide pool picture",
+    "ok": true
+   },
+   {
+    "at": "2026-10-30T09:04:00+00:00",
+    "tool": "record_feeling",
+    "label": "Felt something",
+    "event_id": "X2",
+    "title": "Sample tide pool picture",
+    "ok": true
+   },
+   {
+    "at": "2026-10-30T09:05:00+00:00",
+    "tool": "watch_video",
+    "label": "Watched a video",
+    "event_id": "X3",
+    "title": "Sample tiny water bears video",
+    "ok": true
+   },
+   {
+    "at": "2026-10-30T09:06:00+00:00",
+    "tool": "open_page",
+    "label": "Opened a page",
+    "event_id": null,
+    "title": null,
+    "ok": false
+   },
+   {
+    "at": "2026-10-30T09:07:00+00:00",
+    "tool": "web_search",
+    "label": "Searched the web",
+    "event_id": null,
+    "title": null,
+    "ok": true
+   }
+  ]
+ },
+ "mood": {
+  "valence": "neutral",
+  "intensity": 0,
+  "event_id": "X2"
+ },
+ "drawings": [],
+ "latest_post": {
+  "post_id": "P-sample-2",
+  "ts": "2026-10-30T09:09:00+00:00",
+  "text": "FAKE SAMPLE POST TWO. A crab in a tide pool, a lighthouse above it. Small things near big lights.",
+  "receipt": null,
+  "image": null
+ },
+ "projects": {
+  "active": [],
+  "finished": []
+ },
+ "counts": {
+  "experiences": 3,
+  "posts": 2,
+  "drawings": 0,
+  "wakes": 1
+ }
+}

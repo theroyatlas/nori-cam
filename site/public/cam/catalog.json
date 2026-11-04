@@ -1,0 +1,1362 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "object": {
+        "id": "o_cardboard_box",
+        "kind": "cardboard_box",
+        "x": 6,
+        "y": 4,
+        "z": 0,
+        "footprint": [
+          [
+            0,
+            0
+          ]
+        ],
+        "rotation": 0,
+        "blocks": true,
+        "placement": "floor",
+        "status": "placed",
+        "state": "default",
+        "size": "M",
+        "tags": [
+          "enclosed"
+        ],
+        "sprite": "procedural:cardboard_box",
+        "card": {
+          "name": "cardboard box",
+          "category": "furniture",
+          "size": "M",
+          "height": "low",
+          "tags": [
+            "enclosed"
+          ],
+          "sensations": {
+            "shelter": 0.8
+          },
+          "parts": [
+            {
+              "kind": "inside",
+              "label": "inside",
+              "side": "front",
+              "height": "low"
+            }
+          ],
+          "states": [
+            "default"
+          ],
+          "space": {
+            "cm": {
+              "w": 40,
+              "d": 40,
+              "h": 20
+            },
+            "blocks": true,
+            "placement": "floor",
+            "movable": {
+              "push": false,
+              "rotate": false,
+              "stack": false
+            },
+            "state_cm": {}
+          },
+          "affordances": [],
+          "beyond_executor": [],
+          "summary": "Prefab cardboard_box",
+          "prop_poses": [
+            "box"
+          ]
+        },
+        "origin": {
+          "type": "prefab"
+        }
+      },
+      "interactions": [
+        {
+          "id": "ix_38d0303a",
+          "object_id": "o_cardboard_box",
+          "action": "hide_in",
+          "spec": {
+            "verb": "hide_in",
+            "sensations": {
+              "shelter": 0.8
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "inside"
+              },
+              {
+                "p": "hold_pose",
+                "pose": "box",
+                "ms": 60000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        },
+        {
+          "id": "ix_28ceb105",
+          "object_id": "o_cardboard_box",
+          "action": "sleep",
+          "spec": {
+            "verb": "sleep_at",
+            "sensations": {
+              "shelter": 0.8
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "inside"
+              },
+              {
+                "p": "sleep",
+                "pose": "box",
+                "ms": 2400000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        }
+      ]
+    },
+    {
+      "object": {
+        "id": "o_slipper",
+        "kind": "slipper",
+        "x": 3,
+        "y": 2,
+        "z": 0,
+        "footprint": [
+          [
+            0,
+            0
+          ]
+        ],
+        "rotation": 0,
+        "blocks": true,
+        "placement": "floor",
+        "status": "placed",
+        "state": "default",
+        "size": "S",
+        "tags": [
+          "portable",
+          "pushable"
+        ],
+        "sprite": "procedural:slipper",
+        "card": {
+          "name": "slipper",
+          "category": "furniture",
+          "size": "S",
+          "height": "low",
+          "tags": [
+            "portable",
+            "pushable"
+          ],
+          "sensations": {
+            "soft": 0.3
+          },
+          "parts": [
+            {
+              "kind": "front",
+              "label": "front",
+              "side": "front",
+              "height": "low"
+            }
+          ],
+          "states": [
+            "default"
+          ],
+          "space": {
+            "cm": {
+              "w": 40,
+              "d": 40,
+              "h": 20
+            },
+            "blocks": true,
+            "placement": "floor",
+            "movable": {
+              "push": true,
+              "rotate": true,
+              "stack": false
+            },
+            "state_cm": {}
+          },
+          "affordances": [],
+          "beyond_executor": [],
+          "summary": "Prefab slipper",
+          "prop_poses": [
+            "wave"
+          ]
+        },
+        "origin": {
+          "type": "prefab"
+        }
+      },
+      "interactions": [
+        {
+          "id": "ix_eeb76c98",
+          "object_id": "o_slipper",
+          "action": "play",
+          "spec": {
+            "verb": "play",
+            "sensations": {
+              "soft": 0.3
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "front"
+              },
+              {
+                "p": "touch",
+                "part": "front",
+                "ms": 1000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        },
+        {
+          "id": "ix_e9b4f0f7",
+          "object_id": "o_slipper",
+          "action": "carry",
+          "spec": {
+            "verb": "carry and drop",
+            "sensations": {
+              "soft": 0.3
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "front"
+              },
+              {
+                "p": "carry",
+                "at": [
+                  4,
+                  3
+                ]
+              },
+              {
+                "p": "drop",
+                "at": [
+                  4,
+                  2
+                ]
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        }
+      ]
+    },
+    {
+      "object": {
+        "id": "o_bed",
+        "kind": "bed",
+        "x": 8,
+        "y": 6,
+        "z": 0,
+        "footprint": [
+          [
+            0,
+            0
+          ]
+        ],
+        "rotation": 0,
+        "blocks": false,
+        "placement": "floor",
+        "status": "placed",
+        "state": "default",
+        "size": "M",
+        "tags": [
+          "soft"
+        ],
+        "sprite": "procedural:bed",
+        "card": {
+          "name": "bed",
+          "category": "furniture",
+          "size": "M",
+          "height": "low",
+          "tags": [
+            "soft"
+          ],
+          "sensations": {
+            "soft": 0.9,
+            "warm": 0.3
+          },
+          "parts": [
+            {
+              "kind": "top",
+              "label": "top",
+              "side": "top",
+              "height": "low"
+            }
+          ],
+          "states": [
+            "default"
+          ],
+          "space": {
+            "cm": {
+              "w": 40,
+              "d": 40,
+              "h": 20
+            },
+            "blocks": false,
+            "placement": "floor",
+            "movable": {
+              "push": false,
+              "rotate": false,
+              "stack": false
+            },
+            "state_cm": {}
+          },
+          "affordances": [],
+          "beyond_executor": [],
+          "summary": "Prefab bed",
+          "prop_poses": [
+            "sleep-bed"
+          ]
+        },
+        "origin": {
+          "type": "prefab"
+        }
+      },
+      "interactions": [
+        {
+          "id": "ix_15115565",
+          "object_id": "o_bed",
+          "action": "lie_on",
+          "spec": {
+            "verb": "lie_on",
+            "sensations": {
+              "soft": 0.9,
+              "warm": 0.3
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "top"
+              },
+              {
+                "p": "hold_pose",
+                "pose": "sleep-bed",
+                "ms": 60000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        },
+        {
+          "id": "ix_be6c6137",
+          "object_id": "o_bed",
+          "action": "sleep",
+          "spec": {
+            "verb": "sleep_at",
+            "sensations": {
+              "soft": 0.9,
+              "warm": 0.3
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "top"
+              },
+              {
+                "p": "sleep",
+                "pose": "sleep-bed",
+                "ms": 2400000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        }
+      ]
+    },
+    {
+      "object": {
+        "id": "o_computer_desk",
+        "kind": "computer_desk",
+        "x": 8,
+        "y": 1,
+        "z": 0,
+        "footprint": [
+          [
+            0,
+            0
+          ]
+        ],
+        "rotation": 0,
+        "blocks": true,
+        "placement": "floor",
+        "status": "placed",
+        "state": "default",
+        "size": "M",
+        "tags": [
+          "computer",
+          "high_place"
+        ],
+        "sprite": "procedural:computer_desk",
+        "card": {
+          "name": "computer desk",
+          "category": "furniture",
+          "size": "M",
+          "height": "low",
+          "tags": [
+            "computer",
+            "high_place"
+          ],
+          "sensations": {
+            "height": 0.5,
+            "light": 0.4
+          },
+          "parts": [
+            {
+              "kind": "top",
+              "label": "top",
+              "side": "top",
+              "height": "low"
+            }
+          ],
+          "states": [
+            "default"
+          ],
+          "space": {
+            "cm": {
+              "w": 40,
+              "d": 40,
+              "h": 20
+            },
+            "blocks": true,
+            "placement": "floor",
+            "movable": {
+              "push": false,
+              "rotate": false,
+              "stack": false
+            },
+            "state_cm": {}
+          },
+          "affordances": [],
+          "beyond_executor": [],
+          "summary": "Prefab computer_desk",
+          "prop_poses": [
+            "laptop"
+          ]
+        },
+        "origin": {
+          "type": "prefab"
+        },
+        "levels": [
+          {
+            "id": "top",
+            "z": 1.5,
+            "part": "top"
+          }
+        ]
+      },
+      "interactions": [
+        {
+          "id": "ix_8b88a8ca",
+          "object_id": "o_computer_desk",
+          "action": "use_computer",
+          "spec": {
+            "verb": "use_computer",
+            "sensations": {
+              "height": 0.5,
+              "light": 0.4
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "top"
+              },
+              {
+                "p": "climb",
+                "part": "top"
+              },
+              {
+                "p": "hold_pose",
+                "pose": "laptop",
+                "ms": 60000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        }
+      ]
+    },
+    {
+      "object": {
+        "id": "o_drawing_wall",
+        "kind": "drawing_wall",
+        "x": 0,
+        "y": 2,
+        "z": 0,
+        "footprint": [
+          [
+            0,
+            0
+          ]
+        ],
+        "rotation": 0,
+        "blocks": false,
+        "placement": "wall",
+        "status": "placed",
+        "state": "default",
+        "size": "M",
+        "tags": [],
+        "sprite": "procedural:drawing_wall",
+        "card": {
+          "name": "drawing wall",
+          "category": "furniture",
+          "size": "M",
+          "height": "low",
+          "tags": [],
+          "sensations": {
+            "light": 0.2
+          },
+          "parts": [
+            {
+              "kind": "front",
+              "label": "front",
+              "side": "front",
+              "height": "low"
+            }
+          ],
+          "states": [
+            "default"
+          ],
+          "space": {
+            "cm": {
+              "w": 40,
+              "d": 40,
+              "h": 20
+            },
+            "blocks": false,
+            "placement": "wall",
+            "movable": {
+              "push": false,
+              "rotate": false,
+              "stack": false
+            },
+            "state_cm": {}
+          },
+          "affordances": [],
+          "beyond_executor": [],
+          "summary": "Prefab drawing_wall",
+          "prop_poses": [
+            "sketch"
+          ]
+        },
+        "origin": {
+          "type": "prefab"
+        }
+      },
+      "interactions": [
+        {
+          "id": "ix_d1de6049",
+          "object_id": "o_drawing_wall",
+          "action": "sketch",
+          "spec": {
+            "verb": "sketch",
+            "sensations": {
+              "light": 0.2
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "front"
+              },
+              {
+                "p": "hold_pose",
+                "pose": "sketch",
+                "ms": 60000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        }
+      ]
+    },
+    {
+      "object": {
+        "id": "o_water_bowl",
+        "kind": "water_bowl",
+        "x": 1,
+        "y": 5,
+        "z": 0,
+        "footprint": [
+          [
+            0,
+            0
+          ]
+        ],
+        "rotation": 0,
+        "blocks": true,
+        "placement": "floor",
+        "status": "placed",
+        "state": "default",
+        "size": "S",
+        "tags": [
+          "water"
+        ],
+        "sprite": "procedural:water_bowl",
+        "card": {
+          "name": "water bowl",
+          "category": "furniture",
+          "size": "S",
+          "height": "low",
+          "tags": [
+            "water"
+          ],
+          "sensations": {},
+          "parts": [
+            {
+              "kind": "front",
+              "label": "front",
+              "side": "front",
+              "height": "low"
+            }
+          ],
+          "states": [
+            "default"
+          ],
+          "space": {
+            "cm": {
+              "w": 40,
+              "d": 40,
+              "h": 20
+            },
+            "blocks": true,
+            "placement": "floor",
+            "movable": {
+              "push": false,
+              "rotate": false,
+              "stack": false
+            },
+            "state_cm": {}
+          },
+          "affordances": [],
+          "beyond_executor": [],
+          "summary": "Prefab water_bowl",
+          "prop_poses": [
+            "eat"
+          ]
+        },
+        "origin": {
+          "type": "prefab"
+        }
+      },
+      "interactions": [
+        {
+          "id": "ix_3514633e",
+          "object_id": "o_water_bowl",
+          "action": "drink",
+          "spec": {
+            "verb": "drink",
+            "sensations": {},
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "front"
+              },
+              {
+                "p": "hold_pose",
+                "pose": "eat",
+                "ms": 60000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        }
+      ]
+    },
+    {
+      "object": {
+        "id": "o_food_bowl",
+        "kind": "food_bowl",
+        "x": 2,
+        "y": 5,
+        "z": 0,
+        "footprint": [
+          [
+            0,
+            0
+          ]
+        ],
+        "rotation": 0,
+        "blocks": true,
+        "placement": "floor",
+        "status": "placed",
+        "state": "default",
+        "size": "S",
+        "tags": [],
+        "sprite": "procedural:food_bowl",
+        "card": {
+          "name": "food bowl",
+          "category": "furniture",
+          "size": "S",
+          "height": "low",
+          "tags": [],
+          "sensations": {},
+          "parts": [
+            {
+              "kind": "front",
+              "label": "front",
+              "side": "front",
+              "height": "low"
+            }
+          ],
+          "states": [
+            "default"
+          ],
+          "space": {
+            "cm": {
+              "w": 40,
+              "d": 40,
+              "h": 20
+            },
+            "blocks": true,
+            "placement": "floor",
+            "movable": {
+              "push": false,
+              "rotate": false,
+              "stack": false
+            },
+            "state_cm": {}
+          },
+          "affordances": [],
+          "beyond_executor": [],
+          "summary": "Prefab food_bowl",
+          "prop_poses": [
+            "sit"
+          ]
+        },
+        "origin": {
+          "type": "prefab"
+        }
+      },
+      "interactions": []
+    },
+    {
+      "object": {
+        "id": "env:sun",
+        "kind": "env:sun",
+        "x": 5,
+        "y": 3,
+        "z": 0,
+        "footprint": [
+          [
+            0,
+            0
+          ]
+        ],
+        "rotation": 0,
+        "blocks": false,
+        "placement": "floor",
+        "status": "placed",
+        "state": "default",
+        "size": "M",
+        "tags": [
+          "soft"
+        ],
+        "sprite": "procedural:env:sun",
+        "card": {
+          "name": "env:sun",
+          "category": "environment",
+          "size": "M",
+          "height": "floor",
+          "tags": [
+            "soft"
+          ],
+          "sensations": {
+            "warm": 0.8,
+            "light": 0.5
+          },
+          "parts": [
+            {
+              "kind": "top",
+              "label": "top",
+              "side": "top",
+              "height": "floor"
+            }
+          ],
+          "states": [
+            "default"
+          ],
+          "space": {
+            "cm": {
+              "w": 40,
+              "d": 40,
+              "h": 20
+            },
+            "blocks": false,
+            "placement": "floor",
+            "movable": {
+              "push": false,
+              "rotate": false,
+              "stack": false
+            },
+            "state_cm": {}
+          },
+          "affordances": [],
+          "beyond_executor": [],
+          "summary": "Prefab env:sun",
+          "prop_poses": [
+            "sleepy"
+          ]
+        },
+        "origin": {
+          "type": "prefab"
+        }
+      },
+      "interactions": [
+        {
+          "id": "ix_ddab5ab7",
+          "object_id": "env:sun",
+          "action": "lie_on",
+          "spec": {
+            "verb": "lie_on",
+            "sensations": {
+              "warm": 0.8,
+              "light": 0.5
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "top"
+              },
+              {
+                "p": "hold_pose",
+                "pose": "sleepy",
+                "ms": 60000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        },
+        {
+          "id": "ix_2a19490a",
+          "object_id": "env:sun",
+          "action": "sleep",
+          "spec": {
+            "verb": "sleep_at",
+            "sensations": {
+              "warm": 0.8,
+              "light": 0.5
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "top"
+              },
+              {
+                "p": "sleep",
+                "pose": "sleepy",
+                "ms": 2400000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        }
+      ]
+    },
+    {
+      "object": {
+        "id": "o_toy",
+        "kind": "toy",
+        "x": 6,
+        "y": 4,
+        "z": 0,
+        "footprint": [
+          [
+            0,
+            0
+          ]
+        ],
+        "rotation": 0,
+        "blocks": true,
+        "placement": "floor",
+        "status": "stored",
+        "state": "default",
+        "size": "S",
+        "tags": [
+          "portable",
+          "pushable"
+        ],
+        "sprite": "procedural:toy",
+        "card": {
+          "name": "toy",
+          "category": "toy",
+          "size": "S",
+          "height": "low",
+          "tags": [
+            "portable",
+            "pushable"
+          ],
+          "sensations": {
+            "motion": 0.6
+          },
+          "parts": [
+            {
+              "kind": "front",
+              "label": "front",
+              "side": "front",
+              "height": "low"
+            }
+          ],
+          "states": [
+            "default"
+          ],
+          "space": {
+            "cm": {
+              "w": 25,
+              "d": 25,
+              "h": 10
+            },
+            "blocks": true,
+            "placement": "floor",
+            "movable": {
+              "push": true,
+              "rotate": false,
+              "stack": false
+            },
+            "state_cm": {}
+          },
+          "affordances": [],
+          "beyond_executor": [],
+          "summary": "Prefab toy"
+        },
+        "origin": {
+          "type": "prefab"
+        }
+      },
+      "interactions": []
+    },
+    {
+      "object": {
+        "id": "o_cushion",
+        "kind": "cushion",
+        "x": 6,
+        "y": 4,
+        "z": 0,
+        "footprint": [
+          [
+            0,
+            0
+          ]
+        ],
+        "rotation": 0,
+        "blocks": true,
+        "placement": "floor",
+        "status": "stored",
+        "state": "default",
+        "size": "S",
+        "tags": [
+          "soft"
+        ],
+        "sprite": "procedural:cushion",
+        "card": {
+          "name": "cushion",
+          "category": "household",
+          "size": "S",
+          "height": "low",
+          "tags": [
+            "soft"
+          ],
+          "sensations": {
+            "soft": 0.8
+          },
+          "parts": [
+            {
+              "kind": "front",
+              "label": "front",
+              "side": "front",
+              "height": "low"
+            }
+          ],
+          "states": [
+            "default"
+          ],
+          "space": {
+            "cm": {
+              "w": 25,
+              "d": 25,
+              "h": 10
+            },
+            "blocks": true,
+            "placement": "floor",
+            "movable": {
+              "push": false,
+              "rotate": false,
+              "stack": false
+            },
+            "state_cm": {}
+          },
+          "affordances": [],
+          "beyond_executor": [],
+          "summary": "Prefab cushion"
+        },
+        "origin": {
+          "type": "prefab"
+        }
+      },
+      "interactions": []
+    },
+    {
+      "object": {
+        "id": "o_cat_tree",
+        "kind": "cat_tree",
+        "x": 5,
+        "y": 0,
+        "z": 0,
+        "footprint": [
+          [
+            0,
+            0
+          ]
+        ],
+        "rotation": 0,
+        "blocks": true,
+        "placement": "floor",
+        "status": "placed",
+        "state": "default",
+        "size": "M",
+        "tags": [
+          "high_place",
+          "soft",
+          "viewpoint"
+        ],
+        "sprite": "procedural:cat_tree",
+        "card": {
+          "name": "cat tree",
+          "category": "furniture",
+          "size": "M",
+          "height": "mid",
+          "tags": [
+            "high_place",
+            "soft",
+            "viewpoint"
+          ],
+          "sensations": {
+            "height": 0.5,
+            "view_far": 0.5,
+            "soft": 0.3
+          },
+          "parts": [
+            {
+              "kind": "front",
+              "label": "mid platform",
+              "side": "front",
+              "height": "low"
+            },
+            {
+              "kind": "top",
+              "label": "top platform",
+              "side": "top",
+              "height": "mid"
+            }
+          ],
+          "states": [
+            "default"
+          ],
+          "space": {
+            "cm": {
+              "w": 40,
+              "d": 40,
+              "h": 120
+            },
+            "blocks": true,
+            "placement": "floor",
+            "movable": {
+              "push": false,
+              "rotate": false,
+              "stack": false
+            },
+            "state_cm": {}
+          },
+          "affordances": [],
+          "beyond_executor": [],
+          "summary": "Prefab cat_tree",
+          "prop_poses": []
+        },
+        "origin": {
+          "type": "prefab"
+        },
+        "levels": [
+          {
+            "id": "mid",
+            "z": 1,
+            "part": "front"
+          },
+          {
+            "id": "top",
+            "z": 2.5,
+            "part": "top"
+          }
+        ]
+      },
+      "interactions": [
+        {
+          "id": "ix_cat_tree_sit_on",
+          "object_id": "o_cat_tree",
+          "action": "sit_on",
+          "spec": {
+            "verb": "sit_on",
+            "sensations": {
+              "height": 0.5,
+              "view_far": 0.5,
+              "soft": 0.3
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "top"
+              },
+              {
+                "p": "climb",
+                "part": "top"
+              },
+              {
+                "p": "hold_pose",
+                "pose": "sit",
+                "ms": 600000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        },
+        {
+          "id": "ix_cat_tree_sleep_at",
+          "object_id": "o_cat_tree",
+          "action": "sleep",
+          "spec": {
+            "verb": "sleep_at",
+            "sensations": {
+              "height": 0.5,
+              "view_far": 0.5,
+              "soft": 0.3
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "top"
+              },
+              {
+                "p": "climb",
+                "part": "top"
+              },
+              {
+                "p": "sleep",
+                "pose": "sleepy",
+                "ms": 2400000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        },
+        {
+          "id": "ix_cat_tree_lie_on",
+          "object_id": "o_cat_tree",
+          "action": "lie_on",
+          "spec": {
+            "verb": "lie_on",
+            "sensations": {
+              "height": 0.5,
+              "view_far": 0.5,
+              "soft": 0.3
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "top"
+              },
+              {
+                "p": "climb",
+                "part": "top"
+              },
+              {
+                "p": "hold_pose",
+                "pose": "alert-loaf",
+                "ms": 600000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        }
+      ]
+    },
+    {
+      "object": {
+        "id": "o_wall_shelf",
+        "kind": "wall_shelf",
+        "x": 5,
+        "y": 0,
+        "z": 3,
+        "footprint": [
+          [
+            0,
+            0
+          ]
+        ],
+        "rotation": 0,
+        "blocks": false,
+        "placement": "wall",
+        "status": "placed",
+        "state": "default",
+        "size": "M",
+        "tags": [
+          "high_place",
+          "soft",
+          "viewpoint"
+        ],
+        "sprite": "procedural:wall_shelf",
+        "card": {
+          "name": "wall shelf",
+          "category": "furniture",
+          "size": "M",
+          "height": "mid",
+          "tags": [
+            "high_place",
+            "soft",
+            "viewpoint"
+          ],
+          "sensations": {
+            "height": 0.5,
+            "view_far": 0.5,
+            "soft": 0.3
+          },
+          "parts": [
+            {
+              "kind": "front",
+              "label": "mid platform",
+              "side": "front",
+              "height": "low"
+            },
+            {
+              "kind": "top",
+              "label": "top platform",
+              "side": "top",
+              "height": "mid"
+            }
+          ],
+          "states": [
+            "default"
+          ],
+          "space": {
+            "cm": {
+              "w": 40,
+              "d": 40,
+              "h": 120
+            },
+            "blocks": false,
+            "placement": "wall",
+            "movable": {
+              "push": false,
+              "rotate": false,
+              "stack": false
+            },
+            "state_cm": {}
+          },
+          "affordances": [],
+          "beyond_executor": [],
+          "summary": "Prefab wall_shelf",
+          "prop_poses": []
+        },
+        "origin": {
+          "type": "prefab"
+        },
+        "levels": [
+          {
+            "id": "top",
+            "z": 3,
+            "part": "top",
+            "requires": {
+              "kind": "cat_tree",
+              "level": "top"
+            }
+          }
+        ],
+        "wall_side": "window"
+      },
+      "interactions": [
+        {
+          "id": "ix_wall_shelf_sit_on",
+          "object_id": "o_wall_shelf",
+          "action": "sit_on",
+          "spec": {
+            "verb": "sit_on",
+            "sensations": {
+              "height": 0.5,
+              "view_far": 0.5,
+              "soft": 0.3
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "top"
+              },
+              {
+                "p": "climb",
+                "part": "top"
+              },
+              {
+                "p": "hold_pose",
+                "pose": "sit",
+                "ms": 600000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        },
+        {
+          "id": "ix_wall_shelf_look_out",
+          "object_id": "o_wall_shelf",
+          "action": "look_out",
+          "spec": {
+            "verb": "look_out",
+            "sensations": {
+              "height": 0.5,
+              "view_far": 0.5,
+              "soft": 0.3
+            },
+            "steps": [
+              {
+                "p": "move_to",
+                "part": "top"
+              },
+              {
+                "p": "climb",
+                "part": "top"
+              },
+              {
+                "p": "hold_pose",
+                "pose": "back",
+                "ms": 600000
+              }
+            ],
+            "end_state": null,
+            "cooldown_min": 25
+          }
+        }
+      ]
+    }
+  ]
+}

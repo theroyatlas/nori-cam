@@ -1,0 +1,118 @@
+{
+  "name": "toy piano",
+  "category": "instrument",
+  "contract_version": "cam-d1fix-2",
+  "content_safety": {
+    "ok": true,
+    "reason": "ok"
+  },
+  "identifiable_person_present": false,
+  "initial_state": "default",
+  "size": "S",
+  "object_card": {
+    "name": "toy piano",
+    "category": "instrument",
+    "size": "S",
+    "height": "low",
+    "tags": [
+      "pressable",
+      "portable"
+    ],
+    "sensations": {
+      "sound": 0.9,
+      "motion": 0.1
+    },
+    "parts": [
+      {
+        "kind": "pressable",
+        "label": "miniature keys",
+        "side": "front",
+        "height": "low"
+      },
+      {
+        "kind": "front",
+        "label": "front frame",
+        "side": "front",
+        "height": "low"
+      }
+    ],
+    "states": [
+      "default"
+    ],
+    "hazards": [],
+    "space": {
+      "cm": {
+        "w": 35,
+        "d": 25,
+        "h": 20
+      },
+      "blocks": true,
+      "placement": "floor",
+      "movable": {
+        "push": false,
+        "rotate": false,
+        "stack": false
+      },
+      "state_cm": {}
+    },
+    "affordances": [
+      {
+        "verb": "tap piano keys",
+        "effect_text": "plays a bright note and wobbles slightly",
+        "sensations": [
+          "sound",
+          "motion"
+        ]
+      }
+    ],
+    "beyond_executor": [
+      "play a multi-finger melody across individual keys"
+    ],
+    "summary": "Small wooden toy piano with a row of low pressable keys."
+  },
+  "interactions": [
+    {
+      "verb": "tap_keys",
+      "sensations": {
+        "sound": 0.9,
+        "motion": 0.1
+      },
+      "steps": [
+        {
+          "p": "move_to",
+          "part": "pressable",
+          "gait": "sneak"
+        },
+        {
+          "p": "face",
+          "part": "pressable"
+        },
+        {
+          "p": "touch",
+          "part": "pressable",
+          "pose": "wave",
+          "ms": 1200,
+          "effects": [
+            {
+              "e": "emit_sound",
+              "pattern": "seeded",
+              "at_ms": 300
+            },
+            {
+              "e": "wobble",
+              "amp": 2,
+              "at_ms": 300
+            }
+          ]
+        },
+        {
+          "p": "wait",
+          "pose": "sit",
+          "ms": 1000
+        }
+      ],
+      "end_state": null,
+      "cooldown_min": 15
+    }
+  ]
+}

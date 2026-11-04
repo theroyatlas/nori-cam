@@ -1,0 +1,15 @@
+{
+  "server_now": 1793527200000,
+  "engine_version": "cam-1",
+  "world_version": 1,
+  "timeline_until": 1793530800000,
+  "objects": [
+    {"id": "o_box1", "kind": "cardboard_box", "x": 6, "y": 4, "z": 0, "state": "default", "footprint": [[0, 0]], "card": {"name": "cardboard box", "summary": "A cardboard box"}}
+  ],
+  "segments": [
+    {"id": 1000000000, "start_at": 1793527200000, "end_at": 1793527220000, "action": "idle_sit", "pose": "sit", "primitive": "wait", "facing": 1, "part": null, "path": [[2, 6]], "target": null, "effects": [], "cut_at": null},
+    {"id": 1000000001, "start_at": 1793527220000, "end_at": 1793527240000, "action": "walk", "pose": "walk", "primitive": "move_to", "facing": -1, "part": "front", "path": [[2, 6], [1, 6]], "target": null, "effects": [], "cut_at": null},
+    {"id": 1000000002, "start_at": 1793527240000, "end_at": 1793530800000, "action": "idle_sit", "pose": "sit", "primitive": "wait", "facing": -1, "part": null, "path": [[1, 6]], "target": null, "effects": [], "cut_at": null}
+  ],
+  "weather": {"hour_utc": 1793527200000, "condition": "clear", "temp_c": 10.3, "cloud_pct": 16, "precip_mm": 0, "wind_kph": 12.6, "is_day": 1, "source": "open-meteo", "effects": {"cozyBoost": 0, "sunPatchAllowed": true, "startleEvents": []}}
+}

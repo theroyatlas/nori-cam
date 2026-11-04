@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#211a15">
+<title>Nori Cam — A little life, happening somewhere.</title>
+<meta name="description" content="One cat. One shared world. Watch Nori live her own little life, leave a gift, and see what she makes of it.">
+<link rel="stylesheet" href="/cam.css">
+<link rel="stylesheet" href="/cam-home.css">
+</head>
+<body class="cam-home">
+<header class="cam-brand">
+  <h1>Nori Cam</h1>
+  <p>A little life, happening somewhere.</p>
+  <p class="cam-identity">A shared world with a fictional AI cat.</p>
+</header>
+<main class="stage" aria-label="Nori's shared room">
+  <canvas id="cam" width="320" height="240" role="img" aria-label="Nori, a calico cat, in her shared room" aria-describedby="cam-intro">Nori Cam needs a browser with Canvas support.</canvas>
+</main>
+<div class="live-status" id="live-status" role="status" hidden>reconnecting…</div>
+<aside class="cam-notes" aria-label="About Nori">
+  <details id="cam-about">
+    <summary>Meet Nori</summary>
+    <div class="cam-about-body">
+      <p id="cam-intro"><strong>One cat. One shared world.</strong><br>Everyone visits the same Nori. Her world keeps its own time, even while you are away.</p>
+      <p>You can leave her a gift. She decides when to investigate, what to play with, and where to rest. Stay a while, or come back and see what changed.</p>
+      <p class="cam-disclosure">Nori is a fictional AI cat. Her actions follow a shared world simulation, with AI suggestions checked by the world's rules.</p>
+      <nav aria-label="Project information"><a href="/privacy">Privacy</a><a href="/data-deletion">Data deletion</a><a href="/demo">Earlier memory experiment</a></nav>
+    </div>
+  </details>
+</aside>
+<footer class="wx-attribution" id="wx-attribution"></footer>
+<script type="module" src="/cam.js"></script>
+<script type="module" src="/cam-gift.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+{
+  "type": "gift_ready",
+  "gift_id": "test-gift",
+  "name": "toy box",
+  "size": "M",
+  "sprite": "/media/gift-test-gift.png",
+  "contract_version": "cam-d1fix-2",
+  "initial_state": "default",
+  "content_safety": {
+    "ok": true,
+    "reason": "ok"
+  },
+  "identifiable_person_present": false,
+  "object_card": {
+    "name": "toy box",
+    "category": "toy",
+    "size": "M",
+    "height": "low",
+    "tags": [
+      "enclosed"
+    ],
+    "sensations": {
+      "shelter": 0.8
+    },
+    "parts": [
+      {
+        "kind": "inside",
+        "label": "inside",
+        "side": "front",
+        "height": "low"
+      }
+    ],
+    "states": [
+      "default"
+    ],
+    "hazards": [],
+    "space": {
+      "cm": {
+        "w": 40,
+        "d": 40,
+        "h": 20
+      },
+      "blocks": true,
+      "placement": "floor",
+      "movable": {
+        "push": false,
+        "rotate": false,
+        "stack": false
+      },
+      "state_cm": {}
+    },
+    "affordances": [],
+    "beyond_executor": [],
+    "summary": "Prefab cardboard_box"
+  },
+  "interactions": [
+    {
+      "verb": "approach",
+      "sensations": {
+        "shelter": 0.8
+      },
+      "approach": "front",
+      "target_part": "inside",
+      "contact": "none",
+      "steps": [
+        {
+          "p": "move_to",
+          "part": "inside"
+        },
+        {
+          "p": "wait",
+          "ms": 1500
+        }
+      ],
+      "end_state": null,
+      "cooldown_min": 10
+    }
+  ],
+  "pipeline": [
+    {
+      "step": "fetch_source",
+      "model": "local",
+      "ok": true,
+      "seconds": 0,
+      "ms": 0,
+      "cost_usd": 0.0,
+      "cost_basis": "local"
+    },
+    {
+      "step": "understand",
+      "model": "fake-spark",
+      "ok": true,
+      "seconds": 0,
+      "ms": 0,
+      "cost_usd": 0.0,
+      "cost_basis": "local"
+    },
+    {
+      "step": "box",
+      "model": "fake-box",
+      "ok": true,
+      "seconds": 0,
+      "ms": 0,
+      "cost_usd": 0.0,
+      "cost_basis": "local",
+      "note": "no crop"
+    },
+    {
+      "step": "redraw",
+      "model": "fake-image",
+      "ok": true,
+      "seconds": 0,
+      "ms": 0,
+      "cost_usd": 0.0,
+      "cost_basis": "local"
+    },
+    {
+      "step": "pixelize",
+      "model": "local",
+      "ok": true,
+      "seconds": 0,
+      "ms": 0,
+      "cost_usd": 0.0,
+      "cost_basis": "local"
+    },
+    {
+      "step": "upload",
+      "model": "local",
+      "ok": true,
+      "seconds": 0,
+      "ms": 0,
+      "cost_usd": 0.0,
+      "cost_basis": "local"
+    }
+  ],
+  "cost_usd": 0.0
+}

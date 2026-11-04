@@ -1,0 +1,251 @@
+{
+ "entries": [
+  {
+   "ts": "2026-10-30T09:07:00+00:00",
+   "tick_id": "sample-tick-1",
+   "action": "search",
+   "tool": "web_search",
+   "kind": "search",
+   "status": "ok",
+   "reason": null,
+   "why": "FAKE SAMPLE: looking for more.",
+   "model_note": null,
+   "because": [
+    {
+     "event_id": "X3",
+     "title": "Sample tiny water bears video",
+     "known": true
+    }
+   ],
+   "query": "FAKE SAMPLE tiny animals that survive space",
+   "url": null,
+   "cited_urls": null,
+   "event_id": null,
+   "event": null,
+   "event_ref": null,
+   "feeling": null,
+   "media_link": null,
+   "cost_usd": 0.0021
+  },
+  {
+   "ts": "2026-10-30T09:06:00+00:00",
+   "tick_id": "sample-tick-1",
+   "action": "skip",
+   "tool": "open_page",
+   "kind": null,
+   "status": "skipped",
+   "reason": "robots.txt does not allow this page",
+   "why": "FAKE SAMPLE: a blog I wanted to read.",
+   "model_note": null,
+   "because": [
+    {
+     "event_id": "X1",
+     "title": "Sample Lighthouse",
+     "known": true
+    }
+   ],
+   "query": null,
+   "url": "https://blog.fake-example.org/post",
+   "cited_urls": null,
+   "event_id": null,
+   "event": null,
+   "event_ref": null,
+   "feeling": null,
+   "media_link": null,
+   "cost_usd": 0.0
+  },
+  {
+   "ts": "2026-10-30T09:05:00+00:00",
+   "tick_id": "sample-tick-1",
+   "action": "browse",
+   "tool": "watch_video",
+   "kind": "video",
+   "status": "ok",
+   "reason": null,
+   "why": "FAKE SAMPLE: small animals in a picture made me curious about tiny survivors.",
+   "model_note": null,
+   "because": [
+    {
+     "event_id": "X2",
+     "title": "Sample tide pool picture",
+     "known": true
+    },
+    {
+     "event_id": "X1",
+     "title": "Sample Lighthouse",
+     "known": true
+    }
+   ],
+   "query": null,
+   "url": "https://images-assets.nasa.gov/video/sample/sample~mobile.mp4",
+   "cited_urls": null,
+   "event_id": "X3",
+   "event": {
+    "id": "X3",
+    "type": "video",
+    "title": "Sample tiny water bears video",
+    "url": "https://images-assets.nasa.gov/video/sample/sample~mobile.mp4",
+    "excerpt": "FAKE SAMPLE video page.",
+    "license": "NASA media (public)",
+    "attribution": "FAKE SAMPLE",
+    "retrieved_at": "2026-10-30T09:05:00+00:00",
+    "transcript": "FAKE SAMPLE narration: these animals can survive in space.",
+    "transcript_source": "audio track",
+    "transcript_model": "muse-voice-transcribe-1.0",
+    "audio_seconds": 12.5
+   },
+   "event_ref": null,
+   "feeling": null,
+   "media_link": "https://images-assets.nasa.gov/video/sample/sample~mobile.mp4",
+   "cost_usd": 0.0021
+  },
+  {
+   "ts": "2026-10-30T09:04:00+00:00",
+   "tick_id": "sample-tick-1",
+   "action": "feel",
+   "tool": "record_feeling",
+   "kind": null,
+   "status": "ok",
+   "reason": null,
+   "why": null,
+   "model_note": null,
+   "because": [],
+   "query": null,
+   "url": null,
+   "cited_urls": null,
+   "event_id": "X2",
+   "event": null,
+   "event_ref": {
+    "id": "X2",
+    "title": "Sample tide pool picture"
+   },
+   "feeling": {
+    "valence": "neutral",
+    "intensity": 0,
+    "reason": "FAKE SAMPLE: nice, but no strong feeling.",
+    "label": "model-generated",
+    "model": "fake"
+   },
+   "media_link": "https://upload.wikimedia.org/wikipedia/commons/sample-tide-pool.jpg",
+   "cost_usd": 0.0021
+  },
+  {
+   "ts": "2026-10-30T09:03:00+00:00",
+   "tick_id": "sample-tick-1",
+   "action": "browse",
+   "tool": "look_at_image",
+   "kind": "image",
+   "status": "ok",
+   "reason": null,
+   "why": "FAKE SAMPLE: lighthouses sit near the sea, so I looked for sea life.",
+   "model_note": null,
+   "because": [
+    {
+     "event_id": "X1",
+     "title": "Sample Lighthouse",
+     "known": true
+    }
+   ],
+   "query": null,
+   "url": "https://upload.wikimedia.org/wikipedia/commons/sample-tide-pool.jpg",
+   "cited_urls": null,
+   "event_id": "X2",
+   "event": {
+    "id": "X2",
+    "type": "image",
+    "title": "Sample tide pool picture",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/sample-tide-pool.jpg",
+    "excerpt": "FAKE SAMPLE image page.",
+    "license": "CC BY 4.0",
+    "attribution": "FAKE SAMPLE",
+    "retrieved_at": "2026-10-30T09:03:00+00:00",
+    "noticed": "a small crab near the middle",
+    "boxes": [
+     {
+      "x1": 120,
+      "y1": 90,
+      "x2": 300,
+      "y2": 210
+     }
+    ],
+    "sam_model": "sam-3.1",
+    "sam_concept": "crab",
+    "image_size": {
+     "w": 640,
+     "h": 400
+    }
+   },
+   "event_ref": null,
+   "feeling": null,
+   "media_link": "https://upload.wikimedia.org/wikipedia/commons/sample-tide-pool.jpg",
+   "cost_usd": 0.0021
+  },
+  {
+   "ts": "2026-10-30T09:02:00+00:00",
+   "tick_id": "sample-tick-1",
+   "action": "feel",
+   "tool": "record_feeling",
+   "kind": null,
+   "status": "ok",
+   "reason": null,
+   "why": null,
+   "model_note": null,
+   "because": [],
+   "query": null,
+   "url": null,
+   "cited_urls": null,
+   "event_id": "X1",
+   "event": null,
+   "event_ref": {
+    "id": "X1",
+    "title": "Sample Lighthouse"
+   },
+   "feeling": {
+    "valence": "positive",
+    "intensity": 2,
+    "reason": "FAKE SAMPLE: a steady light for strangers feels kind.",
+    "label": "model-generated",
+    "model": "fake"
+   },
+   "media_link": null,
+   "cost_usd": 0.0021
+  },
+  {
+   "ts": "2026-10-30T09:01:00+00:00",
+   "tick_id": "sample-tick-1",
+   "action": "browse",
+   "tool": "read_wikipedia",
+   "kind": "article",
+   "status": "ok",
+   "reason": null,
+   "why": "FAKE SAMPLE: I wanted to know how ships find the coast.",
+   "model_note": null,
+   "because": [],
+   "query": null,
+   "url": "https://en.wikipedia.org/wiki/Lighthouse",
+   "cited_urls": null,
+   "event_id": "X1",
+   "event": {
+    "id": "X1",
+    "type": "read_public_article",
+    "title": "Sample Lighthouse",
+    "url": "https://en.wikipedia.org/wiki/Lighthouse",
+    "excerpt": "FAKE SAMPLE. A lighthouse is a tower that shows ships where the coast is.",
+    "license": "CC BY-SA 4.0",
+    "attribution": "FAKE SAMPLE, Wikipedia contributors",
+    "retrieved_at": "2026-10-30T09:01:00+00:00"
+   },
+   "event_ref": null,
+   "feeling": null,
+   "media_link": null,
+   "cost_usd": 0.0021
+  }
+ ],
+ "summary": {
+  "entries": 7,
+  "cost_usd": 0.0126,
+  "ticks": [
+   "sample-tick-1"
+  ]
+ }
+}

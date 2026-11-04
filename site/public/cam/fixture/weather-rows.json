@@ -1,0 +1,650 @@
+[
+  {
+    "hour_utc": 1793491200000,
+    "condition": "clear",
+    "temp_c": 7.4,
+    "cloud_pct": 12,
+    "precip_mm": 0,
+    "wind_kph": 8.6,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793494800000,
+    "condition": "clear",
+    "temp_c": 6.9,
+    "cloud_pct": 10,
+    "precip_mm": 0,
+    "wind_kph": 8.1,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793498400000,
+    "condition": "clear",
+    "temp_c": 6.5,
+    "cloud_pct": 8,
+    "precip_mm": 0,
+    "wind_kph": 7.5,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793502000000,
+    "condition": "clear",
+    "temp_c": 6.1,
+    "cloud_pct": 14,
+    "precip_mm": 0,
+    "wind_kph": 7.2,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793505600000,
+    "condition": "clear",
+    "temp_c": 5.8,
+    "cloud_pct": 18,
+    "precip_mm": 0,
+    "wind_kph": 6.8,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793509200000,
+    "condition": "clear",
+    "temp_c": 5.5,
+    "cloud_pct": 15,
+    "precip_mm": 0,
+    "wind_kph": 6.5,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793512800000,
+    "condition": "clear",
+    "temp_c": 5.4,
+    "cloud_pct": 11,
+    "precip_mm": 0,
+    "wind_kph": 6.9,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793516400000,
+    "condition": "clear",
+    "temp_c": 5.9,
+    "cloud_pct": 9,
+    "precip_mm": 0,
+    "wind_kph": 7.8,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793520000000,
+    "condition": "clear",
+    "temp_c": 7.2,
+    "cloud_pct": 10,
+    "precip_mm": 0,
+    "wind_kph": 9.4,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793523600000,
+    "condition": "clear",
+    "temp_c": 8.8,
+    "cloud_pct": 14,
+    "precip_mm": 0,
+    "wind_kph": 11.2,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793527200000,
+    "condition": "clear",
+    "temp_c": 10.3,
+    "cloud_pct": 16,
+    "precip_mm": 0,
+    "wind_kph": 12.6,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793530800000,
+    "condition": "clear",
+    "temp_c": 11.6,
+    "cloud_pct": 12,
+    "precip_mm": 0,
+    "wind_kph": 13.5,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793534400000,
+    "condition": "clear",
+    "temp_c": 12.4,
+    "cloud_pct": 8,
+    "precip_mm": 0,
+    "wind_kph": 14.1,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793538000000,
+    "condition": "clear",
+    "temp_c": 12.8,
+    "cloud_pct": 11,
+    "precip_mm": 0,
+    "wind_kph": 13.8,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793541600000,
+    "condition": "clear",
+    "temp_c": 12.5,
+    "cloud_pct": 19,
+    "precip_mm": 0,
+    "wind_kph": 12.9,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793545200000,
+    "condition": "clear",
+    "temp_c": 11.4,
+    "cloud_pct": 24,
+    "precip_mm": 0,
+    "wind_kph": 11,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793548800000,
+    "condition": "cloudy",
+    "temp_c": 9.9,
+    "cloud_pct": 32,
+    "precip_mm": 0,
+    "wind_kph": 9.2,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793552400000,
+    "condition": "cloudy",
+    "temp_c": 8.7,
+    "cloud_pct": 44,
+    "precip_mm": 0,
+    "wind_kph": 7.4,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793556000000,
+    "condition": "cloudy",
+    "temp_c": 7.8,
+    "cloud_pct": 58,
+    "precip_mm": 0,
+    "wind_kph": 5.9,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793559600000,
+    "condition": "fog",
+    "temp_c": 7.1,
+    "cloud_pct": 72,
+    "precip_mm": 0,
+    "wind_kph": 4.3,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793563200000,
+    "condition": "fog",
+    "temp_c": 6.6,
+    "cloud_pct": 84,
+    "precip_mm": 0,
+    "wind_kph": 3.8,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793566800000,
+    "condition": "fog",
+    "temp_c": 6.2,
+    "cloud_pct": 88,
+    "precip_mm": 0,
+    "wind_kph": 3.5,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793570400000,
+    "condition": "fog",
+    "temp_c": 6,
+    "cloud_pct": 76,
+    "precip_mm": 0,
+    "wind_kph": 4.6,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793574000000,
+    "condition": "cloudy",
+    "temp_c": 6.3,
+    "cloud_pct": 64,
+    "precip_mm": 0,
+    "wind_kph": 6.2,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793577600000,
+    "condition": "cloudy",
+    "temp_c": 6.7,
+    "cloud_pct": 68,
+    "precip_mm": 0,
+    "wind_kph": 8.4,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793581200000,
+    "condition": "overcast",
+    "temp_c": 7,
+    "cloud_pct": 75,
+    "precip_mm": 0,
+    "wind_kph": 10.1,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793584800000,
+    "condition": "overcast",
+    "temp_c": 7.3,
+    "cloud_pct": 83,
+    "precip_mm": 0,
+    "wind_kph": 11.8,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793588400000,
+    "condition": "overcast",
+    "temp_c": 7.6,
+    "cloud_pct": 90,
+    "precip_mm": 0,
+    "wind_kph": 13.4,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793592000000,
+    "condition": "drizzle",
+    "temp_c": 7.9,
+    "cloud_pct": 94,
+    "precip_mm": 0.2,
+    "wind_kph": 14.9,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793595600000,
+    "condition": "drizzle",
+    "temp_c": 8.1,
+    "cloud_pct": 96,
+    "precip_mm": 0.4,
+    "wind_kph": 16.2,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793599200000,
+    "condition": "drizzle",
+    "temp_c": 8.4,
+    "cloud_pct": 97,
+    "precip_mm": 0.6,
+    "wind_kph": 17.8,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793602800000,
+    "condition": "rain",
+    "temp_c": 8.8,
+    "cloud_pct": 98,
+    "precip_mm": 1.1,
+    "wind_kph": 19.5,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793606400000,
+    "condition": "rain",
+    "temp_c": 9.2,
+    "cloud_pct": 99,
+    "precip_mm": 1.8,
+    "wind_kph": 21.3,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793610000000,
+    "condition": "rain",
+    "temp_c": 9.6,
+    "cloud_pct": 100,
+    "precip_mm": 2.9,
+    "wind_kph": 23.7,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793613600000,
+    "condition": "rain",
+    "temp_c": 10,
+    "cloud_pct": 100,
+    "precip_mm": 4.2,
+    "wind_kph": 26.4,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793617200000,
+    "condition": "rain",
+    "temp_c": 10.3,
+    "cloud_pct": 100,
+    "precip_mm": 6.4,
+    "wind_kph": 29.1,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793620800000,
+    "condition": "rain",
+    "temp_c": 10.5,
+    "cloud_pct": 98,
+    "precip_mm": 3.5,
+    "wind_kph": 27.6,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793624400000,
+    "condition": "rain",
+    "temp_c": 10.7,
+    "cloud_pct": 96,
+    "precip_mm": 4.8,
+    "wind_kph": 30.2,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793628000000,
+    "condition": "thunder",
+    "temp_c": 10.4,
+    "cloud_pct": 99,
+    "precip_mm": 7.6,
+    "wind_kph": 34.8,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793631600000,
+    "condition": "thunder",
+    "temp_c": 9.8,
+    "cloud_pct": 100,
+    "precip_mm": 9.2,
+    "wind_kph": 37.5,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793635200000,
+    "condition": "thunder",
+    "temp_c": 9.1,
+    "cloud_pct": 99,
+    "precip_mm": 6.8,
+    "wind_kph": 33.4,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793638800000,
+    "condition": "thunder",
+    "temp_c": 8.2,
+    "cloud_pct": 97,
+    "precip_mm": 5.1,
+    "wind_kph": 29.8,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793642400000,
+    "condition": "rain",
+    "temp_c": 6.9,
+    "cloud_pct": 95,
+    "precip_mm": 2.7,
+    "wind_kph": 25,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793646000000,
+    "condition": "rain",
+    "temp_c": 5.4,
+    "cloud_pct": 92,
+    "precip_mm": 1.4,
+    "wind_kph": 22.1,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793649600000,
+    "condition": "drizzle",
+    "temp_c": 4.1,
+    "cloud_pct": 89,
+    "precip_mm": 0.5,
+    "wind_kph": 19.6,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793653200000,
+    "condition": "overcast",
+    "temp_c": 2.9,
+    "cloud_pct": 86,
+    "precip_mm": 0,
+    "wind_kph": 17.8,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793656800000,
+    "condition": "overcast",
+    "temp_c": 1.9,
+    "cloud_pct": 88,
+    "precip_mm": 0,
+    "wind_kph": 16.5,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793660400000,
+    "condition": "snow",
+    "temp_c": 1.1,
+    "cloud_pct": 91,
+    "precip_mm": 0.4,
+    "wind_kph": 15.9,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793664000000,
+    "condition": "snow",
+    "temp_c": 0.6,
+    "cloud_pct": 94,
+    "precip_mm": 0.9,
+    "wind_kph": 15.4,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793667600000,
+    "condition": "snow",
+    "temp_c": 0.2,
+    "cloud_pct": 97,
+    "precip_mm": 1.6,
+    "wind_kph": 16.1,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793671200000,
+    "condition": "snow",
+    "temp_c": -0.3,
+    "cloud_pct": 99,
+    "precip_mm": 2.4,
+    "wind_kph": 17,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793674800000,
+    "condition": "snow",
+    "temp_c": -0.6,
+    "cloud_pct": 98,
+    "precip_mm": 1.8,
+    "wind_kph": 16.3,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793678400000,
+    "condition": "snow",
+    "temp_c": -0.8,
+    "cloud_pct": 95,
+    "precip_mm": 1.1,
+    "wind_kph": 14.8,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793682000000,
+    "condition": "snow",
+    "temp_c": -0.7,
+    "cloud_pct": 92,
+    "precip_mm": 0.6,
+    "wind_kph": 13.5,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793685600000,
+    "condition": "snow",
+    "temp_c": -0.4,
+    "cloud_pct": 85,
+    "precip_mm": 0.2,
+    "wind_kph": 12.2,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793689200000,
+    "condition": "overcast",
+    "temp_c": 0.3,
+    "cloud_pct": 74,
+    "precip_mm": 0,
+    "wind_kph": 11.4,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793692800000,
+    "condition": "cloudy",
+    "temp_c": 1.4,
+    "cloud_pct": 58,
+    "precip_mm": 0,
+    "wind_kph": 10.9,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793696400000,
+    "condition": "cloudy",
+    "temp_c": 2.8,
+    "cloud_pct": 45,
+    "precip_mm": 0,
+    "wind_kph": 10.3,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793700000000,
+    "condition": "cloudy",
+    "temp_c": 4.1,
+    "cloud_pct": 34,
+    "precip_mm": 0,
+    "wind_kph": 9.8,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793703600000,
+    "condition": "clear",
+    "temp_c": 5.3,
+    "cloud_pct": 22,
+    "precip_mm": 0,
+    "wind_kph": 9.5,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793707200000,
+    "condition": "clear",
+    "temp_c": 6.2,
+    "cloud_pct": 15,
+    "precip_mm": 0,
+    "wind_kph": 9.1,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793710800000,
+    "condition": "clear",
+    "temp_c": 6.8,
+    "cloud_pct": 10,
+    "precip_mm": 0,
+    "wind_kph": 8.9,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793714400000,
+    "condition": "clear",
+    "temp_c": 6.7,
+    "cloud_pct": 9,
+    "precip_mm": 0,
+    "wind_kph": 8.4,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793718000000,
+    "condition": "clear",
+    "temp_c": 6,
+    "cloud_pct": 12,
+    "precip_mm": 0,
+    "wind_kph": 7.8,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793721600000,
+    "condition": "clear",
+    "temp_c": 4.9,
+    "cloud_pct": 16,
+    "precip_mm": 0,
+    "wind_kph": 7.1,
+    "is_day": 1
+  },
+  {
+    "hour_utc": 1793725200000,
+    "condition": "clear",
+    "temp_c": 3.8,
+    "cloud_pct": 20,
+    "precip_mm": 0,
+    "wind_kph": 6.5,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793728800000,
+    "condition": "clear",
+    "temp_c": 3.1,
+    "cloud_pct": 25,
+    "precip_mm": 0,
+    "wind_kph": 6.1,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793732400000,
+    "condition": "cloudy",
+    "temp_c": 2.6,
+    "cloud_pct": 28,
+    "precip_mm": 0,
+    "wind_kph": 5.8,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793736000000,
+    "condition": "clear",
+    "temp_c": 2.2,
+    "cloud_pct": 24,
+    "precip_mm": 0,
+    "wind_kph": 5.5,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793739600000,
+    "condition": "clear",
+    "temp_c": 1.8,
+    "cloud_pct": 18,
+    "precip_mm": 0,
+    "wind_kph": 5.3,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793743200000,
+    "condition": "clear",
+    "temp_c": 1.5,
+    "cloud_pct": 14,
+    "precip_mm": 0,
+    "wind_kph": 5,
+    "is_day": 0
+  },
+  {
+    "hour_utc": 1793746800000,
+    "condition": "clear",
+    "temp_c": 1.2,
+    "cloud_pct": 11,
+    "precip_mm": 0,
+    "wind_kph": 4.8,
+    "is_day": 0
+  }
+]

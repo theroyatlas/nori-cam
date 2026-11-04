@@ -1,0 +1,12 @@
+{
+ "note": "Upload each file to KV namespace MEDIA with the key = name (see site/DEPLOY.md).",
+ "files": [
+  {
+   "name": "P-sample-1.png",
+   "content_type": "image/png",
+   "bytes": 70,
+   "sha256": "b26679c9006f519b516401e0a0d2351bac2d3377ca99d83ad56135e1c4f9970d",
+   "source": "social/media/P-sample-1.png"
+  }
+ ]
+}

@@ -1,0 +1,283 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "verb": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "sensations": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "soft": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "shelter": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "height": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "view_far": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "sound": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "motion": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "light": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "warm": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [],
+      "maxProperties": 3
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "p": {
+            "enum": [
+              "move_to",
+              "face",
+              "touch",
+              "push",
+              "carry",
+              "drop",
+              "climb",
+              "hold_pose",
+              "wait",
+              "set_object_state",
+              "sleep"
+            ]
+          },
+          "approach": {
+            "enum": [
+              "front",
+              "back",
+              "left",
+              "right",
+              "top"
+            ]
+          },
+          "part": {
+            "enum": [
+              "top",
+              "front",
+              "opening",
+              "inside",
+              "under",
+              "handle",
+              "pressable",
+              "movable",
+              "viewport"
+            ]
+          },
+          "pose": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "gait": {
+            "enum": [
+              "walk",
+              "sneak",
+              "dash"
+            ]
+          },
+          "ms": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 5400000
+          },
+          "dir": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "at": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "state": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "effects": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "e": {
+                  "enum": [
+                    "emit_sound",
+                    "wobble",
+                    "move_object",
+                    "set_state",
+                    "glow",
+                    "particles"
+                  ]
+                },
+                "object_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 160
+                },
+                "at_ms": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 5400000
+                },
+                "dx": {
+                  "type": "number",
+                  "minimum": -1,
+                  "maximum": 1
+                },
+                "dy": {
+                  "type": "number",
+                  "minimum": -1,
+                  "maximum": 1
+                },
+                "state": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 160
+                },
+                "on": {
+                  "type": "boolean"
+                },
+                "pattern": {
+                  "enum": [
+                    "seeded",
+                    "single"
+                  ]
+                },
+                "amp": {
+                  "type": "number",
+                  "minimum": 1,
+                  "maximum": 3
+                },
+                "kind": {
+                  "enum": [
+                    "notes",
+                    "sparkle",
+                    "dust"
+                  ]
+                }
+              },
+              "required": [
+                "e"
+              ]
+            },
+            "minItems": 0,
+            "maxItems": 8
+          }
+        },
+        "required": [
+          "p"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 8
+    },
+    "approach": {
+      "enum": [
+        "front",
+        "back",
+        "left",
+        "right",
+        "top"
+      ]
+    },
+    "target_part": {
+      "enum": [
+        "top",
+        "front",
+        "opening",
+        "inside",
+        "under",
+        "handle",
+        "pressable",
+        "movable",
+        "viewport",
+        null
+      ]
+    },
+    "contact": {
+      "enum": [
+        "none",
+        "touch",
+        "push",
+        "carry",
+        "drop",
+        "climb",
+        "sleep",
+        "set_object_state",
+        "hold_pose"
+      ]
+    },
+    "allowed_states": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 160
+      },
+      "minItems": 0,
+      "maxItems": 3
+    },
+    "end_state": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cooldown_min": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10080
+    }
+  },
+  "required": [
+    "verb",
+    "sensations",
+    "steps",
+    "end_state",
+    "cooldown_min"
+  ]
+}

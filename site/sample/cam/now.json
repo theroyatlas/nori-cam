@@ -1,0 +1,38 @@
+{
+ "_comment": "Fixture v0 for the 2026-11-02 Canvas baseline (spec 2026-11-02-nori-cam-design.md §3, §4, §8). Times are fixture milliseconds from 0; in fixture mode the renderer plays them in a loop of loop_ms aligned to the wall clock (t = Date.now() % loop_ms), so two browsers show the same frame.",
+ "fixture": true,
+ "loop_ms": 61000,
+ "server_now": 0,
+ "engine_version": "cam-1",
+ "world_version": 1,
+ "timeline_until": 61000,
+ "room": {"grid": {"w": 10, "h": 8}, "window": "london", "walls": ["x=0", "y=0"]},
+ "objects": [
+  {"id": "o_box1", "kind": "cardboard_box", "sprite": "procedural:cardboard_box", "x": 6, "y": 4, "z": 0,
+   "footprint": [[6, 4]], "blocks": true, "size": "M", "tags": ["enclosed"], "state": "default", "status": "placed",
+   "parts": [{"kind": "inside", "side": "top", "height": "low"}, {"kind": "front", "side": "front", "height": "low"}],
+   "origin": {"type": "prefab", "label": "a cardboard box"}}
+ ],
+ "segments": [
+  {"id": 1, "start_at": 0, "end_at": 4000, "action": "idle_sit", "primitive": "wait", "pose": "sit", "facing": 1,
+   "path": [[2, 6]], "z": 0, "target": null, "part": null, "carrying": null, "effects": null, "cut_at": null},
+  {"id": 2, "start_at": 4000, "end_at": 6000, "action": "stretch", "primitive": "hold_pose", "pose": "stretch", "facing": 1,
+   "path": [[2, 6]], "z": 0, "target": null, "part": null, "carrying": null, "effects": null, "cut_at": null},
+  {"id": 3, "start_at": 6000, "end_at": 9400, "action": "walk", "primitive": "move_to", "pose": "walk", "facing": 1,
+   "path": [[2, 6], [3, 6], [4, 6], [4, 5], [5, 5], [5, 4]], "z": 0, "target": "o_box1", "part": "front", "carrying": null, "effects": null, "cut_at": null},
+  {"id": 4, "start_at": 9400, "end_at": 10900, "action": "sniff", "primitive": "hold_pose", "pose": "look_up", "facing": 1,
+   "path": [[5, 4]], "z": 0, "target": "o_box1", "part": "front", "carrying": null, "effects": null, "cut_at": null},
+  {"id": 5, "start_at": 10900, "end_at": 11500, "action": "hide_in", "primitive": "climb", "pose": "jump", "facing": 1,
+   "path": [[5, 4], [6, 4]], "z": 0, "target": "o_box1", "part": "inside", "carrying": null, "effects": null, "cut_at": null},
+  {"id": 6, "start_at": 11500, "end_at": 16000, "action": "hide_in", "primitive": "hold_pose", "pose": "alert_loaf", "facing": 1,
+   "path": [[6, 4]], "z": 0, "target": "o_box1", "part": "inside", "carrying": null, "effects": null, "cut_at": null},
+  {"id": 7, "start_at": 16000, "end_at": 56000, "action": "sleep", "primitive": "sleep", "pose": "sleepy", "facing": 1,
+   "path": [[6, 4]], "z": 0, "target": "o_box1", "part": "inside", "carrying": null, "effects": null, "cut_at": null},
+  {"id": 8, "start_at": 56000, "end_at": 56600, "action": "walk", "primitive": "climb", "pose": "jump", "facing": -1,
+   "path": [[6, 4], [5, 4]], "z": 0, "target": "o_box1", "part": "front", "carrying": null, "effects": null, "cut_at": null},
+  {"id": 9, "start_at": 56600, "end_at": 60000, "action": "walk", "primitive": "move_to", "pose": "walk", "facing": -1,
+   "path": [[5, 4], [5, 5], [4, 5], [4, 6], [3, 6], [2, 6]], "z": 0, "target": null, "part": null, "carrying": null, "effects": null, "cut_at": null},
+  {"id": 10, "start_at": 60000, "end_at": 61000, "action": "idle_sit", "primitive": "wait", "pose": "sit", "facing": -1,
+   "path": [[2, 6]], "z": 0, "target": null, "part": null, "carrying": null, "effects": null, "cut_at": null}
+ ]
+}

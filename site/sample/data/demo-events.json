@@ -1,0 +1,32 @@
+{
+ "scripted": true,
+ "note": "Events are scripted exposures to public Wikipedia articles fetched by the research harness; feelings are scripted, not model-formed.",
+ "events": [
+  {
+   "id": "E01",
+   "title": "Sample Lantern",
+   "valence": "positive",
+   "scripted_feeling": "I felt quietly pleased after this experience.",
+   "excerpt": "FAKE SAMPLE. A lantern is a portable source of light.",
+   "source_url": "https://en.wikipedia.org/wiki/Lantern",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "attribution": "FAKE SAMPLE, Wikipedia contributors",
+   "fetched_utc": "2026-10-30T09:00:00+00:00",
+   "page_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+  },
+  {
+   "id": "E02",
+   "title": "Sample Pebble",
+   "valence": "neutral",
+   "scripted_feeling": "I felt neither pleased nor displeased afterward.",
+   "excerpt": "FAKE SAMPLE. A pebble is a small, rounded stone.",
+   "source_url": "https://en.wikipedia.org/wiki/Pebble",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "attribution": "FAKE SAMPLE, Wikipedia contributors",
+   "fetched_utc": "2026-10-30T09:00:00+00:00",
+   "page_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+  }
+ ]
+}

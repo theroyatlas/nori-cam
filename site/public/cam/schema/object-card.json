@@ -1,0 +1,394 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "size": {
+      "enum": [
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    "height": {
+      "enum": [
+        "floor",
+        "low",
+        "mid",
+        "high"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "soft",
+          "enclosed",
+          "portable",
+          "high_place",
+          "viewpoint",
+          "pushable",
+          "pressable",
+          "computer",
+          "water",
+          "blocker"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 10
+    },
+    "sensations": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "soft": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "shelter": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "height": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "view_far": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "sound": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "motion": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "light": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "warm": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [],
+      "maxProperties": 3
+    },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "enum": [
+              "top",
+              "front",
+              "opening",
+              "inside",
+              "under",
+              "handle",
+              "pressable",
+              "movable",
+              "viewport"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "side": {
+            "enum": [
+              "front",
+              "back",
+              "left",
+              "right",
+              "top"
+            ]
+          },
+          "height": {
+            "enum": [
+              "floor",
+              "low",
+              "mid",
+              "high"
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "label",
+          "side",
+          "height"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 4
+    },
+    "states": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 160
+      },
+      "minItems": 1,
+      "maxItems": 3
+    },
+    "hazards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "enum": [
+              "hot",
+              "sharp",
+              "fragile",
+              "toxic",
+              "unstable"
+            ]
+          },
+          "parts": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "top",
+                "front",
+                "opening",
+                "inside",
+                "under",
+                "handle",
+                "pressable",
+                "movable",
+                "viewport"
+              ]
+            },
+            "minItems": 0,
+            "maxItems": 4
+          },
+          "states": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            },
+            "minItems": 0,
+            "maxItems": 3
+          }
+        },
+        "required": [
+          "kind",
+          "parts",
+          "states"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 8
+    },
+    "space": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "cm": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "w": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 1000
+            },
+            "d": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 1000
+            },
+            "h": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 1000
+            }
+          },
+          "required": [
+            "w",
+            "d",
+            "h"
+          ]
+        },
+        "blocks": {
+          "type": "boolean"
+        },
+        "placement": {
+          "enum": [
+            "floor",
+            "wall",
+            "surface"
+          ]
+        },
+        "movable": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "push": {
+              "type": "boolean"
+            },
+            "rotate": {
+              "type": "boolean"
+            },
+            "stack": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "push",
+            "rotate",
+            "stack"
+          ]
+        },
+        "state_cm": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "w": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1000
+              },
+              "d": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1000
+              },
+              "h": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1000
+              }
+            },
+            "required": [
+              "w",
+              "d",
+              "h"
+            ]
+          },
+          "maxProperties": 3
+        }
+      },
+      "required": [
+        "cm",
+        "blocks",
+        "placement",
+        "movable",
+        "state_cm"
+      ]
+    },
+    "affordances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "verb": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "effect_text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "sensations": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "soft",
+                "shelter",
+                "height",
+                "view_far",
+                "sound",
+                "motion",
+                "light",
+                "warm"
+              ]
+            },
+            "minItems": 0,
+            "maxItems": 3
+          }
+        },
+        "required": [
+          "verb",
+          "effect_text",
+          "sensations"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 8
+    },
+    "beyond_executor": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 160
+      },
+      "minItems": 0,
+      "maxItems": 8
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 160
+    },
+    "prop_poses": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 160
+      },
+      "minItems": 0,
+      "maxItems": 16
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "size",
+    "height",
+    "tags",
+    "sensations",
+    "parts",
+    "states",
+    "space",
+    "affordances",
+    "beyond_executor",
+    "summary"
+  ]
+}

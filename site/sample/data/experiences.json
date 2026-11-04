@@ -1,0 +1,52 @@
+{
+ "experiences": [
+  {
+   "id": "X1",
+   "type": "read_public_article",
+   "title": "Sample Lighthouse",
+   "url": "https://en.wikipedia.org/wiki/Lighthouse",
+   "excerpt": "FAKE SAMPLE. A lighthouse is a tower that shows ships where the coast is.",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "attribution": "FAKE SAMPLE, Wikipedia contributors",
+   "retrieved_at": "2026-10-30T09:01:00+00:00",
+   "feeling": {
+    "valence": "positive",
+    "intensity": 2,
+    "reason": "FAKE SAMPLE: a steady light for strangers feels kind.",
+    "label": "model-generated",
+    "model": "fake"
+   }
+  },
+  {
+   "id": "X2",
+   "type": "image",
+   "title": "Sample tide pool picture",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/sample-tide-pool.jpg",
+   "excerpt": "FAKE SAMPLE image page.",
+   "license": "CC BY 4.0",
+   "license_url": null,
+   "attribution": "FAKE SAMPLE",
+   "retrieved_at": "2026-10-30T09:03:00+00:00",
+   "feeling": {
+    "valence": "neutral",
+    "intensity": 0,
+    "reason": "FAKE SAMPLE: nice, but no strong feeling.",
+    "label": "model-generated",
+    "model": "fake"
+   }
+  },
+  {
+   "id": "X3",
+   "type": "video",
+   "title": "Sample tiny water bears video",
+   "url": "https://images-assets.nasa.gov/video/sample/sample~mobile.mp4",
+   "excerpt": "FAKE SAMPLE video page.",
+   "license": "NASA media (public)",
+   "license_url": null,
+   "attribution": "FAKE SAMPLE",
+   "retrieved_at": "2026-10-30T09:05:00+00:00",
+   "feeling": null
+  }
+ ]
+}

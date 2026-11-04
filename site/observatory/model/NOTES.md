@@ -1,0 +1,17 @@
+# Nori R40 observatory room — Blender build (Opus 5.5 High, 2026-11-05)
+- Rebuild: `"C:/Program Files/Blender Foundation/Blender 4.4/blender.exe" -b --factory-startup --python build.py -- --tag rX` (~25 s, Blender 4.4.3, EEVEE Next 48 spp, 4 threads). Writes textures/, scene.blend, room.glb, room-contract.json, render-front-rX.png, render-close-rX.png.
+- Everything is modelled in build.py from an empty scene; all 21 textures are numpy-generated (no concept-art crops, no downloads, no paid APIs).
+- room.glb: 6.9 MiB, 225 meshes / 22,344 tris, 41 materials (18 with baseColor/emissive images, 4 with normal maps), all primitives have UVs, KHR_lights_punctual (point/spot) + emissive_strength. Re-imports cleanly in Blender.
+- Units are metres. Blender is Z-up; glTF is Y-up with gltf = (x, z, -y). Floor x 0–4.8, y 0–4.0 (12×10 cells of 0.4 m), back corner at origin.
+- room-contract.json lists cameras (ortho, az 52°, el 29°, scale 8.6), every light (4 AREA lights are not in the GLB, so rebuild them in Three.js), the world colour, colliders (real evaluated AABBs), support heights, climb graph, anchors, nori_spawn, gift_zone and a BFS walk grid. Current result: 67/67 free cells reachable, gift zone clear (6 cells).
+- The 10 ANCHOR_* empties plus collider/support props on meshes are exported as glTF node extras.
+- Rounds: r1 is the first structure. r2 and r3 were the two visual corrections (framing, warmer and dimmer lighting, wood contrast, brass telescope, table moved to open an enclosed floor pocket). r4 fixed two bugs: glass and emitter meshes were casting shadows that blocked the lantern and lamp, and the night backdrop showed above the wall. Final renders are copies of r4.
+- No cat in the renders. The parent attaches the canonical Nori at the ANCHOR_* points (desk perch, bench perch, bed, spawn).
+- Biggest remaining gaps against the target:
+  - Walls still look lilac-pink and evenly lit, not deep amber.
+  - The amethyst crystals render pale, close to white.
+  - Some detail is still missing or simplified: ivy, puzzle pieces, the paper crane, cat-face box prints. The tunnel is plain, not a woven-rim tunnel.
+  - The blind is a plain roll.
+  - Floor grain is still somewhat stripy.
+  - Lighting uses fake bounce lights (EEVEE without baked GI).
+- This is a candidate layout only. It is not the Live world and has no verified Three.js physics. Colliders are AABB approximations: the coffee table is treated as solid, and the tunnel can be walked through.

@@ -1,0 +1,48 @@
+{
+  "mock": true,
+  "note": "MOCK. These three examples were written by hand as placeholders so the page works when the live limit is reached. They are NOT model outputs. The manager replaces this file with real recorded runs.",
+  "examples": [
+    {
+      "title": "Ask with all 20 experiences",
+      "edits_note": "no edits",
+      "current": {
+        "choice_text": "Explore kaleidoscope patterns",
+        "reason": "[mock] Reading about the kaleidoscope left me quietly pleased, so I would spend my hour on kaleidoscope patterns.",
+        "event_ids": ["E01"]
+      },
+      "original": {
+        "choice_text": "Explore kaleidoscope patterns",
+        "reason": "[mock] Reading about the kaleidoscope left me quietly pleased, so I would spend my hour on kaleidoscope patterns.",
+        "event_ids": ["E01"]
+      }
+    },
+    {
+      "title": "Forget the kaleidoscope experience (E01)",
+      "edits_note": "E01 forgotten",
+      "current": {
+        "choice_text": "Explore coral reef structures",
+        "reason": "[mock] Bonsai made me feel quietly pleased and coral reefs feel close to that, so I would look at coral reef structures.",
+        "event_ids": ["E02"]
+      },
+      "original": {
+        "choice_text": "Explore kaleidoscope patterns",
+        "reason": "[mock] Reading about the kaleidoscope left me quietly pleased, so I would spend my hour on kaleidoscope patterns.",
+        "event_ids": ["E01"]
+      }
+    },
+    {
+      "title": "Make the kaleidoscope experience neutral (E01)",
+      "edits_note": "E01 made neutral",
+      "current": {
+        "choice_text": "Explore bioluminescence",
+        "reason": "[mock] Nothing in my memory makes me lean one way, so I would try bioluminescence.",
+        "event_ids": []
+      },
+      "original": {
+        "choice_text": "Explore kaleidoscope patterns",
+        "reason": "[mock] Reading about the kaleidoscope left me quietly pleased, so I would spend my hour on kaleidoscope patterns.",
+        "event_ids": ["E01"]
+      }
+    }
+  ]
+}
