@@ -1,6 +1,6 @@
 # Third-party notices
 
-Project source is all rights reserved. These notices apply to their respective bundled components.
+Project source is released under the MIT License (see LICENSE). These notices apply to their respective bundled components.
 
 ## Three.js 0.187.0
 

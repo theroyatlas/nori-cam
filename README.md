@@ -100,6 +100,6 @@ At runtime, the only model calls are the Meta Model API calls described above. E
 
 ## Rights
 
-Copyright © 2026 Roy Wang. All rights reserved. Source is published for hackathon judging.
+Copyright © 2026 Roy Wang. Released under the MIT License; see [LICENSE](LICENSE).
 
 Bundled dependencies retain their respective licenses. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
