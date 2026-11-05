@@ -2,7 +2,15 @@
 (function () {
   'use strict';
   const ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
-  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ESC[c]);
+  // The saved post data still carries a few Chinese licence notes; the site is English-only, so show them in English.
+  const EN = [
+    ['© 各原網站；僅存查詢與引用清單', '© the original sites; only the query and the citation list are kept'],
+    ['NASA / Wikimedia 媒體（逐筆核對授權）；僅存連結與模型描述', 'NASA / Wikimedia media (licence checked per item); only links and model descriptions are kept'],
+    ['© 原網站，僅存節錄（browser）', '© the original site; excerpt only (browser)'],
+    ['© 原網站，僅存節錄', '© the original site; excerpt only'],
+  ];
+  const en = (s) => EN.reduce((t, [zh, e]) => t.split(zh).join(e), s);
+  const esc = (s) => en(String(s == null ? '' : s)).replace(/[&<>"']/g, (c) => ESC[c]);
   const safeUrl = (u) => (/^https?:\/\//i.test(u || '') ? esc(u) : '#');
   const link = (u, label) => `<a href="${safeUrl(u)}" target="_blank" rel="noopener noreferrer">${esc(label || u)}</a>`;
   async function getJson(path) {

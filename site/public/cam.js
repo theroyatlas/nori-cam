@@ -780,7 +780,7 @@ async function main() {
   const fixtureObjects = timeline.objects || [];
   const fixtureWeather = await getWeather(0);
   const replayStart=benchClock.perfNow();
-  if(isReplay){const label=document.getElementById('live-status');if(label){label.hidden=false;label.textContent='回看這段時光';}}
+  if(isReplay){const label=document.getElementById('live-status');if(label){label.hidden=false;label.textContent='Replaying this stretch of time';}}
   // R40 observatory room is the default scene (?scene=miniature is the same renderer). ?scene=pixel keeps the 2D room;
   // no WebGL or any load failure also leaves the 2D room, which is drawn until the R40 renderer is ready.
   const sceneParam = params.get('scene');
