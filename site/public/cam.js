@@ -786,13 +786,18 @@ async function main() {
   const sceneParam = params.get('scene');
   const webgl = (() => { try { const c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) { return false; } })();
   if (sceneParam !== 'pixel' && webgl) {
+    // Keep the old 2D room hidden while the R40 room loads, so the page does not open on the old room and then jump.
+    // It is shown again if the R40 renderer fails, or if it is still not ready after 15 s.
+    canvas.style.visibility = 'hidden';
+    const revealOldRoom = () => { canvas.style.visibility = ''; };
+    setTimeout(() => { if (!miniature || !miniature.ready()) revealOldRoom(); }, 15000);
     void import('./cam-observatory.js').then(({createMiniatureRenderer}) =>
-      createMiniatureRenderer({oldCanvas:canvas,manifest,images,debug,onFailure:()=>{ miniature=null; }})
+      createMiniatureRenderer({oldCanvas:canvas,manifest,images,debug,onFailure:()=>{ miniature=null; revealOldRoom(); }})
     ).then(renderer=>{
       miniature=renderer;
       if(debug) window.NORI_MINIATURE_DEBUG={probe:renderer.probe,finishFrame:renderer.finishFrame,
         seekReplay:isReplay?time=>{if(!Number.isFinite(time))return;frozenT=Math.max(timeline.from,Math.min(timeline.to,time));}:undefined};
-    }).catch(error=>{ console.warn('Miniature renderer unavailable; using the original room.',error); });
+    }).catch(error=>{ revealOldRoom(); console.warn('Miniature renderer unavailable; using the original room.',error); });
   }
   const attributionEl = document.getElementById('wx-attribution');
   if (attributionEl) attributionEl.textContent = WEATHER_ATTRIBUTION;

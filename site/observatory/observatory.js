@@ -14,7 +14,9 @@ const DROP_MS=700,DROP_H=1.8,LAND_MS=320,FX_MS=520,FRAME_MS=1000/30;
 
 export async function createMiniatureRenderer({oldCanvas,manifest,images,onFailure}){
  const canvas=document.createElement('canvas');canvas.id='cam-observatory';canvas.hidden=true;
- canvas.style.cssText='display:none;width:100%;height:auto;aspect-ratio:16/9';oldCanvas.parentElement.append(canvas);
+ // Fit the whole 16:9 room inside the window (contain), leaving room for the page footer; width:100% alone cropped
+ // the top and bottom on wide windows.
+ canvas.style.cssText='display:none;width:min(100%,calc((100vh - 64px)*16/9));height:auto;aspect-ratio:16/9';oldCanvas.parentElement.append(canvas);
  const report=window.noriObservatory={ready:false,objects:[],frames:0,errors:[],drops:[],fps:0,cat:null,source:'actual Nori cam snapshot + actual Worker gift sprites; no authored gift position'};
  const cfg=await fetch('/observatory/room-contract.json').then(r=>{if(!r.ok)throw Error('room contract '+r.status);return r.json();});
  RectAreaLightUniformsLib.init();
