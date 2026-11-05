@@ -63,10 +63,11 @@ export async function createMiniatureRenderer({oldCanvas,manifest,images,onFailu
    add(new T.TorusGeometry(.055,.012,6,16,Math.PI),std(PAL.slipperDark),.0,.035,0).rotation.set(Math.PI/2,0,Math.PI/2);
    return {group:g,shadow:[.34,.18],h:.08};}
   if(kind==='toy'){
-   g.scale.setScalar(1.3);add(new T.SphereGeometry(.09,18,12),std(PAL.yarnA),0,.09,0);
+   // One size rule for every gift: real size against the R40 furniture (1 unit = 1 m). A yarn ball is about 11 cm.
+   g.scale.setScalar(.6);add(new T.SphereGeometry(.09,18,12),std(PAL.yarnA),0,.09,0);
    for(const [rx,ry] of [[.3,0],[1.2,.6],[-.5,1.3]]){const r=add(new T.TorusGeometry(.088,.008,6,24),std(PAL.yarnB),0,.09,0);r.rotation.set(rx,ry,0);}
    const tail=add(new T.CylinderGeometry(.006,.006,.12,6),std(PAL.yarnB),.1,.012,.02);tail.rotation.z=Math.PI/2.4;
-   return {group:g,shadow:[.24,.2],h:.18};}
+   return {group:g,shadow:[.12,.1],h:.09};}
   if(kind==='cushion'){
    const pad=add(new T.SphereGeometry(.2,20,12),std(PAL.cushion,1),0,.055,0);pad.scale.set(1,.28,1);
    add(new T.SphereGeometry(.018,10,8),std(PAL.button),0,.11,0);
@@ -114,7 +115,12 @@ export async function createMiniatureRenderer({oldCanvas,manifest,images,onFailu
     const l=(now-e.drop.start-DROP_MS)/LAND_MS;if(l<1){const s=.2*Math.exp(-3.2*l)*Math.cos(l*Math.PI*2.4);sy=1-s;sx=1+s*.6;}}}
   e.parcel.visible=visible&&!e.sprite;e.root.visible=visible;e.root.position.copy(pos);e.root.position.y+=lift;e.root.scale.set(sx,sy,sx);
   e.shadow.visible=visible&&!carried;e.shadow.position.copy(floor);e.shadow.position.y+=.002;e.shadow.scale.set(shadowK,shadowK,1);e.shadow.material.opacity=.4+.6*shadowK;
-  if(e.sprite){const cm=cards.get(o.id)?.space?.cm||{w:30,d:28,h:42},b=e.body;e.sprite.visible=visible;e.sprite.scale.set(cm.w/80*b.w/b.bw,cm.h/80*b.h/b.bh,1);e.sprite.position.set(0,.001,0);}
+  // Photo gifts use the same rule as catalog gifts: the object card's real size in cm at 1 unit = 1 m, one scale for
+  // both axes so the picture keeps its own shape (no stretching), clamped to 6-55 cm on screen.
+  if(e.sprite){const cm=cards.get(o.id)?.space?.cm||{w:30,d:28,h:42},b=e.body;e.sprite.visible=visible;
+   const realM=Math.max(cm.w||0,cm.h||0)/100||.3,bodyPx=Math.max(b.bw,b.bh)||1;let k=realM/bodyPx;
+   const shownH=k*b.bh;if(shownH>.55)k*=.55/shownH;else if(shownH<.06)k*=.06/shownH;
+   e.sprite.scale.set(k*b.w,k*b.h,1);e.sprite.position.set(0,.001,0);}
   return {id:o.id,x:o.x,y:o.y,z:o.z,kind:o.kind,sprite:o.sprite,visible,loaded:e.media?e.url===o.sprite:true,lift,position_blender:[pos.x,-pos.z,pos.y],source:'actual snapshot coordinates',card_cm:cards.get(o.id)?.space?.cm||null};
  }
  function hash(s){let h=2166136261;for(const ch of String(s)){h^=ch.charCodeAt(0);h=Math.imul(h,16777619);}return h>>>0;}
